@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import {Button, Typography} from "@mui/material";
+import LandingPage from "./pages/LandingPage";
+import AssignmentPage from "./pages/AssignmentPage";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 const AppWrapper = styled.div`
   padding: 1rem;
@@ -10,26 +12,18 @@ const AppWrapper = styled.div`
   height: 100%;
 `
 
-const AppTitle = styled(Typography)`
-  font-size: calc(50px + 2vmin);
-  text-transform: uppercase;
-  margin: 2rem;
-`
-
-const ButtonWrapper = styled.div`
-  *:not(:last-child) {
-    margin-right: 2rem;
-  }
-`
-
 function App() {
 
   return (
     <AppWrapper>
-      <AppTitle>Lørn</AppTitle>
-      <ButtonWrapper>
-        <Button variant="contained">Begynn</Button>
-      </ButtonWrapper>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="assignment" element={<AssignmentPage />}>
+            <Route path=":index" element={<AssignmentPage />}/>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </AppWrapper>
   )
 }
