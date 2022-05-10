@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+const AppWrapper = styled.div`
+  padding: 1rem;
+`
+
 const AppTitle = styled.h1`
   font-size: calc(60px + 2vmin);
   display: flex;
@@ -10,10 +14,9 @@ const AppTitle = styled.h1`
 function App() {
 
   return (
-    <div>
+    <AppWrapper>
       <AppTitle>Lørn</AppTitle>
-
-    </div>
+    </AppWrapper>
   )
 }
 
