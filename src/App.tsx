@@ -1,14 +1,24 @@
 import styled from "styled-components";
+import {Button} from "@mui/material";
 
 const AppWrapper = styled.div`
   padding: 1rem;
 `
 
 const AppTitle = styled.h1`
-  font-size: calc(60px + 2vmin);
+  font-size: calc(50px + 2vmin);
+  text-transform: uppercase;
   display: flex;
   justify-content: center;
-  text-transform: uppercase;
+`
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  *:not(:last-child) {
+    margin-right: 2rem;
+  }
 `
 
 function App() {
@@ -16,6 +26,9 @@ function App() {
   return (
     <AppWrapper>
       <AppTitle>Lørn</AppTitle>
+      <ButtonWrapper>
+        <Button variant="contained">Begynn</Button>
+      </ButtonWrapper>
     </AppWrapper>
   )
 }
