@@ -17,6 +17,10 @@ const CornerGraphic = styled.div<CornerGraphicProps>`
   width: 200%;
   background-color: ${props => props.theme.palette.primary.main};
 
+  @media only screen and (max-width: 1900px) {
+    bottom: ${props => props.inverted ? 55 : -60}%;
+  }
+
   @media only screen and (max-width: 1600px) {
     height: 80%;
     ${props => props.inverted ? 'display: none' : ''};

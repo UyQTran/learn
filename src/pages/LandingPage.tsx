@@ -3,15 +3,25 @@ import {Button, Typography, useTheme} from "@mui/material";
 import PrintIcon from '@mui/icons-material/Print';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import CornerGraphic from "../graphicals/CornerGraphic";
+import {Link} from "react-router-dom";
 
 const AppTitle = styled(Typography)`
-  font-size: calc(50px + 2vmin);
+  font-size: calc(50px + 1vmin);
   text-transform: uppercase;
-  margin: 2rem;
+  margin: 1rem;
+`
+
+const AppDescription = styled(Typography)`
+  margin: 1rem;
+  word-wrap: break-word;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 `
 
 const ButtonWrapper = styled.div`
   display: flex;
+  margin: 1rem;
   
   @media only screen and (max-width: 600px) {
     flex-direction: column;
@@ -32,24 +42,28 @@ const ButtonText = styled.span`
 `
 
 
-function LandingPage() {
+function LandingPage(props: any) {
   const theme = useTheme()
 
   return (
     <>
       <CornerGraphic theme={theme}/>
       <CornerGraphic theme={theme} inverted/>
-      <AppTitle>Lørn</AppTitle>
+      <AppTitle variant="h1">Lørn</AppTitle>
+      <AppDescription>
+        Lær deg programmering!
+      </AppDescription>
       <ButtonWrapper>
-        <Button
-          variant="contained"
-          href="assignment/0"
-        >
-          <PlayCircleOutlineIcon/>
-          <ButtonText>
-            Start
-          </ButtonText>
-        </Button>
+          <Button
+            component={Link}
+            variant="contained"
+            to="assignment/0"
+          >
+            <PlayCircleOutlineIcon/>
+            <ButtonText>
+              Start
+            </ButtonText>
+          </Button>
         <Button variant="outlined">
           <PrintIcon/>
           <ButtonText>
