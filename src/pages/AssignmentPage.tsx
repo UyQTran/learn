@@ -36,7 +36,7 @@ function AssignmentPage() {
   }
 
   useEffect(() => {
-      import('../../assets/assignmentData.json')
+      import('../data/assignmentData.json')
         .then((res) => setAssignment(res.default[indexNumber]))
         .catch(_ => null);
   }, [indexNumber]);
