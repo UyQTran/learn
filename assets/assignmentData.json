@@ -1,14 +1,20 @@
 [
   {
     "title": "Oppgave 1",
-    "text": "Dette er en oppgavetekst 1"
+    "text": "Dette er en oppgavetekst 1",
+    "code": "",
+    "solution": ""
   },
   {
     "title": "Oppgave 2",
-    "text": "Dette er en oppgavetekst 2"
+    "text": "Dette er en oppgavetekst 2",
+    "code": "",
+    "solution": ""
   },
   {
     "title": "Oppgave 3",
-    "text": "Dette er en oppgavetekst 3"
+    "text": "Dette er en oppgavetekst 3",
+    "code": "",
+    "solution": ""
   }
 ]
