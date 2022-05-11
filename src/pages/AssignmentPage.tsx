@@ -3,13 +3,19 @@ import {Button, Typography} from "@mui/material";
 import styled from "styled-components";
 import {useEffect, useState} from "react";
 
+
 const AssignmentWrapper = styled.div`
+  width: 40%;
 `
 
 const AssignmentTitle = styled(Typography)`
-  font-size: calc(30px + 1vmin);
+  font-size: calc(20px + 1vmin);
   text-transform: uppercase;
-  margin: 1rem;
+  margin: 1rem 0;
+`
+
+const AssignmentDescription = styled(Typography)`
+  margin: 1rem 0;
 `
 
 interface Assignment {
@@ -40,9 +46,13 @@ function AssignmentPage() {
   return (
       assignment ?
         <AssignmentWrapper>
-          <AssignmentTitle variant="h1">
+          <AssignmentTitle variant="h2">
               {assignment.title}
           </AssignmentTitle>
+          <AssignmentDescription variant="subtitle1">
+              {assignment.description}
+          </AssignmentDescription>
+
           <Button
             component={Link}
             variant="contained"

@@ -9,7 +9,6 @@ const AppWrapper = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 100%;
 `
 
 function App() {
