@@ -42,7 +42,7 @@ const ButtonText = styled.span`
 `
 
 
-function LandingPage(props: any) {
+function LandingPage() {
   const theme = useTheme()
 
   return (
