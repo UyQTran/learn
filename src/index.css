@@ -7,7 +7,6 @@ body {
 }
 
 html, body, #root {
-  overflow: hidden;
   height: 90%;
 }
 

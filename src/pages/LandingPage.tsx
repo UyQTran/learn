@@ -2,7 +2,6 @@ import styled from "styled-components";
 import {Button, Typography, useTheme} from "@mui/material";
 import PrintIcon from '@mui/icons-material/Print';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
-import CornerGraphic from "../graphicals/CornerGraphic";
 import {Link} from "react-router-dom";
 
 const AppTitle = styled(Typography)`
@@ -43,12 +42,9 @@ const ButtonText = styled.span`
 
 
 function LandingPage() {
-  const theme = useTheme()
 
   return (
     <>
-      <CornerGraphic theme={theme}/>
-      <CornerGraphic theme={theme} inverted/>
       <AppTitle variant="h1">Lørn</AppTitle>
       <AppDescription>
         Lær deg programmering!

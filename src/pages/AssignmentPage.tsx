@@ -2,6 +2,7 @@ import {Link, useParams} from "react-router-dom";
 import {Button, Typography} from "@mui/material";
 import styled from "styled-components";
 import {useEffect, useState} from "react";
+import CodeEditor from "../coding/CodeEditor";
 
 
 const AssignmentWrapper = styled.div`
@@ -52,6 +53,7 @@ function AssignmentPage() {
           <AssignmentDescription variant="subtitle1">
               {assignment.description}
           </AssignmentDescription>
+          <CodeEditor/>
 
           <Button
             component={Link}
