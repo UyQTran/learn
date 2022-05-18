@@ -1,13 +1,9 @@
 body {
-  margin: 0;
+  margin-top: 5%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #282c34;
   color: white;
-}
-
-html, body, #root {
-  height: 90%;
 }
 
 code {

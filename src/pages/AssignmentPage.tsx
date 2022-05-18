@@ -7,6 +7,10 @@ import CodeEditor from "../coding/CodeEditor";
 
 const AssignmentWrapper = styled.div`
   width: 40%;
+
+  @media only screen and (max-width: 1000px) {
+    width: 90%;
+  }
 `
 
 const AssignmentTitle = styled(Typography)`
@@ -54,7 +58,6 @@ function AssignmentPage() {
               {assignment.description}
           </AssignmentDescription>
           <CodeEditor/>
-
           <Button
             component={Link}
             variant="contained"
