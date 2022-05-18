@@ -23,6 +23,12 @@ const AssignmentDescription = styled(Typography)`
   margin: 1rem 0;
 `
 
+const ButtonWrapper = styled.div`
+  a:not(:last-child) {
+    margin-right: 1rem;
+  }
+`
+
 interface Assignment {
   title?: string;
   description: string;
@@ -47,6 +53,9 @@ function AssignmentPage() {
   }, [indexNumber]);
 
   const nextIndex = indexNumber + 1
+  const previousIndex = indexNumber - 1
+
+  const getPreviousPage = () => previousIndex >= 0 ? '/assignment/'+previousIndex : '/'
 
   return (
       assignment ?
@@ -58,13 +67,22 @@ function AssignmentPage() {
               {assignment.description}
           </AssignmentDescription>
           <CodeEditor/>
-          <Button
-            component={Link}
-            variant="contained"
-            to={'/assignment/'+nextIndex}
-          >
-            Neste oppgave
-          </Button>
+          <ButtonWrapper>
+            <Button
+              component={Link}
+              variant="outlined"
+              to={getPreviousPage()}
+            >
+              Forrige oppgave
+            </Button>
+            <Button
+              component={Link}
+              variant="contained"
+              to={'/assignment/'+nextIndex}
+            >
+              Neste oppgave
+            </Button>
+          </ButtonWrapper>
         </AssignmentWrapper>
       : <></>
   )

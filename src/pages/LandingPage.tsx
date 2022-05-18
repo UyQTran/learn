@@ -20,19 +20,6 @@ const AppDescription = styled(Typography)`
 const ButtonWrapper = styled.div`
   display: flex;
   margin: 1rem;
-  
-  @media only screen and (max-width: 600px) {
-    flex-direction: column;
-    a:not(:last-child) {
-      margin-bottom: 1rem;
-    }
-  }
-  
-  @media only screen and (min-width: 600px) {
-    a:not(:last-child) {
-      margin-right: 1rem;
-    }
-  }
 `
 
 const ButtonText = styled.span`
