@@ -7,7 +7,7 @@ import {Button} from "@mui/material";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 
 const CodeEditorWrapper = styled.div`
-  color: #000;
+  color: #282c34;
 `
 
 const ButtonText = styled.span`

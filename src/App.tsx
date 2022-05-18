@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <AppWrapper>
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Suspense fallback={<p>Loading...</p>}>
           <Routes>
             <Route path="/" element={<LandingPage />} />
