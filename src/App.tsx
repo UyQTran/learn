@@ -12,21 +12,20 @@ const AppWrapper = styled.div`
   height: 100%;
 `
 
-
-function App() {
+const App = () => {
 
   return (
     <AppWrapper>
-      <Suspense fallback={<p>Loading...</p>}>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Suspense fallback={<p>Loading...</p>}>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="assignment" element={<AssignmentPage />}>
               <Route path=":index" element={<AssignmentPage />}/>
             </Route>
           </Routes>
-        </BrowserRouter>
-      </Suspense>
+        </Suspense>
+      </BrowserRouter>
     </AppWrapper>
   )
 }

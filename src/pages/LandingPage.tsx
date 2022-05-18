@@ -26,29 +26,26 @@ const ButtonText = styled.span`
   margin: 0.25rem 0 0 0.5rem;
 `
 
+const LandingPage = () => (
+  <>
+    <AppTitle variant="h1">Lørn</AppTitle>
+    <AppDescription>
+      Lær deg programmering!
+    </AppDescription>
+    <ButtonWrapper>
+        <Button
+          component={Link}
+          variant="contained"
+          to="assignment/0"
+        >
+          <PlayCircleOutlineIcon/>
+          <ButtonText>
+            Start
+          </ButtonText>
+        </Button>
+    </ButtonWrapper>
+  </>
+)
 
-function LandingPage() {
-
-  return (
-    <>
-      <AppTitle variant="h1">Lørn</AppTitle>
-      <AppDescription>
-        Lær deg programmering!
-      </AppDescription>
-      <ButtonWrapper>
-          <Button
-            component={Link}
-            variant="contained"
-            to="assignment/0"
-          >
-            <PlayCircleOutlineIcon/>
-            <ButtonText>
-              Start
-            </ButtonText>
-          </Button>
-      </ButtonWrapper>
-    </>
-  )
-}
 
 export default LandingPage

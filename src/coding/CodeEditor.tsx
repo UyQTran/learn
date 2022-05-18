@@ -6,7 +6,6 @@ import { useState } from "react";
 import {Button} from "@mui/material";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 
-
 const CodeEditorWrapper = styled.div`
   color: #000;
 `
@@ -32,7 +31,7 @@ const runCode = (code: string) => {
   runit(code, outputElementId)
 }
 
-function CodeEditor() {
+const CodeEditor = () => {
   const testCode = `
 x = 50
 y = 20

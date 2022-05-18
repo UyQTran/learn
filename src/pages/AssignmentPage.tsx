@@ -38,7 +38,7 @@ interface Assignment {
   solution: {};
 }
 
-function AssignmentPage() {
+const AssignmentPage = () => {
   const { index } = useParams();
   const [assignments, setAssignments] = useState<Assignment[]>();
   let indexNumber = 0
