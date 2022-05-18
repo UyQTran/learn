@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {Button, Typography, useTheme} from "@mui/material";
-import PrintIcon from '@mui/icons-material/Print';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import {Link} from "react-router-dom";
 
@@ -60,12 +59,6 @@ function LandingPage() {
               Start
             </ButtonText>
           </Button>
-        <Button variant="outlined">
-          <PrintIcon/>
-          <ButtonText>
-            Print
-          </ButtonText>
-        </Button>
       </ButtonWrapper>
     </>
   )
