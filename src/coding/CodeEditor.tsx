@@ -38,29 +38,30 @@ x = 50
 y = 20
 print(x + y)
 `.trim()
-
   const [code, setCode] = useState(testCode)
 
 
   return (
-        <CodeEditorWrapper>
-          <CodeWindow
-            value={code}
-            height="300px"
-            extensions={[python()]}
-            onChange={(value) => {
-              setCode(value)
-              console.log(value)
-            }}
-          />
-          <Button variant="outlined" onClick={() => runCode(code)}>
-            <PlayCircleOutlineIcon/>
-            <ButtonText>
-              Kjør
-            </ButtonText>
-          </Button>
-          <OutputWindow id={outputElementId}></OutputWindow>
-        </CodeEditorWrapper>
+    <>
+      <CodeEditorWrapper>
+        <CodeWindow
+          value={code}
+          height="300px"
+          extensions={[python()]}
+          onChange={(value) => {
+            setCode(value)
+            console.log(value)
+          }}
+        />
+        <Button variant="outlined" onClick={() => runCode(code)}>
+          <PlayCircleOutlineIcon/>
+          <ButtonText>
+            Kjør
+          </ButtonText>
+        </Button>
+        <OutputWindow id={outputElementId}></OutputWindow>
+      </CodeEditorWrapper>
+    </>
   )
 }
 

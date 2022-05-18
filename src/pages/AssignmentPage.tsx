@@ -40,7 +40,7 @@ interface Assignment {
 
 function AssignmentPage() {
   const { index } = useParams();
-  const [assignment, setAssignment] = useState<Assignment>();
+  const [assignments, setAssignments] = useState<Assignment[]>();
   let indexNumber = 0
   if (typeof index === "string") {
     indexNumber = parseInt(index)
@@ -48,7 +48,7 @@ function AssignmentPage() {
 
   useEffect(() => {
       import('../data/assignmentData.json')
-        .then((res) => setAssignment(res.default[indexNumber]))
+        .then((res) => setAssignments(res.default))
         .catch(_ => null);
   }, [indexNumber]);
 
@@ -58,13 +58,13 @@ function AssignmentPage() {
   const getPreviousPage = () => previousIndex >= 0 ? '/assignment/'+previousIndex : '/'
 
   return (
-      assignment ?
+    assignments ?
         <AssignmentWrapper>
           <AssignmentTitle variant="h2">
-              {assignment.title}
+              {assignments[indexNumber].title}
           </AssignmentTitle>
           <AssignmentDescription variant="subtitle1">
-              {assignment.description}
+              {assignments[indexNumber].description}
           </AssignmentDescription>
           <CodeEditor/>
           <ButtonWrapper>
@@ -79,6 +79,7 @@ function AssignmentPage() {
               component={Link}
               variant="contained"
               to={'/assignment/'+nextIndex}
+              disabled={indexNumber+1 >= assignments.length}
             >
               Neste oppgave
             </Button>
