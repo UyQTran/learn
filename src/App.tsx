@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import styled from "styled-components";
 import LandingPage from "./pages/LandingPage";
 import AssignmentPage from "./pages/AssignmentPage";
@@ -16,14 +17,16 @@ function App() {
 
   return (
     <AppWrapper>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="assignment" element={<AssignmentPage />}>
-            <Route path=":index" element={<AssignmentPage />}/>
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <Suspense fallback={<p>Loading...</p>}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="assignment" element={<AssignmentPage />}>
+              <Route path=":index" element={<AssignmentPage />}/>
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </Suspense>
     </AppWrapper>
   )
 }
