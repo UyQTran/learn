@@ -16,12 +16,15 @@ const ButtonText = styled.span`
 
 const OutputWindow = styled.pre`
   background: #fff;
-  height: 300px;
+  height: 150px;
   padding: 0.5rem;
+  font-size: 16px;
+  word-break: break-word;
 `
 
 const CodeWindow = styled(CodeMirror)`
   margin-bottom: 1rem;
+  font-size: 16px;
 `
 
 const outputElementId = 'output'
@@ -45,7 +48,7 @@ print(x + y)
       <CodeEditorWrapper>
         <CodeWindow
           value={code}
-          height="300px"
+          height="250px"
           extensions={[python()]}
           onChange={(value) => {
             setCode(value)
