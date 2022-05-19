@@ -6,7 +6,7 @@ import CodeEditor from "../coding/CodeEditor";
 
 
 const AssignmentWrapper = styled.div`
-  width: 40%;
+  width: 45%;
 
   @media only screen and (max-width: 1000px) {
     width: 90%;

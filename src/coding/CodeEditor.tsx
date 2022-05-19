@@ -2,7 +2,7 @@ import styled from "styled-components";
 import runit from "./skulptRunner";
 import CodeMirror from '@uiw/react-codemirror';
 import { python } from '@codemirror/lang-python';
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import {Button} from '@mui/material';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 
@@ -41,6 +41,8 @@ interface CodeEditorProps {
 
 const CodeEditor = (props: CodeEditorProps) => {
   const [code, setCode] = useState(props.initialCode)
+
+  useEffect(() => setCode(props.initialCode),[props])
 
 
   return (
