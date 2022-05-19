@@ -12,9 +12,6 @@ export default defineConfig({
       input: {
         main: 'index.html',
         notFound: '404.html',
-        skulptMin: 'assets/skulpt.min.js',
-        skulptStdLib: 'assets/skulpt-stdlib.js',
-        data: 'src/data/assignmentData.json',
       }
     }
   }
