@@ -1,6 +1,5 @@
 // output functions are configurable.  This one just appends some text
 // to a pre element.
-import {useState} from "react";
 
 const outf = output => text => {
     const mypre = document.getElementById(output)
@@ -13,11 +12,6 @@ const builtinRead = (x) => {
     return Sk.builtinFiles["files"][x]
 }
 
-// Here's everything you need to run a python program in skulpt
-// grab the code from your textarea
-// get a reference to your pre element for output
-// configure the output function
-// call Sk.importMainWithBody()
 const runit = (code, output) => {
     const prog = code
     Sk.pre = output

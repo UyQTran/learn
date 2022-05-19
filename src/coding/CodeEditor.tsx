@@ -14,12 +14,14 @@ const ButtonText = styled.span`
   margin: 0.25rem 0 0 0.5rem;
 `
 
-const OutputWindow = styled.pre`
+const outputElementId = 'output'
+
+const OutputWindow = styled.pre.attrs(()=>({id: outputElementId}))`
   background: #fff;
   height: 150px;
   padding: 0.5rem;
   font-size: 16px;
-  word-break: break-word;
+  overflow-wrap: break-word;
 `
 
 const CodeWindow = styled(CodeMirror)`
@@ -27,7 +29,6 @@ const CodeWindow = styled(CodeMirror)`
   font-size: 16px;
 `
 
-const outputElementId = 'output'
 const runCode = (code: string) => {
   // @ts-ignore
   document.getElementById(outputElementId).innerHTML = ""
@@ -50,10 +51,7 @@ print(x + y)
           value={code}
           height="250px"
           extensions={[python()]}
-          onChange={(value) => {
-            setCode(value)
-            console.log(value)
-          }}
+          onChange={(value) => setCode(value)}
         />
         <Button variant="outlined" onClick={() => runCode(code)}>
           <PlayCircleOutlineIcon/>
@@ -61,7 +59,7 @@ print(x + y)
             Kjør
           </ButtonText>
         </Button>
-        <OutputWindow id={outputElementId}></OutputWindow>
+        <OutputWindow/>
       </CodeEditorWrapper>
     </>
   )
