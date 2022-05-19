@@ -15,8 +15,11 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve('.', 'index.html'),
-        nested: resolve('.', '404.html'),
+        main: 'index.html',
+        notFound: '404.html',
+        skulptMin: 'assets/skulpt.min.js',
+        skulptStdLib: 'assets/skulpt-stdlib.js',
+        data: 'src/data/assignmentData.json',
       }
     }
   }
