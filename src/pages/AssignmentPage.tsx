@@ -57,16 +57,19 @@ const AssignmentPage = () => {
 
   const getPreviousPage = () => previousIndex >= 0 ? '/assignment/'+previousIndex : '/'
 
+  if(!assignments) return <></>
+
+  let currentAssignment = assignments[indexNumber]
+
   return (
-    assignments ?
         <AssignmentWrapper>
           <AssignmentTitle variant="h2">
-              {assignments[indexNumber].title}
+              {currentAssignment.title}
           </AssignmentTitle>
           <AssignmentDescription variant="subtitle1">
-              {assignments[indexNumber].description}
+              {currentAssignment.description}
           </AssignmentDescription>
-          <CodeEditor/>
+          <CodeEditor initialCode={currentAssignment.code}/>
           <ButtonWrapper>
             <Button
               component={Link}
@@ -85,7 +88,6 @@ const AssignmentPage = () => {
             </Button>
           </ButtonWrapper>
         </AssignmentWrapper>
-      : <></>
   )
 }
 

@@ -2,9 +2,9 @@ import styled from "styled-components";
 import runit from "./skulptRunner";
 import CodeMirror from '@uiw/react-codemirror';
 import { python } from '@codemirror/lang-python';
-import { useState } from "react";
-import {Button} from "@mui/material";
-import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
+import { useState } from 'react';
+import {Button} from '@mui/material';
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 
 const CodeEditorWrapper = styled.div`
   color: #282c34;
@@ -16,7 +16,7 @@ const ButtonText = styled.span`
 
 const outputElementId = 'output'
 
-const OutputWindow = styled.pre.attrs(()=>({id: outputElementId}))`
+const OutputWindow = styled.pre.attrs(() => ({id: outputElementId}))`
   background: #fff;
   height: 150px;
   padding: 0.5rem;
@@ -35,13 +35,12 @@ const runCode = (code: string) => {
   runit(code, outputElementId)
 }
 
-const CodeEditor = () => {
-  const testCode = `
-x = 50
-y = 20
-print(x + y)
-`.trim()
-  const [code, setCode] = useState(testCode)
+interface CodeEditorProps {
+  initialCode: string
+}
+
+const CodeEditor = (props: CodeEditorProps) => {
+  const [code, setCode] = useState(props.initialCode)
 
 
   return (
@@ -51,7 +50,7 @@ print(x + y)
           value={code}
           height="250px"
           extensions={[python()]}
-          onChange={(value) => setCode(value)}
+          onChange={value => setCode(value)}
         />
         <Button variant="outlined" onClick={() => runCode(code)}>
           <PlayCircleOutlineIcon/>
