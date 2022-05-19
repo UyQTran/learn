@@ -6,7 +6,7 @@
     "hint": "Dette er et hint",
     "code": "x = 50\ny = 30\nprint(x + y)",
     "solution": {
-      "solved": 6
+      "solved": ""
     }
   },
   {
@@ -14,9 +14,9 @@
     "description": "Kvadratroten av et tall er hvilke to like faktorer som skal til for å gange opp til det opprinnelige tallet vi hadde. Skriv et program som skriver ut kvadratroten av 36.",
     "text": "Dette er en oppgavetekst",
     "hint": "Dette er et hint",
-    "code": "x = 50\ny = 20\nprint(x + y)",
+    "code": "import math\nx = 16\nsqrtX = math.sqrt(x)",
     "solution": {
-      "solved": 6
+      "solved": 6.0
     }
   },
   {

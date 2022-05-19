@@ -29,9 +29,13 @@ const CodeWindow = styled(CodeMirror)`
   font-size: 16px;
 `
 
-const runCode = (code: string) => {
+const cleanOutputWindow = () => {
   // @ts-ignore
   document.getElementById(outputElementId).innerHTML = ""
+}
+
+const runCode = (code: string) => {
+  cleanOutputWindow()
   runit(code, outputElementId)
 }
 
@@ -42,7 +46,10 @@ interface CodeEditorProps {
 const CodeEditor = (props: CodeEditorProps) => {
   const [code, setCode] = useState(props.initialCode)
 
-  useEffect(() => setCode(props.initialCode),[props])
+  useEffect(() => {
+    setCode(props.initialCode)
+    cleanOutputWindow()
+  },[props])
 
 
   return (
