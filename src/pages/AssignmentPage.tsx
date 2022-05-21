@@ -23,9 +23,13 @@ const AssignmentDescription = styled(Typography)`
   margin: 1rem 0;
 `
 
-const ButtonWrapper = styled.div`\
-  a:not(:last-child) {
-    margin-right: 1rem;
+const ButtonWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1rem;
+  
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `
 
