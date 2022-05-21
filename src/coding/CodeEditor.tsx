@@ -21,7 +21,7 @@ const OutputWindow = styled.pre.attrs(() => ({id: outputElementId}))`
   height: 150px;
   padding: 0.5rem;
   font-size: 16px;
-  white-space: pre-wrap;       /* css-3 */
+  white-space: pre-wrap;
 `
 
 const CodeWindow = styled(CodeMirror)`
