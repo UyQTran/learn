@@ -25,10 +25,10 @@ const AssignmentDescription = styled(Typography)`
 
 const ButtonWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   column-gap: 1rem;
   
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     grid-template-columns: repeat(2, 1fr);
   }
 `
@@ -59,7 +59,7 @@ const AssignmentPage = () => {
   const nextIndex = indexNumber + 1
   const previousIndex = indexNumber - 1
 
-  const getPreviousPage = () => previousIndex >= 0 ? '/assignment/'+previousIndex : '/'
+  const previousPage = previousIndex >= 0 ? '/assignment/'+previousIndex : '/'
 
   if(!assignments) return <></>
 
@@ -78,9 +78,9 @@ const AssignmentPage = () => {
             <Button
               component={Link}
               variant="outlined"
-              to={getPreviousPage()}
+              to={previousPage}
             >
-              Forrige oppgave
+              Tilbake
             </Button>
             <Button
               component={Link}
