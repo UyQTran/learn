@@ -1,8 +1,9 @@
-import {Link, useParams} from "react-router-dom";
+import {Link as RouterLink, useParams} from "react-router-dom";
 import {Button, Typography} from "@mui/material";
 import styled from "styled-components";
 import {useEffect, useState} from "react";
 import CodeEditor from "../coding/CodeEditor";
+import Solution from "../coding/Solution";
 
 
 const AssignmentWrapper = styled.div`
@@ -34,12 +35,15 @@ const ButtonWrapper = styled.div`
 `
 
 interface Assignment {
-  title?: string;
-  description: string;
-  text: string;
-  hint: string;
-  code: string;
-  solution: {};
+  title?: string
+  description: string
+  text: string
+  hint: string
+  initialCode: string
+  solution: {
+    solved: string | number
+    code: string
+  };
 }
 
 const AssignmentPage = () => {
@@ -73,17 +77,17 @@ const AssignmentPage = () => {
           <AssignmentDescription variant="subtitle1">
               {currentAssignment.description}
           </AssignmentDescription>
-          <CodeEditor initialCode={currentAssignment.code}/>
+          <CodeEditor initialCode={currentAssignment.initialCode}/>
           <ButtonWrapper>
             <Button
-              component={Link}
+              component={RouterLink}
               variant="outlined"
               to={previousPage}
             >
               Tilbake
             </Button>
             <Button
-              component={Link}
+              component={RouterLink}
               variant="contained"
               to={'/assignment/'+nextIndex}
               disabled={indexNumber+1 >= assignments.length}
@@ -91,6 +95,7 @@ const AssignmentPage = () => {
               Neste oppgave
             </Button>
           </ButtonWrapper>
+          <Solution solutionCode={currentAssignment.solution.code}/>
         </AssignmentWrapper>
   )
 }

@@ -4,9 +4,10 @@
     "description": "På denne siden så kan du kode i et programmeringsspråk som heter Python. Under ser du et eksempel med to variabler x og y med en linje for å printe summen av disse variablene. Prøv deg frem med å trykke på kjøreknappen!",
     "text": "Dette er en oppgavetekst",
     "hint": "Dette er et hint",
-    "code": "x = 50\ny = 30\nprint(x + y)",
+    "initialCode": "x = 50\ny = 30\nprint(x + y)",
     "solution": {
-      "solved": ""
+      "solved": "",
+      "code": ""
     }
   },
   {
@@ -14,9 +15,10 @@
     "description": "Kvadratroten av et tall er hvilke to like faktorer som skal til for å gange opp til det opprinnelige tallet vi hadde. Skriv et program som skriver ut kvadratroten av 36.",
     "text": "Dette er en oppgavetekst",
     "hint": "Dette er et hint",
-    "code": "import math\nx = 16\nsqrtX = math.sqrt(x)",
+    "initialCode": "import math\nx = 16\nsqrtX = math.sqrt(x)\nprint(sqrtX)",
     "solution": {
-      "solved": 6.0
+      "solved": 6.0,
+      "code": "import math\nx = 36\nsqrtX = math.sqrt(x)\nprint('Kvadratroten til 16 er lik')\nprint(sqrtX)"
     }
   },
   {
@@ -24,9 +26,10 @@
     "description": "Pytagoras sin læresetning handler om at summen av arealene til katetene i en rettvinklet trekant er lik arealet til hypotenusen. Skriv et program som regner og skriver ut hypotenusen til en trekant der katetene er lik 5 og 12.",
     "text": "Dette er en oppgavetekst",
     "hint": "Dette er et hint",
-    "code": "x = 50\ny = 20\nprint(x + y)",
+    "initialCode": "",
     "solution": {
-      "solved": 13
+      "solved": 13,
+      "code": "import math\nkat1 = 5\nkat2 = 12\nhyp = math.sqrt(kat1*kat1+kat2*kat2)\nprint('Hypotenusen til en rettvinklet trekant med kateter 5 og 12 er lik')\nprint(hyp)"
     }
   }
 ]

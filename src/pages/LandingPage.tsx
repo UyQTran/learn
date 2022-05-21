@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Button, Typography, useTheme} from "@mui/material";
+import {Button, Typography} from "@mui/material";
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import {Link} from "react-router-dom";
 
