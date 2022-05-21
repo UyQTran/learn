@@ -11,6 +11,9 @@ interface SolutionWrapperProps {
 const SolutionCodeWrapper = styled.section<SolutionWrapperProps>`
   color: #282c34;
   margin-top: 0.25rem;
+  * {
+    overflow: hidden;
+  }
 
   ${props => props.isCollapsed ? 'display: none' : ''}
 `
@@ -48,7 +51,7 @@ const Solution = (props: SolutionProps) => {
           <CodeMirror
             readOnly
             value={props.solutionCode}
-            height={lineCount*21 + 'px'}
+            height={lineCount*19 + 'px'}
             extensions={[python()]}
           />
         </SolutionCodeWrapper>
