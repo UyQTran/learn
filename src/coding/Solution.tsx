@@ -45,7 +45,7 @@ const Solution = (props: SolutionProps) => {
           variant="body2"
           onClick={() => setIsSolutionCollapsed(!isSolutionCollapsed)}
         >
-          Løsningsforlsag
+          Vis løsningsforslag
         </MuiLink>
         <SolutionCodeWrapper isCollapsed={isSolutionCollapsed}>
           <CodeMirror
