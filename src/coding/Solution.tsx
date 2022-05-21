@@ -12,7 +12,7 @@ const SolutionCodeWrapper = styled.section<SolutionWrapperProps>`
   color: #282c34;
   margin-top: 0.25rem;
   * {
-    overflow: hidden;
+    overflow-y: hidden;
   }
 
   ${props => props.isCollapsed ? 'display: none' : ''}
