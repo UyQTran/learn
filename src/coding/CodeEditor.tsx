@@ -8,10 +8,6 @@ import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 
 const CodeEditorWrapper = styled.div`
   color: #282c34;
-
-  button,div,pre {
-    margin-bottom: 1rem;
-  }
 `
 
 const ButtonText = styled.span`
@@ -26,10 +22,10 @@ const OutputWindow = styled.pre.attrs(() => ({id: outputElementId}))`
   padding: 0.5rem;
   font-size: 16px;
   overflow-wrap: break-word;
-  margin: 0;
 `
 
 const CodeWindow = styled(CodeMirror)`
+  margin-bottom: 1rem;
   font-size: 16px;
 `
 
