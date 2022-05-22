@@ -8,6 +8,16 @@ import Solution from "../coding/Solution";
 
 const AssignmentWrapper = styled.div`
   width: 850px;
+  animation: fadeIn 0.5s;
+
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
 
   @media only screen and (max-width: 1000px) {
     width: 95%;
