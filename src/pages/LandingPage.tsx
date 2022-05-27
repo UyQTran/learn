@@ -34,6 +34,7 @@ const LandingPage = () => (
     </AppDescription>
     <ButtonWrapper>
         <Button
+          data-cy="start-button"
           component={Link}
           variant="contained"
           to="assignment/0"

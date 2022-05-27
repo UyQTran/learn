@@ -82,6 +82,7 @@ const AssignmentPage = () => {
           <Solution solutionCode={currentAssignment.solution.code}/>
           <ButtonGroup gridColumnCount={{desktop: 5, mobile: 2}}>
             <Button
+              data-cy=""
               component={RouterLink}
               variant="outlined"
               to={previousPage}
