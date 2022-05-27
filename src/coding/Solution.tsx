@@ -43,7 +43,7 @@ const Solution = (props: SolutionProps) => {
         Vis løsningsforslag
       </MuiLink>
       <AnimateHeight
-        duration={ 500 }
+        duration={ 150 }
         height={ isSolutionCollapsed ? 0 : 'auto' }
       >
         <SolutionCodeWrapper>
