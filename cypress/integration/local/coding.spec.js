@@ -12,6 +12,16 @@ describe('Positive test with coding and verification', () => {
     cy.get('[data-cy="output-window"]').should('not.contain.text', '80')
   })
 
+  it('should output with initial code in editor and save previous compilation', () => {
+    cy.get('[data-cy="start-button"]').click()
+    cy.get('[data-cy="compile-button"]').click()
+    cy.get('[data-cy="compile-button"]').click()
+    cy.get('[data-cy="compile-button"]').click()
+    cy.get('[data-cy="output-window"]').should('contain.text', '80\n80\n80')
+    cy.get('[data-cy="reset-output-button"]').click()
+    cy.get('[data-cy="output-window"]').should('not.contain.text', '80')
+  })
+
   it('should go to next assignment', () => {
     cy.get('[data-cy="start-button"]').click()
     cy.get('[data-cy="next-assignment-button"]').click()
