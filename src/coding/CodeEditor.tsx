@@ -47,26 +47,35 @@ const CodeEditor = (props: CodeEditorProps) => {
   return (
     <CodeEditorWrapper>
       <CodeWindow
+        data-cy="coding-window"
         value={code}
         height="250px"
         extensions={[python()]}
         onChange={value => setCode(value)}
       />
       <ButtonGroup gridColumnCount={{desktop: 6, mobile: 2}}>
-        <Button variant="outlined" onClick={() => compile(code)}>
+        <Button
+          data-cy="compile-button"
+          variant="outlined"
+          onClick={() => compile(code)}
+        >
           <PlayCircleOutlineIcon/>
           <ButtonText>
             Kjør
           </ButtonText>
         </Button>
-        <Button variant="outlined" onClick={() => resetOutput()}>
+        <Button
+          data-cy="reset-output-button"
+          variant="outlined"
+          onClick={() => resetOutput()}
+        >
           <HighlightOffIcon/>
           <ButtonText>
             Nullstill
           </ButtonText>
         </Button>
       </ButtonGroup>
-      <OutputWindow>{output}</OutputWindow>
+      <OutputWindow data-cy="output-window">{output}</OutputWindow>
     </CodeEditorWrapper>
   )
 }

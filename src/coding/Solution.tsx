@@ -35,6 +35,7 @@ const Solution = (props: SolutionProps) => {
   return (
     <SolutionWrapper>
       <MuiLink
+        data-cy="solution-button"
         component="button"
         variant="body2"
         onClick={() => setIsSolutionCollapsed(!isSolutionCollapsed)}
@@ -42,13 +43,13 @@ const Solution = (props: SolutionProps) => {
         Vis løsningsforslag
       </MuiLink>
       <AnimateHeight
-        id='solution'
         duration={ 500 }
         height={ isSolutionCollapsed ? 0 : 'auto' }
       >
         <SolutionCodeWrapper>
           <CodeMirror
             readOnly
+            data-cy="solution-code"
             value={props.solutionCode}
             height={lineCount * 19 + 'px'}
             extensions={[python()]}
