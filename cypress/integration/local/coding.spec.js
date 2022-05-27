@@ -18,7 +18,7 @@ describe('Positive test with coding and verification', () => {
     cy.url().should('contain', url+'/assignment/1')
   })
 
-  it('should spawn solution code', function() {
+  it('should spawn solution code', () => {
     cy.get('[data-cy="start-button"]').click()
     cy.get('[data-cy="next-assignment-button"]').click();
     cy.get('[data-cy="solution-button"]').click();
