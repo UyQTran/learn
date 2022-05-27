@@ -5,7 +5,7 @@ declare const Sk: any
 const usePythonCompiler: (initialOutput?: string) => [string, (code: string) => void, () => void] = (initialOutput = '') => {
     const [output, setOutput] = useState(initialOutput)
 
-    const getOutCallback = (nextOutput: string) => {
+    const handleOutput = (nextOutput: string) => {
         setOutput(output + nextOutput)
     }
 
@@ -18,7 +18,7 @@ const usePythonCompiler: (initialOutput?: string) => [string, (code: string) => 
     const resetOutput = () => setOutput('')
 
     const compile = (code: string) => {
-        Sk.configure({output:getOutCallback, read:builtinRead, __future__: Sk.python3})
+        Sk.configure({output:handleOutput, read:builtinRead, __future__: Sk.python3})
         const myPromise = Sk.misceval.asyncToPromise(function() {
             return Sk.importMainWithBody("<stdin>", false, code, true)
         })
@@ -26,10 +26,9 @@ const usePythonCompiler: (initialOutput?: string) => [string, (code: string) => 
               console.log('success')
           },
           function(err: Error) {
-              getOutCallback(err.toString())
+              handleOutput(err.toString()+'\n')
           })
     }
-
 
     return [output, compile, resetOutput]
 }
