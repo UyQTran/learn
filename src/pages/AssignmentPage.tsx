@@ -88,6 +88,7 @@ const AssignmentPage = () => {
               {currentAssignment.description}
           </AssignmentDescription>
           <CodeEditor initialCode={currentAssignment.initialCode}/>
+          <Solution solutionCode={currentAssignment.solution.code}/>
           <ButtonWrapper>
             <Button
               component={RouterLink}
@@ -105,7 +106,6 @@ const AssignmentPage = () => {
               Neste oppgave
             </Button>
           </ButtonWrapper>
-          <Solution solutionCode={currentAssignment.solution.code}/>
         </AssignmentWrapper>
   )
 }

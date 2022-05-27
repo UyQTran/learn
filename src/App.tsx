@@ -11,15 +11,6 @@ const AppWrapper = styled.div`
   justify-content: center;
   height: 100%;
   animation: fadeIn 0.5s;
-
-  @keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
 `
 
 const App = () => {

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import CodeMirror from '@uiw/react-codemirror';
 import { python } from '@codemirror/lang-python';
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import MuiLink from "@mui/material/Link";
 
 interface SolutionWrapperProps {
@@ -19,7 +19,7 @@ const SolutionCodeWrapper = styled.section<SolutionWrapperProps>`
 `
 
 const SolutionWrapper = styled.div`
-  margin-top: 1rem;
+  margin: 1rem;
 `
 
 interface SolutionProps {
@@ -31,32 +31,30 @@ const Solution = (props: SolutionProps) => {
 
   useEffect(() => {
     setIsSolutionCollapsed(true)
-  },[props])
+  }, [props])
 
-  if(props.solutionCode === '') return <></>
+  if (props.solutionCode === '') return <></>
 
   const lineCount = props.solutionCode.split('\n').length
 
   return (
-    <>
-      <SolutionWrapper>
-        <MuiLink
-          component="button"
-          variant="body2"
-          onClick={() => setIsSolutionCollapsed(!isSolutionCollapsed)}
-        >
-          Vis løsningsforslag
-        </MuiLink>
-        <SolutionCodeWrapper isCollapsed={isSolutionCollapsed}>
-          <CodeMirror
-            readOnly
-            value={props.solutionCode}
-            height={lineCount*19 + 'px'}
-            extensions={[python()]}
-          />
-        </SolutionCodeWrapper>
-      </SolutionWrapper>
-    </>
+    <SolutionWrapper>
+      <MuiLink
+        component="button"
+        variant="body2"
+        onClick={() => setIsSolutionCollapsed(!isSolutionCollapsed)}
+      >
+        Vis løsningsforslag
+      </MuiLink>
+      <SolutionCodeWrapper isCollapsed={isSolutionCollapsed}>
+        <CodeMirror
+          readOnly
+          value={props.solutionCode}
+          height={lineCount * 19 + 'px'}
+          extensions={[python()]}
+        />
+      </SolutionCodeWrapper>
+    </SolutionWrapper>
   )
 }
 
