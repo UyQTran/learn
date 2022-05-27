@@ -3,19 +3,14 @@ import CodeMirror from '@uiw/react-codemirror';
 import { python } from '@codemirror/lang-python';
 import { useEffect, useState } from 'react';
 import MuiLink from "@mui/material/Link";
+import AnimateHeight from 'react-animate-height';
 
-interface SolutionWrapperProps {
-  isCollapsed: boolean
-}
-
-const SolutionCodeWrapper = styled.section<SolutionWrapperProps>`
+const SolutionCodeWrapper = styled.section`
   color: #282c34;
   margin-top: 0.25rem;
   * {
     overflow-y: hidden;
   }
-
-  ${props => props.isCollapsed ? 'display: none' : ''}
 `
 
 const SolutionWrapper = styled.div`
@@ -46,14 +41,20 @@ const Solution = (props: SolutionProps) => {
       >
         Vis løsningsforslag
       </MuiLink>
-      <SolutionCodeWrapper isCollapsed={isSolutionCollapsed}>
-        <CodeMirror
-          readOnly
-          value={props.solutionCode}
-          height={lineCount * 19 + 'px'}
-          extensions={[python()]}
-        />
-      </SolutionCodeWrapper>
+      <AnimateHeight
+        id='solution'
+        duration={ 500 }
+        height={ isSolutionCollapsed ? 0 : 'auto' }
+      >
+        <SolutionCodeWrapper>
+          <CodeMirror
+            readOnly
+            value={props.solutionCode}
+            height={lineCount * 19 + 'px'}
+            extensions={[python()]}
+          />
+        </SolutionCodeWrapper>
+      </AnimateHeight>
     </SolutionWrapper>
   )
 }
