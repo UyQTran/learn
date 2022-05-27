@@ -22,6 +22,7 @@ const OutputWindow = styled.pre`
   padding: 0.5rem;
   font-size: 16px;
   white-space: pre-wrap;
+  overflow: auto;
 `
 
 const CodeWindow = styled(CodeMirror)`
