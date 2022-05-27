@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {useEffect, useState} from "react";
 import CodeEditor from "../coding/CodeEditor";
 import Solution from "../coding/Solution";
+import { ButtonGroup } from "../styled/ButtonGroup";
 
 
 const AssignmentWrapper = styled.div`
@@ -32,16 +33,6 @@ const AssignmentTitle = styled(Typography)`
 
 const AssignmentDescription = styled(Typography)`
   margin: 1rem 0;
-`
-
-const ButtonWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  column-gap: 1rem;
-  
-  @media only screen and (max-width: 900px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
 `
 
 interface Assignment {
@@ -89,7 +80,7 @@ const AssignmentPage = () => {
           </AssignmentDescription>
           <CodeEditor initialCode={currentAssignment.initialCode}/>
           <Solution solutionCode={currentAssignment.solution.code}/>
-          <ButtonWrapper>
+          <ButtonGroup gridColumnCount={{desktop: 5, mobile: 2}}>
             <Button
               component={RouterLink}
               variant="outlined"
@@ -105,7 +96,7 @@ const AssignmentPage = () => {
             >
               Neste oppgave
             </Button>
-          </ButtonWrapper>
+          </ButtonGroup>
         </AssignmentWrapper>
   )
 }
