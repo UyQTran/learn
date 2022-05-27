@@ -18,7 +18,7 @@
     "initialCode": "import math\nx = 16\nsqrtX = math.sqrt(x)\nprint(sqrtX)",
     "solution": {
       "solved": 6.0,
-      "code": "import math\nx = 36\nsqrtX = math.sqrt(x)\nprint('Kvadratroten til ' + x + ' er lik')\nprint(sqrtX)"
+      "code": "import math\nx = 36\nsqrtX = math.sqrt(x)\nprint('Kvadratroten til 36 er lik')\nprint(sqrtX)"
     }
   },
   {
