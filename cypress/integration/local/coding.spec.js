@@ -7,9 +7,9 @@ describe('Positive test with coding and verification', () => {
   it('should output with initial code in editor', () => {
     cy.get('[data-cy="start-button"]').click()
     cy.get('[data-cy="compile-button"]').click()
-    cy.get('[data-cy="output-window"]').should('contain.text', '80')
+    cy.get('[data-cy="output-window"]').should('contain.text', 'Hei verden!')
     cy.get('[data-cy="reset-output-button"]').click()
-    cy.get('[data-cy="output-window"]').should('not.contain.text', '80')
+    cy.get('[data-cy="output-window"]').should('not.contain.text', 'Hei verden!')
   })
 
   it('should output with initial code in editor and save previous compilation', () => {
@@ -17,9 +17,9 @@ describe('Positive test with coding and verification', () => {
     cy.get('[data-cy="compile-button"]').click()
     cy.get('[data-cy="compile-button"]').click()
     cy.get('[data-cy="compile-button"]').click()
-    cy.get('[data-cy="output-window"]').should('contain.text', '80\n80\n80')
+    cy.get('[data-cy="output-window"]').should('contain.text', 'Hei verden!\nHei verden!\nHei verden!')
     cy.get('[data-cy="reset-output-button"]').click()
-    cy.get('[data-cy="output-window"]').should('not.contain.text', '80')
+    cy.get('[data-cy="output-window"]').should('not.contain.text', 'Hei verden!')
   })
 
   it('should go to next assignment', () => {
