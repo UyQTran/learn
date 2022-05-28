@@ -1,9 +1,43 @@
 [
   {
-    "title": "Oppgave 0: Mitt første program",
-    "description": "På denne siden så kan du kode i et programmeringsspråk som heter Python. Under ser du et eksempel med to variabler x og y med en linje for å printe summen av disse variablene. Prøv deg frem med å trykke på kjøreknappen!",
-    "text": "Dette er en oppgavetekst",
-    "hint": "Dette er et hint",
+    "title": "Mitt første program",
+    "description": "På denne siden så kan du kode i et programmeringsspråk som heter Python. Under ser du to hvite bokser. Den øverste er editoren din, mens boksen under er outputfeltet. Outputfeltet er boksen som skriver ut resultatet av koden i editoren når du trykker på kjøreknappen. I eksempelet under ser du et funksjonskall på print som skriver ut strengen 'Hei verden!' til outputfeltet. PRøv deg frem ved å trykke på kjøreknappen.",
+    "initialCode": "print('Hei verden!')",
+    "solution": {
+      "solved": "",
+      "code": ""
+    }
+  },
+  {
+    "title": "Koding",
+    "description": "Kode er det samme som en oppskrift som maskinene våre følger bastant. Det betyr at maskinen din skriver ut nøyaktig hva som er mellom ' tegnene i funksjonskallet for print under. Erstatt LØRN med ditt eget navn så vil du får en hilsen fra din egen maskin.",
+    "initialCode": "print('Hei mitt navn er LØRN')",
+    "solution": {
+      "solved": "",
+      "code": ""
+    }
+  },
+  {
+    "title": "Variabler av tall",
+    "description": "I matematikken lærer vi om ligninger med ukjente variabler der vår oppgave som oftest er å finne ut hva variabelen er lik. Dette fungerer litt annerledes i programmering hvor vi er sjefen. Vi bestemmer hva variabelen skal være lik. I editoren så ser du en variabel x som vi har satt lik 3. Prøv å bytt ut 3 med ditt favorittall og trykk på kjør. Funksjonen print kan ta hvilke som helst variabler og printer fortsatt ut som om vi hadde byttet ut variabelen med verdien.",
+    "initialCode": "x = 3\nprint(x)",
+    "solution": {
+      "solved": "",
+      "code": ""
+    }
+  },
+  {
+    "title": "Variabler av strenger",
+    "description": "Variabler kan ikke bare være tall, men tekststrenger også. Trykk på kjør og se resultatet.",
+    "initialCode": "x = 'Jeg heter x og er en variabel'\nprint(x)",
+    "solution": {
+      "solved": "",
+      "code": ""
+    }
+  },
+  {
+    "title": "Uttrykk",
+    "description": "Under ser du et eksempel med to variabler x og y med en linje for å printe summen av disse variablene. Prøv deg frem med å trykke på kjøreknappen!",
     "initialCode": "x = 50\ny = 30\nprint(x + y)",
     "solution": {
       "solved": "",
@@ -11,10 +45,8 @@
     }
   },
   {
-    "title": "Oppgave 1: Kvadratroten",
-    "description": "Kvadratroten av et tall er hvilke to like faktorer som skal til for å gange opp til det opprinnelige tallet vi hadde. Skriv et program som skriver ut kvadratroten av 36.",
-    "text": "Dette er en oppgavetekst",
-    "hint": "Dette er et hint",
+    "title": "Kvadratroten",
+    "description": "Python er et utrolig sterkt språk med masse biblioteker som gjør koding mye enklere for oss. Før vi bruker et bibliotek så må vi importere biblioteket som du ser i linje 1 i editoren. Et bibliotek, math, er en bibliotek med masse matematiske funksjoner. I editoren så ser du bruken av math sin funksjon for å regne ut kvadratroten av et tall eller variabel som er mellom parantesene. Skriv et program som skriver ut kvadratroten av 36.",
     "initialCode": "import math\nx = 16\nsqrtX = math.sqrt(x)\nprint(sqrtX)",
     "solution": {
       "solved": 6.0,
@@ -22,10 +54,8 @@
     }
   },
   {
-    "title": "Oppgave 2: Enkel Pytagoras",
+    "title": "Pytagoras",
     "description": "Pytagoras sin læresetning handler om at summen av arealene til katetene i en rettvinklet trekant er lik arealet til hypotenusen. Skriv et program som regner og skriver ut hypotenusen til en trekant der katetene er lik 5 og 12.",
-    "text": "Dette er en oppgavetekst",
-    "hint": "Dette er et hint",
     "initialCode": "",
     "solution": {
       "solved": 13,

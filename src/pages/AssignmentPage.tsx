@@ -38,8 +38,6 @@ const AssignmentDescription = styled(Typography)`
 interface Assignment {
   title?: string
   description: string
-  text: string
-  hint: string
   initialCode: string
   solution: {
     solved: string | number
