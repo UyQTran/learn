@@ -7,14 +7,14 @@ import AnimateHeight from 'react-animate-height'
 
 const SolutionCodeWrapper = styled.section`
   color: #282c34;
-  margin-top: 0.25rem;
+  margin-top: ${props => props.theme.spacing(1)};
   * {
     overflow-y: hidden;
   }
 `
 
 const SolutionWrapper = styled.div`
-  margin: 1rem;
+  margin: ${props => props.theme.spacing(4)};
 `
 
 interface SolutionProps {

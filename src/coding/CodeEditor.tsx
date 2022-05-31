@@ -13,20 +13,20 @@ const CodeEditorWrapper = styled.div`
 `
 
 const ButtonText = styled.span`
-  margin: 0.25rem 0 0 0.5rem;
+  margin: ${props => props.theme.spacing(1, 0, 0, 2)};
 `
 
 const OutputWindow = styled.pre`
   background: #fff;
   height: 150px;
-  padding: 0.5rem;
+  padding: ${props => props.theme.spacing(2)};
   font-size: 16px;
   white-space: pre-wrap;
   overflow: auto;
 `
 
 const CodeWindow = styled(CodeMirror)`
-  margin-bottom: 1rem;
+  margin-bottom: ${props => props.theme.spacing(4)};
   font-size: 16px;
 `
 

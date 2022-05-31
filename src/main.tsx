@@ -14,6 +14,7 @@ const theme = createTheme({
       main: '#6390EB',
     },
   },
+  spacing: (factor: number) => `${0.25 * factor}rem`
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

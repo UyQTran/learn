@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 import {Theme} from '@mui/material'
 
-
-
 interface CornerGraphicProps {
   theme: Theme
   inverted?: boolean

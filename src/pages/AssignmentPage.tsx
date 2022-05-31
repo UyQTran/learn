@@ -28,11 +28,11 @@ const AssignmentWrapper = styled.div`
 const AssignmentTitle = styled(Typography)`
   font-size: calc(20px + 1vmin);
   text-transform: uppercase;
-  margin: 1rem 0;
+  margin: ${props => props.theme.spacing(4, 0)};
 `
 
 const AssignmentDescription = styled(Typography)`
-  margin: 1rem 0;
+  margin: ${props => props.theme.spacing(4, 0)};
 `
 
 interface Assignment {
