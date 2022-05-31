@@ -4,8 +4,8 @@ import {Theme} from '@mui/material'
 
 
 interface CornerGraphicProps {
-  theme: Theme;
-  inverted?: boolean;
+  theme: Theme
+  inverted?: boolean
 }
 
 const CornerGraphic = styled.div<CornerGraphicProps>`
