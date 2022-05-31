@@ -1,22 +1,24 @@
-import { Link as RouterLink, useParams } from "react-router-dom";
-import { Button, Typography } from "@mui/material";
-import styled from "styled-components";
-import { useEffect, useState } from "react";
-import CodeEditor from "../coding/CodeEditor";
-import Solution from "../coding/Solution";
-import { ButtonGroup } from "../styled/ButtonGroup";
+import { Link as RouterLink, useParams } from 'react-router-dom'
+import { Button, Typography } from '@mui/material'
+import styled from 'styled-components'
+import { useEffect, useState } from 'react'
+import CodeEditor from '../coding/CodeEditor'
+import Solution from '../coding/Solution'
+import { ButtonGroup } from '../styled/ButtonGroup'
 
 
 const AssignmentWrapper = styled.div`
   width: 850px;
-  animation: fadeIn 0.5s;
+  animation: fadeIn 0.25s;
 
   @keyframes fadeIn {
     0% {
       opacity:0;
+      margin-top: 100px;
     }
     100% {
       opacity:1;
+      margin-top: 0;
     }
   }
 
