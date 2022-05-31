@@ -47,7 +47,7 @@ interface Assignment {
 
 const AssignmentPage = () => {
   const { index } = useParams()
-  const [assignments, setAssignments] = useState<Assignment[]>();
+  const [assignments, setAssignments] = useState<Assignment[]>()
   let indexNumber = 0
   if (typeof index === "string") {
     indexNumber = parseInt(index)
