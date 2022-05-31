@@ -1,7 +1,7 @@
-import {Link as RouterLink, useParams} from "react-router-dom";
-import {Button, Typography} from "@mui/material";
+import { Link as RouterLink, useParams } from "react-router-dom";
+import { Button, Typography } from "@mui/material";
 import styled from "styled-components";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import CodeEditor from "../coding/CodeEditor";
 import Solution from "../coding/Solution";
 import { ButtonGroup } from "../styled/ButtonGroup";
