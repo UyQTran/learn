@@ -14,7 +14,7 @@ const AssignmentWrapper = styled.div`
   @keyframes fadeIn {
     0% {
       opacity:0;
-      margin-top: 100px;
+      margin-top: 50px;
     }
     100% {
       opacity:1;
