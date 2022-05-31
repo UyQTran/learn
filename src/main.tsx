@@ -18,7 +18,9 @@ const theme = createTheme({
   },
   spacing: (factor: number) => `${0.25 * factor}rem`,
   typography: {
-    fontSize: 16,
+    h5: {
+      fontSize: '16px',
+    }
   },
 });
 

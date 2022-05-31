@@ -20,14 +20,14 @@ const OutputWindow = styled.pre`
   background: ${props => props.theme.palette.primary.light};
   height: 150px;
   padding: ${props => props.theme.spacing(2)};
-  font-size: ${props => props.theme.typography.fontSize};
+  font-size: ${props => props.theme.typography.h5.fontSize};
   white-space: pre-wrap;
   overflow: auto;
 `
 
 const CodeWindow = styled(CodeMirror)`
   margin-bottom: ${props => props.theme.spacing(4)};
-  font-size: ${props => props.theme.typography.fontSize};
+  font-size: ${props => props.theme.typography.h5.fontSize};
 `
 
 interface CodeEditorProps {
