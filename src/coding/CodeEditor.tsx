@@ -9,7 +9,7 @@ import usePythonCompiler from './usePythonCompiler'
 import { ButtonGroup } from '../styled/ButtonGroup'
 
 const CodeEditorWrapper = styled.div`
-  color: #282c34;
+  color: ${props => props.theme.palette.secondary.dark};
 `
 
 const ButtonText = styled.span`
@@ -17,7 +17,7 @@ const ButtonText = styled.span`
 `
 
 const OutputWindow = styled.pre`
-  background: #fff;
+  background: ${props => props.theme.palette.primary.light};
   height: 150px;
   padding: ${props => props.theme.spacing(2)};
   font-size: ${props => props.theme.typography.fontSize};

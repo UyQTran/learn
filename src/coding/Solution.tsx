@@ -6,7 +6,7 @@ import MuiLink from '@mui/material/Link'
 import AnimateHeight from 'react-animate-height'
 
 const SolutionCodeWrapper = styled.section`
-  color: #282c34;
+  color: ${props => props.theme.palette.secondary.dark};
   margin-top: ${props => props.theme.spacing(1)};
   * {
     overflow-y: hidden;
