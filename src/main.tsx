@@ -14,7 +14,10 @@ const theme = createTheme({
       main: '#6390EB',
     },
   },
-  spacing: (factor: number) => `${0.25 * factor}rem`
+  spacing: (factor: number) => `${0.25 * factor}rem`,
+  typography: {
+    fontSize: 16,
+  },
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
