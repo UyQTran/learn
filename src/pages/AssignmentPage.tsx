@@ -71,35 +71,35 @@ const AssignmentPage = () => {
   let currentAssignment = assignments[indexNumber]
 
   return (
-        <AssignmentWrapper>
-          <AssignmentTitle variant="h2">
-              {currentAssignment.title}
-          </AssignmentTitle>
-          <AssignmentDescription variant="subtitle1">
-              {currentAssignment.description}
-          </AssignmentDescription>
-          <CodeEditor initialCode={currentAssignment.initialCode}/>
-          <Solution solutionCode={currentAssignment.solution.code}/>
-          <ButtonGroup gridColumnCount={{desktop: 5, mobile: 2}}>
-            <Button
-              data-cy="previous-page-button"
-              component={RouterLink}
-              variant="outlined"
-              to={previousPage}
-            >
-              Tilbake
-            </Button>
-            <Button
-              data-cy="next-assignment-button"
-              component={RouterLink}
-              variant="contained"
-              to={'/assignment/'+nextIndex}
-              disabled={indexNumber+1 >= assignments.length}
-            >
-              Neste oppgave
-            </Button>
-          </ButtonGroup>
-        </AssignmentWrapper>
+      <AssignmentWrapper key={indexNumber}>
+        <AssignmentTitle variant="h2">
+            {currentAssignment.title}
+        </AssignmentTitle>
+        <AssignmentDescription variant="subtitle1">
+            {currentAssignment.description}
+        </AssignmentDescription>
+        <CodeEditor initialCode={currentAssignment.initialCode}/>
+        <Solution solutionCode={currentAssignment.solution.code}/>
+        <ButtonGroup gridColumnCount={{desktop: 5, mobile: 2}}>
+          <Button
+            data-cy="previous-page-button"
+            component={RouterLink}
+            variant="outlined"
+            to={previousPage}
+          >
+            Tilbake
+          </Button>
+          <Button
+            data-cy="next-assignment-button"
+            component={RouterLink}
+            variant="contained"
+            to={'/assignment/'+nextIndex}
+            disabled={indexNumber+1 >= assignments.length}
+          >
+            Neste oppgave
+          </Button>
+        </ButtonGroup>
+      </AssignmentWrapper>
   )
 }
 
