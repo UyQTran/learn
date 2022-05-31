@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 declare const Sk: any
 

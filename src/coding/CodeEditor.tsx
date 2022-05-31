@@ -1,12 +1,12 @@
-import styled from "styled-components";
-import CodeMirror from '@uiw/react-codemirror';
-import { python } from '@codemirror/lang-python';
-import { useEffect, useState } from 'react';
-import { Button } from '@mui/material';
-import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
-import usePythonCompiler from './usePythonCompiler';
-import { ButtonGroup } from '../styled/ButtonGroup';
+import styled from 'styled-components'
+import CodeMirror from '@uiw/react-codemirror'
+import { python } from '@codemirror/lang-python'
+import { useEffect, useState } from 'react'
+import { Button } from '@mui/material'
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline'
+import HighlightOffIcon from '@mui/icons-material/HighlightOff'
+import usePythonCompiler from './usePythonCompiler'
+import { ButtonGroup } from '../styled/ButtonGroup'
 
 const CodeEditorWrapper = styled.div`
   color: #282c34;

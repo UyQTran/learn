@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import {Button, Typography} from "@mui/material";
-import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
-import {Link} from "react-router-dom";
+import styled from 'styled-components'
+import {Button, Typography} from '@mui/material'
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline'
+import {Link} from 'react-router-dom'
 
 const AppTitle = styled(Typography)`
   font-size: calc(50px + 1vmin);

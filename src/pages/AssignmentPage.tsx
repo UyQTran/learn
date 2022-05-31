@@ -42,11 +42,11 @@ interface Assignment {
   solution: {
     solved: string | number
     code: string
-  };
+  }
 }
 
 const AssignmentPage = () => {
-  const { index } = useParams();
+  const { index } = useParams()
   const [assignments, setAssignments] = useState<Assignment[]>();
   let indexNumber = 0
   if (typeof index === "string") {
@@ -56,8 +56,8 @@ const AssignmentPage = () => {
   useEffect(() => {
       import('../data/assignmentData.json')
         .then((res) => setAssignments(res.default))
-        .catch(_ => null);
-  }, [indexNumber]);
+        .catch(_ => null)
+  }, [indexNumber])
 
   const nextIndex = indexNumber + 1
   const previousIndex = indexNumber - 1

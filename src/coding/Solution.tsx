@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import CodeMirror from '@uiw/react-codemirror';
-import { python } from '@codemirror/lang-python';
-import { useEffect, useState } from 'react';
-import MuiLink from "@mui/material/Link";
-import AnimateHeight from 'react-animate-height';
+import styled from 'styled-components'
+import CodeMirror from '@uiw/react-codemirror'
+import { python } from '@codemirror/lang-python'
+import { useEffect, useState } from 'react'
+import MuiLink from '@mui/material/Link'
+import AnimateHeight from 'react-animate-height'
 
 const SolutionCodeWrapper = styled.section`
   color: #282c34;
@@ -22,7 +22,7 @@ interface SolutionProps {
 }
 
 const Solution = (props: SolutionProps) => {
-  const [isSolutionCollapsed, setIsSolutionCollapsed] = useState(true);
+  const [isSolutionCollapsed, setIsSolutionCollapsed] = useState(true)
 
   useEffect(() => {
     setIsSolutionCollapsed(true)

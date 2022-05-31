@@ -1,8 +1,8 @@
 import { Suspense } from 'react'
-import styled from "styled-components";
-import LandingPage from "./pages/LandingPage";
-import AssignmentPage from "./pages/AssignmentPage";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import styled from 'styled-components'
+import LandingPage from './pages/LandingPage'
+import AssignmentPage from './pages/AssignmentPage'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 const AppWrapper = styled.div`
   display: flex;
