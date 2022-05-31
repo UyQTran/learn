@@ -1,7 +1,7 @@
 [
   {
     "title": "Mitt første program",
-    "description": "På denne siden så kan du kode i et programmeringsspråk som heter Python. Under ser du to hvite bokser. Den øverste er editoren din, mens boksen under er outputfeltet. Outputfeltet er boksen som skriver ut resultatet av koden i editoren når du trykker på kjøreknappen. I eksempelet under ser du et funksjonskall på print som skriver ut strengen 'Hei verden!' til outputfeltet. PRøv deg frem ved å trykke på kjøreknappen.",
+    "description": "På denne siden så kan du kode i et programmeringsspråk som heter Python. Under ser du to hvite bokser. Den øverste er editoren din, mens boksen under er outputfeltet. Outputfeltet er boksen som skriver ut resultatet av koden i editoren når du trykker på kjøreknappen. I eksempelet under ser du et funksjonskall på print som skriver ut strengen 'Hei verden!' til outputfeltet. Prøv deg frem ved å trykke på kjøreknappen.",
     "initialCode": "print('Hei verden!')",
     "solution": {
       "solved": "",
