@@ -5,23 +5,12 @@ import { useEffect, useState } from 'react'
 import CodeEditor from '../coding/CodeEditor'
 import Solution from '../coding/Solution'
 import { ButtonGroup } from '../styled/ButtonGroup'
+import { useAnimation, motion } from 'framer-motion'
 
 
 const AssignmentWrapper = styled.div`
   width: 850px;
-  animation: fadeIn 0.25s;
-
-  @keyframes fadeIn {
-    0% {
-      opacity:0;
-      margin-top: 50px;
-    }
-    100% {
-      opacity:1;
-      margin-top: 0;
-    }
-  }
-
+  
   @media only screen and (max-width: 1000px) {
     width: 95%;
   }
@@ -55,11 +44,14 @@ const AssignmentPage = () => {
     indexNumber = parseInt(index)
   }
 
+  const controls = useAnimation()
+
   useEffect(() => {
       import('../data/assignmentData.json')
         .then((res) => setAssignments(res.default))
         .catch(_ => null)
   }, [indexNumber])
+
 
   const nextIndex = indexNumber + 1
   const previousIndex = indexNumber - 1
@@ -70,7 +62,19 @@ const AssignmentPage = () => {
 
   let currentAssignment = assignments[indexNumber]
 
+  const variants = {
+    visible: { y: 0 },
+    hidden: { y: 2000, overflow: 'hidden' },
+  }
+
   return (
+    <motion.div
+      key={indexNumber}
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      transition={{ duration: 1 }}
+    >
         <AssignmentWrapper>
           <AssignmentTitle variant="h2">
               {currentAssignment.title}
@@ -100,6 +104,7 @@ const AssignmentPage = () => {
             </Button>
           </ButtonGroup>
         </AssignmentWrapper>
+    </motion.div>
   )
 }
 
