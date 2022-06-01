@@ -76,10 +76,9 @@ const AssignmentPage = (props: any) => {
 
   const handlePreviousClick = async () => {
     await controls.start(() => ({
-      opacity: 0.5,
-      x: -50,
+      x: -1200,
       transition: {
-        duration: 0.1
+        duration: 0.25
       },
     }))
     navigate(previousPage)
@@ -87,10 +86,9 @@ const AssignmentPage = (props: any) => {
 
   const handleNextClick = async () => {
     await controls.start(() => ({
-      opacity: 0.5,
-      x: 50,
+      x: 1200,
       transition: {
-        duration: 0.1
+        duration: 0.25
       },
     }))
     navigate('/assignment/'+nextIndex)
