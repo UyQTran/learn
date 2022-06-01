@@ -1,23 +1,24 @@
-import { Link as RouterLink, useParams } from 'react-router-dom'
+import {Link as RouterLink, useNavigate, useParams} from 'react-router-dom'
 import { Button, Typography } from '@mui/material'
 import styled from 'styled-components'
 import { useEffect, useState } from 'react'
 import CodeEditor from '../coding/CodeEditor'
 import Solution from '../coding/Solution'
 import { ButtonGroup } from '../styled/ButtonGroup'
+import { motion, useAnimation } from 'framer-motion'
 
 
 const AssignmentWrapper = styled.div`
   width: 850px;
-  animation: fadeIn 0.25s;
+  animation: fadeIn 0.5s;
 
   @keyframes fadeIn {
     0% {
-      opacity:0;
+      opacity: 0.5;
       margin-top: 50px;
     }
     100% {
-      opacity:1;
+      opacity: 1;
       margin-top: 0;
     }
   }
@@ -47,8 +48,9 @@ interface Assignment {
   }
 }
 
-const AssignmentPage = () => {
+const AssignmentPage = (props: any) => {
   const { index } = useParams()
+  const controls = useAnimation()
   const [assignments, setAssignments] = useState<Assignment[]>()
   let indexNumber = 0
   if (typeof index === "string") {
@@ -66,12 +68,41 @@ const AssignmentPage = () => {
 
   const previousPage = previousIndex >= 0 ? '/assignment/'+previousIndex : '/'
 
+  const navigate = useNavigate()
+
   if(!assignments) return <></>
 
   let currentAssignment = assignments[indexNumber]
 
+  const handlePreviousClick = async () => {
+    await controls.start(() => ({
+      opacity: 0.5,
+      x: -50,
+      transition: {
+        duration: 0.1
+      },
+    }))
+    navigate(previousPage)
+  }
+
+  const handleNextClick = async () => {
+    await controls.start(() => ({
+      opacity: 0.5,
+      x: 50,
+      transition: {
+        duration: 0.1
+      },
+    }))
+    navigate('/assignment/'+nextIndex)
+  }
+
   return (
-      <AssignmentWrapper key={indexNumber}>
+    <motion.div
+      initial="visible"
+      animate={controls}
+      key={indexNumber}
+    >
+      <AssignmentWrapper>
         <AssignmentTitle variant="h2">
             {currentAssignment.title}
         </AssignmentTitle>
@@ -83,23 +114,22 @@ const AssignmentPage = () => {
         <ButtonGroup gridColumnCount={{desktop: 5, mobile: 2}}>
           <Button
             data-cy="previous-page-button"
-            component={RouterLink}
             variant="outlined"
-            to={previousPage}
+            onClick={handlePreviousClick}
           >
             Tilbake
           </Button>
           <Button
             data-cy="next-assignment-button"
-            component={RouterLink}
             variant="contained"
-            to={'/assignment/'+nextIndex}
+            onClick={handleNextClick}
             disabled={indexNumber+1 >= assignments.length}
           >
             Neste oppgave
           </Button>
         </ButtonGroup>
       </AssignmentWrapper>
+    </motion.div>
   )
 }
 
