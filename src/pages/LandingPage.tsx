@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const AppTitle = styled(Typography)`
   font-size: calc(50px + 1vmin);
-  text-transform: uppercase;
+  text-transform: lowercase;
   margin: ${props => props.theme.spacing(4)};
 `
 
@@ -28,7 +28,7 @@ const ButtonText = styled.span`
 
 const LandingPage = () => (
   <>
-    <AppTitle variant="h1">Lørn</AppTitle>
+    <AppTitle variant="h1">progg.it</AppTitle>
     <AppDescription>
       Lær deg programmering!
     </AppDescription>

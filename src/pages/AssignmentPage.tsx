@@ -14,7 +14,7 @@ const AssignmentWrapper = styled.div`
 
   @keyframes fadeIn {
     0% {
-      opacity: 0.5;
+      opacity: 0.25;
       margin-top: 50px;
     }
     100% {
@@ -25,6 +25,16 @@ const AssignmentWrapper = styled.div`
 
   @media only screen and (max-width: 1000px) {
     width: 95%;
+
+
+    @keyframes fadeIn {
+      0% {
+        margin-top: 50px;
+      }
+      100% {
+        margin-top: 0;
+      }
+    }
   }
 `
 
@@ -49,6 +59,7 @@ interface Assignment {
 }
 
 const AssignmentPage = (props: any) => {
+  document.body.style.overflow = 'auto'
   const { index } = useParams()
   const controls = useAnimation()
   const [assignments, setAssignments] = useState<Assignment[]>()
@@ -76,7 +87,8 @@ const AssignmentPage = (props: any) => {
 
   const handlePreviousClick = async () => {
     await controls.start(() => ({
-      x: -1200,
+      opacity: 0,
+      x: -1000,
       transition: {
         duration: 0.25
       },
@@ -85,8 +97,10 @@ const AssignmentPage = (props: any) => {
   }
 
   const handleNextClick = async () => {
+    document.body.style.overflow = 'hidden'
     await controls.start(() => ({
-      x: 1200,
+      opacity: 0,
+      x: 1000,
       transition: {
         duration: 0.25
       },
