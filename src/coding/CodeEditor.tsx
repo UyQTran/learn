@@ -32,6 +32,7 @@ const CodeWindow = styled(CodeMirror)`
 
 interface CodeEditorProps {
   initialCode: string
+  isSandbox?: boolean
 }
 
 const CodeEditor = (props: CodeEditorProps) => {
@@ -56,7 +57,7 @@ const CodeEditor = (props: CodeEditorProps) => {
       <ButtonGroup gridColumnCount={{desktop: 6, mobile: 2}}>
         <Button
           data-cy="compile-button"
-          variant="outlined"
+          variant={props.isSandbox ? 'contained' : 'outlined'}
           onClick={() => compile(code)}
         >
           <PlayCircleOutlineIcon/>

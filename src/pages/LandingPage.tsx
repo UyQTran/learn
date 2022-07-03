@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Button, Typography } from '@mui/material'
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline'
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import { Link } from 'react-router-dom'
 import TypeAnimation from 'react-type-animation'
 
@@ -21,7 +22,10 @@ const AppDescription = styled(Typography)`
 `
 
 const ButtonWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1rem;
+  
   margin: ${props => props.theme.spacing(4)};
 `
 
@@ -40,6 +44,17 @@ const LandingPage = () => (
       Lær deg programmering!
     </AppDescription>
     <ButtonWrapper>
+        <Button
+          data-cy="sandbox-button"
+          component={Link}
+          variant="outlined"
+          to="sandbox"
+        >
+          <LightbulbIcon/>
+          <ButtonText>
+            Sandkassa
+          </ButtonText>
+        </Button>
         <Button
           data-cy="start-button"
           component={Link}
