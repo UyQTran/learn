@@ -10,7 +10,7 @@ const AppTitle = styled(TypeAnimation)`
   text-transform: lowercase;
   margin: ${props => props.theme.spacing(4)};
   font-family: 'Roboto', sans-serif;
-  font-weight: normal;
+  font-weight: 200;
 `
 
 const AppDescription = styled(Typography)`
