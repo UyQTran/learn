@@ -4,9 +4,7 @@ import { python } from '@codemirror/lang-python'
 import { useEffect, useState } from 'react'
 import { Button } from '@mui/material'
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline'
-import HighlightOffIcon from '@mui/icons-material/HighlightOff'
 import usePythonCompiler from './usePythonCompiler'
-import { ButtonGroup } from '../styled/ButtonGroup'
 
 const CodeEditorWrapper = styled.div`
   color: ${props => props.theme.palette.secondary.dark};
@@ -54,28 +52,16 @@ const CodeEditor = (props: CodeEditorProps) => {
         extensions={[python()]}
         onChange={value => setCode(value)}
       />
-      <ButtonGroup gridColumnCount={{desktop: 6, mobile: 2}}>
-        <Button
-          data-cy="compile-button"
-          variant={props.isSandbox ? 'contained' : 'outlined'}
-          onClick={() => compile(code)}
-        >
-          <PlayCircleOutlineIcon/>
-          <ButtonText>
-            Kjør
-          </ButtonText>
-        </Button>
-        <Button
-          data-cy="reset-output-button"
-          variant="outlined"
-          onClick={() => resetOutput()}
-        >
-          <HighlightOffIcon/>
-          <ButtonText>
-            Nullstill
-          </ButtonText>
-        </Button>
-      </ButtonGroup>
+      <Button
+        data-cy="compile-button"
+        variant={props.isSandbox ? 'contained' : 'outlined'}
+        onClick={() => compile(code)}
+      >
+        <PlayCircleOutlineIcon/>
+        <ButtonText>
+          Kjør
+        </ButtonText>
+      </Button>
       <OutputWindow data-cy="output-window">{output}</OutputWindow>
     </CodeEditorWrapper>
   )

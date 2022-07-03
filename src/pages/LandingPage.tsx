@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import { Button, Typography } from '@mui/material'
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline'
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
-import { Link } from 'react-router-dom'
+import { Link as RouterLink } from 'react-router-dom'
+import Link from '@mui/material/Link'
 import TypeAnimation from 'react-type-animation'
 
 const AppTitle = styled(TypeAnimation)`
@@ -14,6 +15,14 @@ const AppTitle = styled(TypeAnimation)`
 `
 
 const AppDescription = styled(Typography)`
+  margin: ${props => props.theme.spacing(4)};
+  word-wrap: break-word;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`
+
+const AppFooter = styled.footer`
   margin: ${props => props.theme.spacing(4)};
   word-wrap: break-word;
   display: flex;
@@ -46,7 +55,7 @@ const LandingPage = () => (
     <ButtonWrapper>
         <Button
           data-cy="sandbox-button"
-          component={Link}
+          component={RouterLink}
           variant="outlined"
           to="sandbox"
         >
@@ -57,7 +66,7 @@ const LandingPage = () => (
         </Button>
         <Button
           data-cy="start-button"
-          component={Link}
+          component={RouterLink}
           variant="contained"
           to="assignment/0"
         >
@@ -67,6 +76,11 @@ const LandingPage = () => (
           </ButtonText>
         </Button>
     </ButtonWrapper>
+    <AppFooter>
+      <Link href="mailto:uqtontran@gmail.com">
+        Kontakt meg
+      </Link>
+    </AppFooter>
   </>
 )
 

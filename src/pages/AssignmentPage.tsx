@@ -1,4 +1,4 @@
-import {Link as RouterLink, useNavigate, useParams} from 'react-router-dom'
+import {useNavigate, useParams} from 'react-router-dom'
 import { Button, Typography } from '@mui/material'
 import styled from 'styled-components'
 import { useEffect, useState } from 'react'

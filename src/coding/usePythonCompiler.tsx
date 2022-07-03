@@ -4,11 +4,9 @@ declare const Sk: any
 
 const usePythonCompiler: (initialOutput?: string) => [string, (code: string) => void, () => void] = (initialOutput = '') => {
     const [output, setOutput] = useState(initialOutput)
-    let outputCache = output
 
     const handleOutput = (nextOutput: string) => {
-        outputCache = outputCache + nextOutput
-        setOutput(outputCache)
+        setOutput(nextOutput)
     }
 
     const builtinRead = (fileName: string) => {
