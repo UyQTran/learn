@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import LandingPage from './pages/LandingPage'
 import AssignmentPage from './pages/AssignmentPage'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import SandboxPage from "./pages/SandboxPage";
+import SandboxPage from './pages/SandboxPage'
 
 const AppWrapper = styled.div`
   display: flex;

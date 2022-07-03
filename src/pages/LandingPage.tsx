@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Button, Typography } from '@mui/material'
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline'
-import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import LightbulbIcon from '@mui/icons-material/Lightbulb'
 import { Link as RouterLink } from 'react-router-dom'
 import Link from '@mui/material/Link'
 import TypeAnimation from 'react-type-animation'
@@ -23,11 +23,14 @@ const AppDescription = styled(Typography)`
 `
 
 const AppFooter = styled.footer`
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
   margin: ${props => props.theme.spacing(4)};
   word-wrap: break-word;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1rem;
 `
 
 const ButtonWrapper = styled.div`
@@ -77,6 +80,9 @@ const LandingPage = () => (
         </Button>
     </ButtonWrapper>
     <AppFooter>
+      <Link href="https://www.linkedin.com/in/uy-tran-28b88557/">
+        Om meg
+      </Link>
       <Link href="mailto:uqtontran@gmail.com">
         Kontakt meg
       </Link>
