@@ -10,8 +10,8 @@
   },
   {
     "title": "Koding",
-    "description": "Kode er det samme som en oppskrift som maskinene våre følger bastant. Det betyr at maskinen din skriver ut nøyaktig hva som er mellom ' tegnene i funksjonskallet for print under. Erstatt LØRN med ditt eget navn så vil du får en hilsen fra din egen maskin.",
-    "initialCode": "print('Hei mitt navn er LØRN')",
+    "description": "Kode er det samme som en oppskrift som maskinene våre følger bastant. Det betyr at maskinen din skriver ut nøyaktig hva som er mellom ' tegnene i funksjonskallet for print under. Erstatt progg.it med ditt eget navn så vil du får en hilsen fra din egen maskin.",
+    "initialCode": "print('Hei mitt navn er progg.it')",
     "solution": {
       "solved": "",
       "code": ""

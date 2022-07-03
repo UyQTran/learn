@@ -58,7 +58,7 @@ interface Assignment {
   }
 }
 
-const AssignmentPage = (props: any) => {
+const AssignmentPage = () => {
   document.body.style.overflow = 'auto'
   const { index } = useParams()
   const controls = useAnimation()
@@ -88,7 +88,7 @@ const AssignmentPage = (props: any) => {
   const handlePreviousClick = async () => {
     await controls.start(() => ({
       opacity: 0,
-      x: -1000,
+      y: 250,
       transition: {
         duration: 0.25
       },
@@ -100,7 +100,7 @@ const AssignmentPage = (props: any) => {
     document.body.style.overflow = 'hidden'
     await controls.start(() => ({
       opacity: 0,
-      x: 1000,
+      x: -1000,
       transition: {
         duration: 0.25
       },
