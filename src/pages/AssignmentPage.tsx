@@ -1,10 +1,9 @@
 import {useNavigate, useParams} from 'react-router-dom'
-import { Button, Typography } from '@mui/material'
+import {Button, LinearProgress, Typography} from '@mui/material'
 import styled from 'styled-components'
 import { useEffect, useState } from 'react'
 import CodeEditor from '../coding/CodeEditor'
 import Solution from '../coding/Solution'
-import { ButtonGroup } from '../styled/ButtonGroup'
 import { motion, useAnimation } from 'framer-motion'
 
 
@@ -47,6 +46,27 @@ const AssignmentTitle = styled(Typography)`
 const AssignmentDescription = styled(Typography)`
   margin: ${props => props.theme.spacing(4, 0)};
 `
+
+interface ButtonGroupProps {
+  gridColumnCount: {
+    mobile: number
+    desktop: number
+  }
+}
+
+const ButtonGroup = styled.div<ButtonGroupProps>`
+  position: fixed;
+  bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(${props => props.gridColumnCount.desktop}, 1fr);
+  column-gap: ${props => props.theme.spacing(4)};
+  
+  @media only screen and (max-width: 900px) {
+    grid-template-columns: repeat(${props => props.gridColumnCount.mobile}, 1fr);
+    bottom: 1rem;
+  }
+`
+
 
 interface Assignment {
   title?: string
@@ -109,39 +129,41 @@ const AssignmentPage = () => {
   }
 
   return (
-    <motion.div
-      initial="visible"
-      animate={controls}
-      key={indexNumber}
-    >
-      <AssignmentWrapper>
-        <AssignmentTitle variant="h2">
+    <AssignmentWrapper>
+      <LinearProgress variant="determinate" value={(indexNumber/(assignments.length-1))* 100} />
+      <motion.div
+        initial="visible"
+        animate={controls}
+        key={indexNumber}
+      >
+          <AssignmentTitle variant="h2">
             {currentAssignment.title}
-        </AssignmentTitle>
-        <AssignmentDescription variant="subtitle1">
+          </AssignmentTitle>
+          <AssignmentDescription variant="subtitle1">
             {currentAssignment.description}
-        </AssignmentDescription>
-        <CodeEditor initialCode={currentAssignment.initialCode}/>
-        <Solution solutionCode={currentAssignment.solution.code}/>
-        <ButtonGroup gridColumnCount={{desktop: 5, mobile: 2}}>
-          <Button
-            data-cy="previous-page-button"
-            variant="outlined"
-            onClick={handlePreviousClick}
-          >
-            Tilbake
-          </Button>
-          <Button
-            data-cy="next-assignment-button"
-            variant="contained"
-            onClick={handleNextClick}
-            disabled={indexNumber+1 >= assignments.length}
-          >
-            Neste oppgave
-          </Button>
-        </ButtonGroup>
-      </AssignmentWrapper>
-    </motion.div>
+          </AssignmentDescription>
+          <CodeEditor initialCode={currentAssignment.initialCode}/>
+          <Solution solutionCode={currentAssignment.solution.code}/>
+      </motion.div>
+      <ButtonGroup gridColumnCount={{desktop: 5, mobile: 2}}>
+        <Button
+          data-cy="previous-page-button"
+          variant="outlined"
+          onClick={handlePreviousClick}
+        >
+          Tilbake
+        </Button>
+        <Button
+          data-cy="next-assignment-button"
+          variant="contained"
+          onClick={handleNextClick}
+          disabled={indexNumber+1 >= assignments.length}
+        >
+          Neste oppgave
+        </Button>
+      </ButtonGroup>
+    </AssignmentWrapper>
+
   )
 }
 
