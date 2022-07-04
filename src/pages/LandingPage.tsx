@@ -64,7 +64,7 @@ const LandingPage = () => (
         >
           <LightbulbIcon/>
           <ButtonText>
-            Sandkassen
+            Sandkassa
           </ButtonText>
         </Button>
         <Button
