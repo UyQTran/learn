@@ -4,9 +4,11 @@ declare const Sk: any
 
 const usePythonCompiler: (initialOutput?: string) => [string, (code: string) => void, () => void] = (initialOutput = '') => {
     const [output, setOutput] = useState(initialOutput)
+    let outputCache = output
 
     const handleOutput = (nextOutput: string) => {
-        setOutput(nextOutput)
+        outputCache += nextOutput
+        setOutput(outputCache)
     }
 
     const builtinRead = (fileName: string) => {
@@ -18,6 +20,7 @@ const usePythonCompiler: (initialOutput?: string) => [string, (code: string) => 
     const resetOutput = () => setOutput('')
 
     const compile = (code: string) => {
+        outputCache = ''
         Sk.configure({output:handleOutput, read:builtinRead, __future__: Sk.python3})
         const myPromise = Sk.misceval.asyncToPromise(function() {
             return Sk.importMainWithBody("<stdin>", false, code, true)
