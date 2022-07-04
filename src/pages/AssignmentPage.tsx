@@ -47,23 +47,16 @@ const AssignmentDescription = styled(Typography)`
   margin: ${props => props.theme.spacing(4, 0)};
 `
 
-interface ButtonGroupProps {
-  gridColumnCount: {
-    mobile: number
-    desktop: number
-  }
-}
-
-const ButtonGroup = styled.div<ButtonGroupProps>`
-  position: fixed;
-  bottom: 2rem;
+const ButtonGroup = styled.div`
   display: grid;
-  grid-template-columns: repeat(${props => props.gridColumnCount.desktop}, 1fr);
+  background: ${props => props.theme.palette.secondary.dark};
+  align-items: center;
+  grid-template-columns: 1fr 6fr 1fr;
   column-gap: ${props => props.theme.spacing(4)};
-  
-  @media only screen and (max-width: 900px) {
-    grid-template-columns: repeat(${props => props.gridColumnCount.mobile}, 1fr);
-    bottom: 1rem;
+
+  @media only screen and (max-width: 1000px) {
+
+    grid-template-columns: 1fr 3fr 1fr;
   }
 `
 
@@ -107,10 +100,10 @@ const AssignmentPage = () => {
 
   const handlePreviousClick = async () => {
     await controls.start(() => ({
-      opacity: 0,
+      opacity: -2,
       y: 250,
       transition: {
-        duration: 0.25
+        duration: 0.35
       },
     }))
     navigate(previousPage)
@@ -122,7 +115,7 @@ const AssignmentPage = () => {
       opacity: 0,
       x: -1000,
       transition: {
-        duration: 0.25
+        duration: 0.35
       },
     }))
     navigate('/assignment/'+nextIndex)
@@ -130,7 +123,24 @@ const AssignmentPage = () => {
 
   return (
     <AssignmentWrapper>
-      <LinearProgress variant="determinate" value={(indexNumber/(assignments.length-1))* 100} />
+      <ButtonGroup>
+        <Button
+          data-cy="previous-page-button"
+          variant="outlined"
+          onClick={handlePreviousClick}
+        >
+          Tilbake
+        </Button>
+        <LinearProgress variant="determinate" value={(indexNumber/(assignments.length-1))* 100} />
+        <Button
+          data-cy="next-assignment-button"
+          variant="contained"
+          onClick={handleNextClick}
+          disabled={indexNumber+1 >= assignments.length}
+        >
+          Neste
+        </Button>
+      </ButtonGroup>
       <motion.div
         initial="visible"
         animate={controls}
@@ -145,23 +155,6 @@ const AssignmentPage = () => {
           <CodeEditor initialCode={currentAssignment.initialCode}/>
           <Solution solutionCode={currentAssignment.solution.code}/>
       </motion.div>
-      <ButtonGroup gridColumnCount={{desktop: 5, mobile: 2}}>
-        <Button
-          data-cy="previous-page-button"
-          variant="outlined"
-          onClick={handlePreviousClick}
-        >
-          Tilbake
-        </Button>
-        <Button
-          data-cy="next-assignment-button"
-          variant="contained"
-          onClick={handleNextClick}
-          disabled={indexNumber+1 >= assignments.length}
-        >
-          Neste oppgave
-        </Button>
-      </ButtonGroup>
     </AssignmentWrapper>
 
   )
