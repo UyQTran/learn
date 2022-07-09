@@ -1,7 +1,7 @@
 [
   {
     "title": "Mitt første program",
-    "description": "På denne siden så kan du kode i et programmeringsspråk som heter Python. Under ser du to hvite bokser. Den øverste er editoren din, mens boksen under er outputfeltet. Outputfeltet er boksen som skriver ut resultatet av koden i editoren når du trykker på kjøreknappen. I eksempelet under ser du et funksjonskall på print som skriver ut strengen 'Hei verden!' til outputfeltet. Prøv deg frem ved å trykke på kjøreknappen.",
+    "description": "På denne siden så kan du kode i et programmeringsspråk som heter Python. Til høyre ser du to hvite bokser. Den øverste er editoren din, mens boksen under er outputfeltet. Outputfeltet er boksen som skriver ut resultatet av koden i editoren når du trykker på kjøreknappen. I eksempelet til høyre ser du et funksjonskall på print som skriver ut strengen 'Hei verden!' til outputfeltet. Prøv deg frem ved å trykke på kjøreknappen.",
     "initialCode": "print('Hei verden!')",
     "solution": {
       "solved": "",
@@ -10,7 +10,7 @@
   },
   {
     "title": "Koding",
-    "description": "Kode er det samme som en oppskrift som maskinene våre følger bastant. Det betyr at maskinen din skriver ut nøyaktig hva som er mellom ' tegnene i funksjonskallet for print under. Erstatt progg.it med ditt eget navn så vil du får en hilsen fra din egen maskin.",
+    "description": "Kode er det samme som en oppskrift som maskinene våre følger bastant. Det betyr at maskinen din skriver ut nøyaktig hva som er mellom ' tegnene i funksjonskallet for print. Erstatt progg.it med ditt eget navn så vil du får en hilsen fra din egen maskin.",
     "initialCode": "print('Hei mitt navn er progg.it')",
     "solution": {
       "solved": "",
@@ -28,8 +28,8 @@
   },
   {
     "title": "Variabler av strenger",
-    "description": "Variabler kan ikke bare være tall, men tekststrenger også. Trykk på kjør og se resultatet.",
-    "initialCode": "x = 'Jeg heter x og er en variabel'\nprint(x)",
+    "description": "Variabler kan ikke bare være tall, men tekststrenger også. Variabler kan også hete nesten hva som helst så lenge variabelnavnet begynner med en bokstav. Trykk på kjør og se resultatet.",
+    "initialCode": "var1 = 'Jeg heter var1 og er en variabel'\nprint(var1)",
     "solution": {
       "solved": "",
       "code": ""
@@ -37,7 +37,7 @@
   },
   {
     "title": "Uttrykk",
-    "description": "Under ser du et eksempel med to variabler x og y med en linje for å printe summen av disse variablene. Prøv deg frem med å trykke på kjøreknappen!",
+    "description": "Til høyre ser du et eksempel med to variabler x og y med en linje for å printe summen av disse variablene. Prøv deg frem med å trykke på kjøreknappen!",
     "initialCode": "x = 50\ny = 30\nprint(x + y)",
     "solution": {
       "solved": "",
@@ -63,8 +63,35 @@
     }
   },
   {
+    "title": "Lister",
+    "description": "",
+    "initialCode": "liste = [67,31,53,6,97,1]\nprint(liste)",
+    "solution": {
+      "solved": 0,
+      "code": ""
+    }
+  },
+  {
+    "title": "Elementer i lister",
+    "description": "",
+    "initialCode": "liste = [67,31,53,6,97,1]\nprint(liste[4])",
+    "solution": {
+      "solved": 0,
+      "code": ""
+    }
+  },
+  {
+    "title": "Funksjonen range",
+    "description": "",
+    "initialCode": "liste = range(0,10)\nprint(liste)",
+    "solution": {
+      "solved": 0,
+      "code": ""
+    }
+  },
+  {
     "title": "Løkker",
-    "description": "Datamaskinen er utrolig flink til å gjøre en ting mange ganger og gir oss kjappe resultater. Tenk deg om vi fikk i oppgave om å telle til 100. Det tar litt tid for oss mennesker å ramse opp alle tallene. Ordet 'for' er et nøkkelord i som sier til damaskinen at vi har et stykke kode som vi vil kjøre mange ganger. I editoren, ser du et eksempel på hvordan en løkke er skrevet i Python hvor print funksjonen blir kalt 50 ganger og printer ut alle tallene fra 25 til 50. Endre på løkken slik at print skriver ut alle tall fra 0 til 100.",
+    "description": "Datamaskinen er utrolig flink til å gjøre en ting mange ganger og gi oss kjappe resultater. Tenk deg om vi fikk i oppgave om å telle til 100. Det tar litt tid for oss mennesker å ramse opp alle tallene. Ordet 'for' er et nøkkelord i som sier til damaskinen at vi har et stykke kode som vi vil kjøre mange ganger. I editoren, ser du et eksempel på hvordan en løkke er skrevet i Python hvor print funksjonen blir kalt 50 ganger og printer ut alle tallene fra 25 til 50. Endre på løkken slik at print skriver ut alle tall fra 0 til 100.",
     "initialCode": "for i in range(25,50):\n\tprint(i)",
     "solution": {
       "solved": 0,

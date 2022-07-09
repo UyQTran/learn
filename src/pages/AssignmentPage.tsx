@@ -8,7 +8,7 @@ import { motion, useAnimation } from 'framer-motion'
 
 
 const AssignmentWrapper = styled.div`
-  width: 850px;
+  width: 80%;
   animation: fadeIn 0.5s;
 
   @keyframes fadeIn {
@@ -49,7 +49,6 @@ const AssignmentDescription = styled(Typography)`
 
 const ButtonGroup = styled.div`
   display: grid;
-  background: ${props => props.theme.palette.secondary.dark};
   align-items: center;
   grid-template-columns: 1fr 6fr 1fr;
   column-gap: ${props => props.theme.spacing(4)};
@@ -58,6 +57,20 @@ const ButtonGroup = styled.div`
 
     grid-template-columns: 1fr 3fr 1fr;
   }
+`
+
+const AssigmentGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: ${props => props.theme.spacing(8)};
+
+  @media only screen and (max-width: 1100px) {
+    grid-template-columns: 1fr;
+  }
+`
+
+const CodingWrapper = styled.div`
+  min-width: 500px;
 `
 
 
@@ -146,14 +159,18 @@ const AssignmentPage = () => {
         animate={controls}
         key={indexNumber}
       >
-          <AssignmentTitle variant="h2">
-            {currentAssignment.title}
-          </AssignmentTitle>
+        <AssignmentTitle variant="h2">
+          {currentAssignment.title}
+        </AssignmentTitle>
+        <AssigmentGrid>
           <AssignmentDescription variant="subtitle1">
             {currentAssignment.description}
           </AssignmentDescription>
-          <CodeEditor initialCode={currentAssignment.initialCode}/>
-          <Solution solutionCode={currentAssignment.solution.code}/>
+          <CodingWrapper>
+            <CodeEditor initialCode={currentAssignment.initialCode}/>
+            <Solution solutionCode={currentAssignment.solution.code}/>
+          </CodingWrapper>
+        </AssigmentGrid>
       </motion.div>
     </AssignmentWrapper>
 
