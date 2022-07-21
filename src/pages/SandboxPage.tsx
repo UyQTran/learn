@@ -76,7 +76,7 @@ const SandboxPage = () => {
         <SandboxDescription variant="subtitle1">
             Programmer akkurat det du vil!
         </SandboxDescription>
-        <CodeEditor initialCode="" isSandbox={true}/>
+        <CodeEditor initialCode="" isSandbox={true} runClickCallback={() => {}}/>
         <Button
           data-cy="previous-page-button"
           variant="outlined"

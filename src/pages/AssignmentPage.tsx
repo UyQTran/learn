@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import CodeEditor from '../coding/CodeEditor'
 import Solution from '../coding/Solution'
 import { motion, useAnimation } from 'framer-motion'
+import AssignmentDescription from '../coding/AssignmentDescription';
 
 
 const AssignmentWrapper = styled.div`
@@ -43,10 +44,6 @@ const AssignmentTitle = styled(Typography)`
   margin: ${props => props.theme.spacing(4, 0)};
 `
 
-const AssignmentDescription = styled(Typography)`
-  margin: ${props => props.theme.spacing(4, 0)};
-`
-
 const ButtonGroup = styled.div`
   display: grid;
   align-items: center;
@@ -73,10 +70,10 @@ const CodingWrapper = styled.div`
   min-width: 500px;
 `
 
-
 interface Assignment {
   title?: string
   description: string
+  postDescription: string
   initialCode: string
   solution: {
     solved: string | number
@@ -89,12 +86,14 @@ const AssignmentPage = () => {
   const { index } = useParams()
   const controls = useAnimation()
   const [assignments, setAssignments] = useState<Assignment[]>()
+  const [hasClickedRun, setHasClickedRun] = useState<boolean>(false)
   let indexNumber = 0
   if (typeof index === "string") {
     indexNumber = parseInt(index)
   }
 
   useEffect(() => {
+    setHasClickedRun(false)
       import('../data/assignmentData.json')
         .then((res) => setAssignments(res.default))
         .catch(_ => null)
@@ -163,11 +162,12 @@ const AssignmentPage = () => {
           {currentAssignment.title}
         </AssignmentTitle>
         <AssigmentGrid>
-          <AssignmentDescription variant="subtitle1">
-            {currentAssignment.description}
-          </AssignmentDescription>
+          <AssignmentDescription
+            description={currentAssignment.description}
+            postDescription={currentAssignment.postDescription}
+            shouldShowPostDescription={hasClickedRun}/>
           <CodingWrapper>
-            <CodeEditor initialCode={currentAssignment.initialCode}/>
+            <CodeEditor initialCode={currentAssignment.initialCode} runClickCallback={() => setHasClickedRun(true)}/>
             <Solution solutionCode={currentAssignment.solution.code}/>
           </CodingWrapper>
         </AssigmentGrid>

@@ -30,18 +30,18 @@ const CodeWindow = styled(CodeMirror)`
 
 interface CodeEditorProps {
   initialCode: string
+  runClickCallback: () => void
   isSandbox?: boolean
 }
 
 const CodeEditor = (props: CodeEditorProps) => {
   const [code, setCode] = useState(props.initialCode)
-  const [output, compile, resetOutput] = usePythonCompiler()
+  const [output, compile] = usePythonCompiler()
 
-  useEffect(() => {
-    setCode(props.initialCode)
-    resetOutput()
-  }, [props])
-
+  const handleRunClick = () => {
+    props.runClickCallback()
+    compile(code)
+  }
 
   return (
     <CodeEditorWrapper>
@@ -55,7 +55,7 @@ const CodeEditor = (props: CodeEditorProps) => {
       <Button
         data-cy="compile-button"
         variant={props.isSandbox ? 'contained' : 'outlined'}
-        onClick={() => compile(code)}
+        onClick={handleRunClick}
       >
         <PlayCircleOutlineIcon/>
         <ButtonText>
