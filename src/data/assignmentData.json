@@ -172,7 +172,7 @@
   {
     "title": "Strengkonkatenering",
     "description": "Ofte når vi skriver programmer, kan det være lurt å lagre strenger i flere enn en variabel. I editoren, ser du et eksempel på hvordan vi kan slå sammen to strengvariabler. Kalt konkatenering",
-    "postDescription": "Strengkonkatenering er et uttrykk for tekststrenger akkurat som tall. Vi bruker operatoren + for å slå sammen tekststrenger.",
+    "postDescription": "Strengkonkatenering er uttrykk bare for tekststrenger akkurat som tall har egne uttrykk med pluss og minus. Vi bruker operatoren + for å slå sammen tekststrenger.",
     "initialCode": "melding = 'Hei! Mitt navn er '\nnavn = 'progg.it'\nprint(melding + navn)",
     "solution": {
       "solved": 0,
