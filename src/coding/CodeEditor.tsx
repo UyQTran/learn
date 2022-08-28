@@ -26,6 +26,9 @@ const OutputWindow = styled.pre`
 const CodeWindow = styled(CodeMirror)`
   margin-bottom: ${props => props.theme.spacing(4)};
   font-size: ${props => props.theme.typography.h5.fontSize};
+  div {
+    white-space: normal;
+  }
 `
 
 interface CodeEditorProps {

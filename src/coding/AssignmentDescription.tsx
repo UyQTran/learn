@@ -1,6 +1,5 @@
 import {Typography} from '@mui/material'
 import styled from 'styled-components'
-import { useEffect } from 'react';
 
 const AssignmentDescriptionWrapper = styled(Typography)`
   margin: ${props => props.theme.spacing(4, 0)};
