@@ -1,7 +1,7 @@
 [
   {
     "title": "Mitt første program",
-    "description": "På denne siden så kan du kode i et programmeringsspråk som heter Python. På denne siden ser du to hvite bokser. Den øverste er editoren din, mens boksen under er outputfeltet. Outputfeltet er boksen som skriver ut resultatet av koden i editoren når du trykker på kjøreknappen. I eksempelet i editoren ser du et funksjonskall på print som skriver ut strengen 'Hei verden!' til outputfeltet. Prøv deg frem ved å trykke på kjøreknappen.",
+    "description": "På denne siden så kan du kode i et programmeringsspråk som heter Python. På denne siden ser du to hvite bokser. Den øverste er editoren din, mens boksen under er output-feltet. Output-feltet er boksen som skriver ut resultatet av koden i editoren når du trykker på kjøreknappen. På eksempelet, ser du et funksjonskall i editoren der en funksjon print, som skriver ut strengen 'Hei verden!' til output-feltet. Prøv deg frem ved å trykke på kjøreknappen.",
     "postDescription": "",
     "initialCode": "print('Hei verden!')",
     "solution": {
@@ -21,8 +21,8 @@
   },
   {
     "title": "Variabler av tall",
-    "description": "I matematikken lærer vi om ligninger med ukjente variabler der vår oppgave som oftest er å finne ut hva variabelen er lik. Dette fungerer litt annerledes i programmering hvor vi er sjefen. Vi bestemmer hva variabelen skal være lik. I editoren så ser du en variabel x som vi har satt lik 3. Prøv å bytt ut 3 med ditt favorittall og trykk på kjør. Funksjonen print kan ta hvilke som helst variabler og printer fortsatt ut som om vi hadde byttet ut variabelen med verdien.",
-    "postDescription": "",
+    "description": "I matematikken lærer vi om ligninger med ukjente variabler der vår oppgave som oftest er å finne ut hva variabelen er lik. Dette fungerer litt annerledes i programmering hvor vi er sjefen. Vi bestemmer hva variabelen skal være lik. I editoren så ser du en variabel x som vi har satt lik 3. Prøv å bytt ut 3 med ditt favorittall og trykk på kjør",
+    "postDescription": "Funksjonen print kan ta hvilke som helst variabler og printer fortsatt ut som om vi hadde byttet ut variabelen med verdien.",
     "initialCode": "x = 3\nprint(x)",
     "solution": {
       "solved": "",
@@ -34,6 +34,16 @@
     "description": "Variabler kan ikke bare være tall, men tekststrenger også. Variabler kan også hete nesten hva som helst så lenge variabelnavnet begynner med en bokstav. Trykk på kjør og se resultatet.",
     "postDescription": "",
     "initialCode": "var1 = 'Jeg heter var1 og er en variabel'\nprint(var1)",
+    "solution": {
+      "solved": "",
+      "code": ""
+    }
+  },
+  {
+    "title": "Feil variabelnavn?",
+    "description": "Variabler kan hete nesten hva som helst. Nesten...",
+    "postDescription": "På outpur-feltet, ser du vår første feilmelding! Den forklarer at kildekoden vår inneholder såkalt 'bad input' og hvilket linjenummer feilen først forekommer. Altså variabelnavn kan ikke starte med et tall.",
+    "initialCode": "1var = 'Jeg heter 1var og er en variabel'\nprint(1var)",
     "solution": {
       "solved": "",
       "code": ""
