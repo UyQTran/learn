@@ -17,6 +17,13 @@ const SolutionWrapper = styled.div`
   margin: ${props => props.theme.spacing(4)};
 `
 
+
+const SolutionCode = styled(CodeMirror)`
+  div {
+    white-space: normal;
+  }
+`
+
 interface SolutionProps {
   solutionCode: string
 }
@@ -47,11 +54,11 @@ const Solution = (props: SolutionProps) => {
         height={ isSolutionCollapsed ? 0 : 'auto' }
       >
         <SolutionCodeWrapper>
-          <CodeMirror
+          <SolutionCode
             readOnly
             data-cy="solution-code"
             value={props.solutionCode}
-            height={lineCount * 19 + 'px'}
+            height={(lineCount * 19)+20 + 'px'}
             extensions={[python()]}
           />
         </SolutionCodeWrapper>

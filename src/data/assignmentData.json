@@ -62,7 +62,7 @@
   {
     "title": "Feil i kildekoden",
     "description": "Her mangler det noe. Kanskje det går av likevel?",
-    "postDescription": "Imotsetning til oss mennesker, så må maskinene vi jobber med, ta alt med teskje. Det betyr at alle paranteser av alle typer må han en start og sluttparantes. Alle kvotteringstegn som '' og \"\" må avsluttes. Feilmeldingen i output-feltet forklarer at dette er en syntaksfeil. Det betyr at det er en feil i kildekoden som ikke følger reglene i Python. Litt som en skrivefeil.",
+    "postDescription": "Imotsetning til oss mennesker, så må maskinene vi jobber med, ta alt med teskje. Det betyr at alle paranteser av alle typer må ha en start og sluttparantes. Alle kvotteringstegn som '' og \"\" må avsluttes. Feilmeldingen i output-feltet forklarer at dette er en syntaksfeil. Det betyr at det er en feil i kildekoden som ikke følger reglene i Python. Litt som en skrivefeil.",
     "initialCode": "print('Hei verden!'",
     "solution": {
       "solved": "",
@@ -111,7 +111,7 @@
   },
   {
     "title": "Lister",
-    "description": "En liste i Python er definert med klammeparanteser []. Inneholdet i listen heter elementer som er skilt fra hverandre med kommategn. Akkurat som tekststrenger og tall så kan også lister være variabler. som vist på eksempelet i editoren. Trykk på kjøreknappen for å se hva som blir skrevet ut på terminalen.",
+    "description": "En liste i Python er definert med klammeparanteser []. Inneholdet i listen heter elementer som er skilt fra hverandre med kommategn. Akkurat som tekststrenger og tall så kan også lister være variabler som vist på eksempelet i editoren. Trykk på kjøreknappen for å se hva som blir skrevet ut på terminalen.",
     "postDescription": "",
     "initialCode": "liste = [67,31,53,6,97,1]\nprint(liste)",
     "solution": {
@@ -151,7 +151,7 @@
   },
   {
     "title": "Løkker",
-    "description": "Datamaskinen er utrolig flink til å gjøre en ting mange ganger og gi oss kjappe resultater. Tenk deg om vi fikk i oppgave om å telle til 100. Det tar litt tid for oss mennesker å ramse opp alle tallene. Ordet 'for' er et nøkkelord i som sier til damaskinen at vi har et stykke kode som vi vil kjøre mange ganger. I editoren, ser du et eksempel på hvordan en løkke er skrevet i Python hvor print funksjonen blir kalt 25 ganger og printer ut alle tallene fra 25 frem til, men ikke inkludert 50. Endre på løkken slik at print skriver ut alle tall fra 0 frem til, men ikke inkludert 100.",
+    "description": "Datamaskinen er utrolig flink til å gjøre en ting mange ganger og gi oss kjappe resultater. Tenk deg om vi fikk i oppgave om å telle til 100. Det tar litt tid for oss mennesker å ramse opp alle tallene. Ordet 'for' er et nøkkelord i Python som sier til datamaskinen at vi har et stykke kode som vi vil kjøre flere ganger. I editoren, ser du et eksempel på hvordan en løkke er skrevet i Python hvor print funksjonen blir kalt 25 ganger og printer ut alle tallene fra 25 frem til, men ikke inkludert 50. Endre på løkken slik at print skriver ut alle tall fra 0 frem til, men ikke inkludert 100.",
     "postDescription": "",
     "initialCode": "for i in range(25,50):\n\tprint(i)",
     "solution": {
@@ -161,9 +161,9 @@
   },
   {
     "title": "Hva er indentering?",
-    "description": "Indentering er rett og slett fire mellomrom eller en tab med tab-knappen på tasturet som forteller maskinen at hvilken del av kildekoden tilhører en annen del av koden. Hva som om vi har feil indentering i denne løkken?",
+    "description": "Indentering er rett og slett fire mellomrom eller en tab med tab-knappen på tasturet som forteller maskinen at hvilken del av kildekoden tilhører en annen del av koden. Fjern alle mellomrommene før print. Hva skjer om vi har feil indentering i denne løkken?",
     "postDescription": "Da får vi en feilmelding som forteller oss at maskinen ikke skjønner hvor variabel 'i' kommer fra i linje 2. Dette er fordi variabelen 'i' kun kan brukes i kode som tilhører løkken vår.",
-    "initialCode": "for i in range(25,50):\nprint(i)",
+    "initialCode": "for i in range(25,50):\n\tprint(i)",
     "solution": {
       "solved": 0,
       "code": ""
@@ -187,6 +187,36 @@
     "solution": {
       "solved": 0,
       "code": ""
+    }
+  },
+  {
+    "title": "Typekonvertering fra streng til tall",
+    "description": "Nå har vi kommet langt! Vi har nå lært om to primærtyper i Python, tall og strenger. Noen ganger vil vi kanskje bytte typer på disse. Som for eksempel så vil brukerinput alltid spytte ut en streng fra tastaturet. Om vi skriver inn tall i tastaturet så vil vi kunne bruke dette tallet til å regne ut ting. Bruk funksjonen int() for å konvertere tallet vi tar inn i input(). Funksjonen int() tar imot nøyaktig et argument som må være en streng.",
+    "postDescription": "",
+    "initialCode": "tall = input()\nprint(5 + tall)",
+    "solution": {
+      "solved": 0,
+      "code": "tall = int(input())\nprint(5 + tall)"
+    }
+  },
+  {
+    "title": "Typekonvertering fra tall til streng",
+    "description": "Eller kanskje vi vil konkatenere et tall inn til en streng? Da bruker vi funksjonen str()",
+    "postDescription": "",
+    "initialCode": "print('Mitt favorittall er ' + 7)",
+    "solution": {
+      "solved": 0,
+      "code": "print('Mitt favorittall er ' + str(7))"
+    }
+  },
+  {
+    "title": "Hypotenuskalkulator",
+    "description": "Nå har du lært deg hvordan du regner ut Pytagoras læresetning og hvordan vi kan få input fra bruker gjennom tastaturet. La oss kombinere den kunnskapen vi har opplært oss til å lage en kalkulator for å regne ut hypotenusen av en rettvinklet trekant. Kalkulatoren skal ta imot to brukerinput første katet og andre katet. Programmet skal så regne ut hypotenusen. Til slutt, skal programmet printe ut hva brukeren skrev inn som katateter og verdien av den beregnede hypotenusen",
+    "postDescription": "",
+    "initialCode": "",
+    "solution": {
+      "solved": 0,
+      "code": "import math\nkat1 = int(input())\nkat2 = int(input())\nhyp = math.sqrt(kat1*kat1+kat2*kat2)\nprint('Hypotenusen til en rettvinklet trekant med kateter' + str(kat1) + ' og ' + str(kat2) + ' er lik ' + str(hyp))"
     }
   }
 ]
