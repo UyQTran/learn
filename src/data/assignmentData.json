@@ -158,5 +158,15 @@
       "solved": 0,
       "code": ""
     }
+  },
+  {
+    "title": "Hva er indentering?",
+    "description": "Indentering er rett og slett fire mellomrom eller en tab med tab-knappen på tasturet som forteller maskinen at hvilken del av kildekoden tilhører en annen del av koden. Hva som om vi har feil indentering i denne løkken?",
+    "postDescription": "Da får vi en feilmelding som forteller oss at maskinen ikke skjønner hvor variabel 'i' kommer fra i linje 2. Dette er fordi variabelen 'i' kun kan brukes i kode som tilhører løkken vår.",
+    "initialCode": "for i in range(25,50):\nprint(i)",
+    "solution": {
+      "solved": 0,
+      "code": ""
+    }
   }
 ]
