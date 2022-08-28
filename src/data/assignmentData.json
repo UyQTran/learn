@@ -216,7 +216,7 @@
     "initialCode": "",
     "solution": {
       "solved": 0,
-      "code": "import math\nkat1 = int(input())\nkat2 = int(input())\nhyp = math.sqrt(kat1*kat1+kat2*kat2)\nprint('Hypotenusen til en rettvinklet trekant med kateter' + str(kat1) + ' og ' + str(kat2) + ' er lik ' + str(hyp))"
+      "code": "import math\nkat1 = int(input())\nkat2 = int(input())\nhyp = math.sqrt(kat1*kat1+kat2*kat2)\nprint('Hypotenusen til en rettvinklet trekant med kateter ' + str(kat1) + ' og ' + str(kat2) + ' er lik ' + str(hyp))"
     }
   }
 ]
