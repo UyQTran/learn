@@ -66,10 +66,6 @@ const AssigmentGrid = styled.div`
   }
 `
 
-const CodingWrapper = styled.div`
-  min-width: 500px;
-`
-
 interface Assignment {
   title?: string
   description: string
@@ -166,10 +162,10 @@ const AssignmentPage = () => {
             description={currentAssignment.description}
             postDescription={currentAssignment.postDescription}
             shouldShowPostDescription={hasClickedRun}/>
-          <CodingWrapper>
+          <div>
             <CodeEditor initialCode={currentAssignment.initialCode} runClickCallback={() => setHasClickedRun(true)}/>
             <Solution solutionCode={currentAssignment.solution.code}/>
-          </CodingWrapper>
+          </div>
         </AssigmentGrid>
       </motion.div>
     </AssignmentWrapper>
