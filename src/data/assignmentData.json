@@ -141,7 +141,7 @@
   },
   {
     "title": "Funksjonen range",
-    "description": "Denne funksjonen tar inn to tall og spytter ut en liste med tall fra det første gitte tallet til det andre gitte tallet. På editoren, ser du et eksempel hvor vi kaller på range med tall 0 og 10.",
+    "description": "Denne funksjonen tar inn to tall og spytter ut en liste med tall fra det første gitte tallet frem til, men ikke inkludert det andre gitte andre tallet. I editoren, ser du et eksempel hvor vi kaller på range med tall 0 og 10.",
     "postDescription": "Vi kan aksessere range verdien som en liste og bruke klammeparantesene []. I dette tilfellet skulle vi printe plass nummer 3 i listen.",
     "initialCode": "liste = range(0,10)\nprint(liste[3])",
     "solution": {
@@ -182,7 +182,7 @@
   {
     "title": "Brukerinput",
     "description": "Når vi bruker programmer på maskinene våre, trenger de ofte input fra oss som brukere fra tastaturet. I Python, gjøres dette med funksjonen input() som vist i eksempelet i editoren. Kjør programmet og skriv inn ditt eget navn.",
-    "postDescription": "Det poppet plutselig opp en alarmboks på nettleseren vår med et input-felt der vi kunne skrive navnet vårt. Det skal sies at dette skjer kun i progg.it for jeg er en nettsiden. Om du kjører Python på andre måter så kan det hende at brukerinput blir hentet på andre måter.",
+    "postDescription": "Det poppet plutselig opp en alarmboks på nettleseren vår med et input-felt der vi kunne skrive navnet vårt. Det skal sies at dette skjer kun i progg.it for jeg er en nettside. Om du kjører Python på andre måter så kan det hende at brukerinput blir hentet på andre måter.",
     "initialCode": "navn = input()\nprint('Hei! Mitt navn er ' + navn)",
     "solution": {
       "solved": 0,
