@@ -132,7 +132,7 @@
   {
     "title": "Liste error",
     "description": "Hva med indeks høyere enn størrelsen til listen?",
-    "postDescription": "Akkurat som om vi skulle bla til side 100 i en bok med kun 2 sider så vil ikke dette gå. Feilmeldingen forklarer at indeksen vår er 'out of bounds' som betyr at den er utenfor grensen til listen. I tillegg så gir feilmeldingen beskjed om hvilken linjenummer i kildekoden vår, feilen forekommer. Veldig nyttig!",
+    "postDescription": "Akkurat som om vi skulle bla til side 100 i en bok med kun 2 sider så vil ikke dette gå. Feilmeldingen forklarer at indeksen vår er 'out of range' som betyr at den er utenfor grensen til listen. Altså vi prøver å hente et element med en indeks som ikke finnes i listen. I tillegg så gir feilmeldingen beskjed om hvilken linjenummer i kildekoden vår, feilen forekommer. Veldig nyttig!",
     "initialCode": "liste = [3,14]\nprint(liste[100])",
     "solution": {
       "solved": 0,
@@ -171,7 +171,7 @@
   },
   {
     "title": "Strengkonkatenering",
-    "description": "Ofte når vi skriver programmer så kan det være lurt å lagre strenger i flere enn en variabel. I editoren, ser du et eksempel på hvordan vi kan slå sammen to strengvariabler. Kalt konkatenering",
+    "description": "Ofte når vi skriver programmer, kan det være lurt å lagre strenger i flere enn en variabel. I editoren, ser du et eksempel på hvordan vi kan slå sammen to strengvariabler. Kalt konkatenering",
     "postDescription": "Strengkonkatenering er et uttrykk for tekststrenger akkurat som tall. Vi bruker operatoren + for å slå sammen tekststrenger.",
     "initialCode": "melding = 'Hei! Mitt navn er '\nnavn = 'progg.it'\nprint(melding + navn)",
     "solution": {
