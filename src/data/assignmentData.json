@@ -50,13 +50,43 @@
     }
   },
   {
+    "title": "Feil i kildekoden",
+    "description": "Her mangler det noe. Kanskje det går av likevel?",
+    "postDescription": "Imotsetning til oss mennesker, så må maskinene vi jobber med, ta alt med teskje. Det betyr at alle paranteser av alle typer må han en start og sluttparantes. Alle kvotteringstegn som '' og \"\" må avsluttes. Feilmeldingen i output-feltet forklarer at dette er en syntaksfeil. Det betyr at det er en feil i kildekoden som ikke følger reglene i Python. Litt som en skrivefeil.",
+    "initialCode": "print('Hei verden!'",
+    "solution": {
+      "solved": "",
+      "code": ""
+    }
+  },
+  {
     "title": "Kvadratroten",
     "description": "Python er et utrolig sterkt språk med masse biblioteker som gjør koding mye enklere for oss. Før vi bruker et bibliotek så må vi importere biblioteket som du ser i linje 1 i editoren. Et bibliotek, math, er en bibliotek med masse matematiske funksjoner. I editoren så ser du bruken av math sin funksjon for å regne ut kvadratroten av et tall eller variabel som er mellom parantesene. Skriv et program som skriver ut kvadratroten av 36.",
-    "postDescription": "",
+    "postDescription": "I dette eksempelet så er math et objekt, sqrt() en funksjon av math og x et argument til math.sqrt().",
     "initialCode": "import math\nx = 16\nsqrtX = math.sqrt(x)\nprint(sqrtX)",
     "solution": {
       "solved": 6.0,
       "code": "import math\nx = 36\nsqrtX = math.sqrt(x)\nprint('Kvadratroten til 36 er lik')\nprint(sqrtX)"
+    }
+  },
+  {
+    "title": "Feil med funksjoner",
+    "description": "Ok, så vi må gi funksjonen math.sqrt() et tall for at den skal fungere. Men hva skjer om vi gir funskjonen mer enn ett tall?",
+    "postDescription": "Output-feltet gir oss en feilmelding om at funksjonen math.sqrt() tar nøyaktig et argument. Derfor så vet ikke funksjonen hva den skal gjøre med så mange tall og gir oss en feilmelding slik at vi kan rette på kildekoden.",
+    "initialCode": "import math\nx = 16\nsqrtX = math.sqrt(2,1,51)\nprint(sqrtX)",
+    "solution": {
+      "solved": 0,
+      "code": ""
+    }
+  },
+  {
+    "title": "Hva om vi sender inn en streng?",
+    "description": "Så feilmeldingen fortalte oss at math.sqrt() tar nøyaktig et argument. Men betyr det også strenger? Hvordan regner man ut kvadratroten av 'progg.it'?",
+    "postDescription": "Nå fikk vi en helt annen feilmelding! Denne forteller oss at math.sqrt() kun tar imot tall som argument. For en kresen funksjon 😡",
+    "initialCode": "import math\nsqrtX = math.sqrt('progg.it')\nprint(sqrtX)",
+    "solution": {
+      "solved": 0,
+      "code": ""
     }
   },
   {
@@ -90,10 +120,20 @@
     }
   },
   {
+    "title": "Liste error",
+    "description": "Hva med indeks høyere enn størrelsen til listen?",
+    "postDescription": "Akkurat som om vi skulle bla til side 100 i en bok med kun 2 sider så vil ikke dette gå. Feilmeldingen forklarer at indeksen vår er 'out of bounds' som betyr at den er utenfor grensen til listen. I tillegg så gir feilmeldingen beskjed om hvilken linjenummer i kildekoden vår, feilen forekommer. Veldig nyttig!",
+    "initialCode": "liste = [3,14]\nprint(liste[100])",
+    "solution": {
+      "solved": 0,
+      "code": ""
+    }
+  },
+  {
     "title": "Funksjonen range",
-    "description": "",
-    "postDescription": "",
-    "initialCode": "liste = range(0,10)\nprint(liste)",
+    "description": "Denne funksjonen tar inn to tall og spytter ut en liste med tall fra det første gitte tallet til det andre gitte tallet. På editoren, ser du et eksempel hvor vi kaller på range med tall 0 og 10.",
+    "postDescription": "Vi kan aksessere range verdien som en liste og bruke klammeparantesene []. I dette tilfellet skulle vi printe plass nummer 3 i listen.",
+    "initialCode": "liste = range(0,10)\nprint(liste[3])",
     "solution": {
       "solved": 0,
       "code": ""
@@ -101,7 +141,7 @@
   },
   {
     "title": "Løkker",
-    "description": "Datamaskinen er utrolig flink til å gjøre en ting mange ganger og gi oss kjappe resultater. Tenk deg om vi fikk i oppgave om å telle til 100. Det tar litt tid for oss mennesker å ramse opp alle tallene. Ordet 'for' er et nøkkelord i som sier til damaskinen at vi har et stykke kode som vi vil kjøre mange ganger. I editoren, ser du et eksempel på hvordan en løkke er skrevet i Python hvor print funksjonen blir kalt 50 ganger og printer ut alle tallene fra 25 til 50. Endre på løkken slik at print skriver ut alle tall fra 0 til 100.",
+    "description": "Datamaskinen er utrolig flink til å gjøre en ting mange ganger og gi oss kjappe resultater. Tenk deg om vi fikk i oppgave om å telle til 100. Det tar litt tid for oss mennesker å ramse opp alle tallene. Ordet 'for' er et nøkkelord i som sier til damaskinen at vi har et stykke kode som vi vil kjøre mange ganger. I editoren, ser du et eksempel på hvordan en løkke er skrevet i Python hvor print funksjonen blir kalt 25 ganger og printer ut alle tallene fra 25 til 50. Endre på løkken slik at print skriver ut alle tall fra 0 til 100.",
     "postDescription": "",
     "initialCode": "for i in range(25,50):\n\tprint(i)",
     "solution": {
