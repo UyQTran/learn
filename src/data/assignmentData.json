@@ -42,7 +42,7 @@
   {
     "title": "Feil variabelnavn?",
     "description": "Variabler kan hete nesten hva som helst. Nesten...",
-    "postDescription": "På outpur-feltet, ser du vår første feilmelding! Den forklarer at kildekoden vår inneholder såkalt 'bad input' og hvilket linjenummer feilen først forekommer. Altså variabelnavn kan ikke starte med et tall.",
+    "postDescription": "På output-feltet, ser du vår første feilmelding! Den forklarer at kildekoden vår inneholder såkalt 'bad input' og hvilket linjenummer feilen først forekommer. Altså variabelnavn kan ikke starte med et tall.",
     "initialCode": "1var = 'Jeg heter 1var og er en variabel'\nprint(1var)",
     "solution": {
       "solved": "",
@@ -121,7 +121,7 @@
   },
   {
     "title": "Elementer i lister",
-    "description": "Noen ganger, vil vi kun skrive ut noen elementer i listen. Tenk på en liste som en bok. En bok er jo egentlig en liste av ark. Ganske ofte når vi leser fagvøker så blir vi nødt til å slå opp ting ved å lete etter sidenummeret. Sidenummeret i en bok, men for en liste, heter indeks. I editoren, ser du et eksempel der vi printer ut elementene på plass 4 og 2 i listen. Kan du gjette hvilke tall som blir skrevet ut?",
+    "description": "Noen ganger, vil vi kun skrive ut noen elementer i listen. Tenk på en liste som en bok. En bok er jo egentlig en liste av ark. Ganske ofte når vi leser fagbøker så blir vi nødt til å slå opp ting ved å lete etter sidenummeret. Indeks i en liste tilsvarer det vi ville ha kalt sidenummeret i en bok. Altså et tall som beskriver hvor et element ligger i en liste. I editoren, ser du et eksempel der vi printer ut elementene på plass 4 og 2 i listen. Kan du gjette hvilke tall som blir skrevet ut?",
     "postDescription": "Gjettet du kanskje at nummer 6 og 31 skulle bli printet ut? Grunnen til at det heller ble 97 og 53 er fordi maskinene våre rett og slett begynner å telle fra 0. Prøv å se hva som skjer om du prøver å printe ut indeks nummer 0 fra liste variablen.",
     "initialCode": "liste = [67,31,53,6,97,1]\nprint(liste[4])\nprint(liste[2])",
     "solution": {
@@ -164,6 +164,26 @@
     "description": "Indentering er rett og slett fire mellomrom eller en tab med tab-knappen på tasturet som forteller maskinen at hvilken del av kildekoden tilhører en annen del av koden. Hva som om vi har feil indentering i denne løkken?",
     "postDescription": "Da får vi en feilmelding som forteller oss at maskinen ikke skjønner hvor variabel 'i' kommer fra i linje 2. Dette er fordi variabelen 'i' kun kan brukes i kode som tilhører løkken vår.",
     "initialCode": "for i in range(25,50):\nprint(i)",
+    "solution": {
+      "solved": 0,
+      "code": ""
+    }
+  },
+  {
+    "title": "Strengkonkatenering",
+    "description": "Ofte når vi skriver programmer så kan det være lurt å lagre strenger i flere enn en variabel. I editoren, ser du et eksempel på hvordan vi kan slå sammen to strengvariabler. Kalt konkatenering",
+    "postDescription": "Strengkonkatenering er et uttrykk for tekststrenger akkurat som tall. Vi bruker operatoren + for å slå sammen tekststrenger.",
+    "initialCode": "melding = 'Hei! Mitt navn er '\nnavn = 'progg.it'\nprint(melding + navn)",
+    "solution": {
+      "solved": 0,
+      "code": ""
+    }
+  },
+  {
+    "title": "Brukerinput",
+    "description": "Når vi bruker programmer på maskinene våre, trenger de ofte input fra oss som brukere fra tastaturet. I Python, gjøres dette med funksjonen input() som vist i eksempelet i editoren. Kjør programmet og skriv inn ditt eget navn.",
+    "postDescription": "Det poppet plutselig opp en alarmboks på nettleseren vår med et input-felt der vi kunne skrive navnet vårt. Det skal sies at dette skjer kun i progg.it for jeg er en nettsiden. Om du kjører Python på andre måter så kan det hende at brukerinput blir hentet på andre måter.",
+    "initialCode": "navn = input()\nprint('Hei! Mitt navn er ' + navn)",
     "solution": {
       "solved": 0,
       "code": ""
