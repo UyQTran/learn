@@ -151,7 +151,7 @@
   },
   {
     "title": "Løkker",
-    "description": "Datamaskinen er utrolig flink til å gjøre en ting mange ganger og gi oss kjappe resultater. Tenk deg om vi fikk i oppgave om å telle til 100. Det tar litt tid for oss mennesker å ramse opp alle tallene. Ordet 'for' er et nøkkelord i som sier til damaskinen at vi har et stykke kode som vi vil kjøre mange ganger. I editoren, ser du et eksempel på hvordan en løkke er skrevet i Python hvor print funksjonen blir kalt 25 ganger og printer ut alle tallene fra 25 til 50. Endre på løkken slik at print skriver ut alle tall fra 0 til 100.",
+    "description": "Datamaskinen er utrolig flink til å gjøre en ting mange ganger og gi oss kjappe resultater. Tenk deg om vi fikk i oppgave om å telle til 100. Det tar litt tid for oss mennesker å ramse opp alle tallene. Ordet 'for' er et nøkkelord i som sier til damaskinen at vi har et stykke kode som vi vil kjøre mange ganger. I editoren, ser du et eksempel på hvordan en løkke er skrevet i Python hvor print funksjonen blir kalt 25 ganger og printer ut alle tallene fra 25 frem til, men ikke inkludert 50. Endre på løkken slik at print skriver ut alle tall fra 0 frem til, men ikke inkludert 100.",
     "postDescription": "",
     "initialCode": "for i in range(25,50):\n\tprint(i)",
     "solution": {
@@ -182,7 +182,7 @@
   {
     "title": "Brukerinput",
     "description": "Når vi bruker programmer på maskinene våre, trenger de ofte input fra oss som brukere fra tastaturet. I Python, gjøres dette med funksjonen input() som vist i eksempelet i editoren. Kjør programmet og skriv inn ditt eget navn.",
-    "postDescription": "Det poppet plutselig opp en alarmboks på nettleseren vår med et input-felt der vi kunne skrive navnet vårt. Det skal sies at dette skjer kun i progg.it for jeg er en nettside. Om du kjører Python på andre måter så kan det hende at brukerinput blir hentet på andre måter.",
+    "postDescription": "Det poppet plutselig opp en alarmboks på nettleseren vår med et input-felt der vi kunne skrive navnet vårt. Det skal sies at dette skjer kun i progg.it fordi jeg er en nettside. Om du kjører Python på andre måter, kan det hende at brukerinput blir hentet på andre måter.",
     "initialCode": "navn = input()\nprint('Hei! Mitt navn er ' + navn)",
     "solution": {
       "solved": 0,
