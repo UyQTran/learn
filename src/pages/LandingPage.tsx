@@ -63,7 +63,7 @@ const LandingPage = () => {
     document.body.style.overflow = 'hidden'
     appControls.start(() => ({
       y: '20vh',
-      opacity: -2,
+      opacity: -1,
       transition: {
         duration: 0.25
       },
