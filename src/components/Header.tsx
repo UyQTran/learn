@@ -8,7 +8,7 @@ const Heading = styled.h1`
   font-family: 'Roboto', sans-serif;
   margin-top: ${props => props.theme.spacing(4)};
   font-weight: 200;
-  animation: downSize 0.5s;
+  animation: downSize 0.3s;
   
   a {
     color: white;
