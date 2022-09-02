@@ -56,13 +56,20 @@ const ButtonText = styled.span`
 
 const LandingPage = () => {
   const navigate = useNavigate()
-  const controls = useAnimation()
+  const headerControls = useAnimation()
+  const appControls = useAnimation()
 
-  const handleStartClick = (to: string) => async () => {
+  const handleClick = (to: string) => async () => {
     document.body.style.overflow = 'hidden'
-    await controls.start(() => ({
+    appControls.start(() => ({
+      y: '20vh',
+      opacity: -2,
+      transition: {
+        duration: 0.25
+      },
+    }))
+    await headerControls.start(() => ({
       y: '-7vh',
-      children: "font-size: 10px",
       transition: {
         duration: 0.35,
         ease: 'easeOut'
@@ -75,7 +82,7 @@ const LandingPage = () => {
   <LandingPageWrapper>
     <motion.div
       initial="visible"
-      animate={controls}
+      animate={headerControls}
       key={0}
     >
       <AppTitle
@@ -84,31 +91,37 @@ const LandingPage = () => {
         wrapper="h1"
       />
     </motion.div>
-    <AppDescription>
-      La oss knekke koden!
-    </AppDescription>
-    <ButtonWrapper>
-      <Button
-        data-cy="sandbox-button"
-        variant="outlined"
-        onClick={handleStartClick('sandbox')}
-      >
-        <LightbulbIcon/>
-        <ButtonText>
-          Sandkassa
-        </ButtonText>
-      </Button>
-      <Button
-        data-cy="start-button"
-        variant="contained"
-        onClick={handleStartClick('assignment/0')}
-      >
-        <PlayCircleOutlineIcon/>
-        <ButtonText>
-          Start
-        </ButtonText>
-      </Button>
-    </ButtonWrapper>
+    <motion.div
+      initial="visible"
+      animate={appControls}
+      key={1}
+    >
+      <AppDescription>
+        La oss knekke koden!
+      </AppDescription>
+      <ButtonWrapper>
+        <Button
+          data-cy="sandbox-button"
+          variant="outlined"
+          onClick={handleClick('sandbox')}
+        >
+          <LightbulbIcon/>
+          <ButtonText>
+            Sandkassa
+          </ButtonText>
+        </Button>
+        <Button
+          data-cy="start-button"
+          variant="contained"
+          onClick={handleClick('assignment/0')}
+        >
+          <PlayCircleOutlineIcon/>
+          <ButtonText>
+            Start
+          </ButtonText>
+        </Button>
+      </ButtonWrapper>
+    </motion.div>
     <AppFooter>
       <Link href="https://www.linkedin.com/in/uy-tran-28b88557/">
         Om meg
