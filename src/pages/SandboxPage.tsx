@@ -1,9 +1,7 @@
-import {useNavigate} from 'react-router-dom'
-import { Button, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import styled from 'styled-components'
 import CodeEditor from '../coding/CodeEditor'
 import { motion, useAnimation } from 'framer-motion'
-import HomeIcon from '@mui/icons-material/Home'
 import Header from "../components/Header";
 
 const SandboxWrapper = styled.div`
@@ -45,26 +43,9 @@ const SandboxDescription = styled(Typography)`
   margin: ${props => props.theme.spacing(4, 0)};
 `
 
-const ButtonText = styled.span`
-  margin: ${props => props.theme.spacing(1, 0, 0, 2)};
-`
-
 const SandboxPage = () => {
   document.body.style.overflow = 'auto'
   const controls = useAnimation()
-  const navigate = useNavigate()
-
-  const handleHomeClick = async () => {
-    await controls.start(() => ({
-      opacity: 0,
-      y: 250,
-      transition: {
-        duration: 0.25
-      },
-    }))
-    navigate('/')
-  }
-
   return (
     <>
       <Header/>
@@ -80,16 +61,6 @@ const SandboxPage = () => {
               Programmer akkurat det du vil!
           </SandboxDescription>
           <CodeEditor initialCode="" isSandbox={true} runClickCallback={() => {}} outputCallback={()=>{}}/>
-          <Button
-            data-cy="previous-page-button"
-            variant="outlined"
-            onClick={handleHomeClick}
-          >
-            <HomeIcon/>
-            <ButtonText>
-              Hjem
-            </ButtonText>
-          </Button>
         </SandboxWrapper>
       </motion.div>
     </>
