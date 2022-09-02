@@ -35,7 +35,7 @@ const Header = () => {
 
   return (
     <Heading>
-      <a href="#" onClick={() => navigate('/')}>
+      <a href="" onClick={() => navigate('/')}>
         progg.it
       </a>
     </Heading>
