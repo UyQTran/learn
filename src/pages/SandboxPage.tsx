@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import CodeEditor from '../coding/CodeEditor'
 import { motion, useAnimation } from 'framer-motion'
 import HomeIcon from '@mui/icons-material/Home'
+import Header from "../components/Header";
 
 const SandboxWrapper = styled.div`
   width: 850px;
@@ -65,30 +66,33 @@ const SandboxPage = () => {
   }
 
   return (
-    <motion.div
-      initial="visible"
-      animate={controls}
-    >
-      <SandboxWrapper>
-        <SandboxTitle variant="h2">
-            Sandkassa
-        </SandboxTitle>
-        <SandboxDescription variant="subtitle1">
-            Programmer akkurat det du vil!
-        </SandboxDescription>
-        <CodeEditor initialCode="" isSandbox={true} runClickCallback={() => {}} outputCallback={()=>{}}/>
-        <Button
-          data-cy="previous-page-button"
-          variant="outlined"
-          onClick={handleHomeClick}
-        >
-          <HomeIcon/>
-          <ButtonText>
-            Hjem
-          </ButtonText>
-        </Button>
-      </SandboxWrapper>
-    </motion.div>
+    <>
+      <Header/>
+      <motion.div
+        initial="visible"
+        animate={controls}
+      >
+        <SandboxWrapper>
+          <SandboxTitle variant="h2">
+              Sandkassa
+          </SandboxTitle>
+          <SandboxDescription variant="subtitle1">
+              Programmer akkurat det du vil!
+          </SandboxDescription>
+          <CodeEditor initialCode="" isSandbox={true} runClickCallback={() => {}} outputCallback={()=>{}}/>
+          <Button
+            data-cy="previous-page-button"
+            variant="outlined"
+            onClick={handleHomeClick}
+          >
+            <HomeIcon/>
+            <ButtonText>
+              Hjem
+            </ButtonText>
+          </Button>
+        </SandboxWrapper>
+      </motion.div>
+    </>
   )
 }
 

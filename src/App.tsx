@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 import styled from 'styled-components'
 import LandingPage from './pages/LandingPage'
 import AssignmentPage from './pages/AssignmentPage'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import {BrowserRouter, Routes, Route, useNavigate} from 'react-router-dom'
 import SandboxPage from './pages/SandboxPage'
 
 const AppWrapper = styled.div`
@@ -12,6 +12,8 @@ const AppWrapper = styled.div`
   justify-content: center;
   height: 100%;
 `
+
+
 
 const App = () => {
 

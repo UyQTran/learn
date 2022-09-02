@@ -6,6 +6,7 @@ import CodeEditor from '../coding/CodeEditor'
 import Solution from '../coding/Solution'
 import { motion, useAnimation } from 'framer-motion'
 import AssignmentDescription from '../coding/AssignmentDescription';
+import Header from "../components/Header";
 
 
 const AssignmentWrapper = styled.div`
@@ -140,50 +141,52 @@ const AssignmentPage = () => {
       && !currentAssignment.postDescription.shouldShowIfSolved)
 
   return (
-    <AssignmentWrapper>
-      <ButtonGroup>
-        <Button
-          data-cy="previous-page-button"
-          variant="outlined"
-          onClick={handlePreviousClick}
+    <>
+      <Header/>
+      <AssignmentWrapper>
+        <ButtonGroup>
+          <Button
+            data-cy="previous-page-button"
+            variant="outlined"
+            onClick={handlePreviousClick}
+          >
+            Tilbake
+          </Button>
+          <LinearProgress variant="determinate" value={(indexNumber/(assignments.length-1))* 100} />
+          <Button
+            data-cy="next-assignment-button"
+            variant="contained"
+            onClick={handleNextClick}
+            disabled={indexNumber+1 >= assignments.length || !shouldShowPostDescription}
+          >
+            Neste
+          </Button>
+        </ButtonGroup>
+        <motion.div
+          initial="visible"
+          animate={controls}
+          key={indexNumber}
         >
-          Tilbake
-        </Button>
-        <LinearProgress variant="determinate" value={(indexNumber/(assignments.length-1))* 100} />
-        <Button
-          data-cy="next-assignment-button"
-          variant="contained"
-          onClick={handleNextClick}
-          disabled={indexNumber+1 >= assignments.length || !shouldShowPostDescription}
-        >
-          Neste
-        </Button>
-      </ButtonGroup>
-      <motion.div
-        initial="visible"
-        animate={controls}
-        key={indexNumber}
-      >
-        <AssignmentTitle variant="h2">
-          {(indexNumber+1)+ ': ' + currentAssignment.title}
-        </AssignmentTitle>
-        <AssigmentGrid>
-          <AssignmentDescription
-            description={currentAssignment.description}
-            postDescription={currentAssignment.postDescription.text}
-            shouldShowPostDescription={shouldShowPostDescription}/>
-          <div>
-            <CodeEditor
-              initialCode={currentAssignment.initialCode}
-              runClickCallback={() => setHasClickedRun(true)}
-              outputCallback={(output) => setHasSolved(output.includes(""+currentAssignment.solution.solved))}
-            />
-            <Solution solutionCode={currentAssignment.solution.code}/>
-          </div>
-        </AssigmentGrid>
-      </motion.div>
-    </AssignmentWrapper>
-
+          <AssignmentTitle variant="h2">
+            {(indexNumber+1)+ ': ' + currentAssignment.title}
+          </AssignmentTitle>
+          <AssigmentGrid>
+            <AssignmentDescription
+              description={currentAssignment.description}
+              postDescription={currentAssignment.postDescription.text}
+              shouldShowPostDescription={shouldShowPostDescription}/>
+            <div>
+              <CodeEditor
+                initialCode={currentAssignment.initialCode}
+                runClickCallback={() => setHasClickedRun(true)}
+                outputCallback={(output) => setHasSolved(output.includes(""+currentAssignment.solution.solved))}
+              />
+              <Solution solutionCode={currentAssignment.solution.code}/>
+            </div>
+          </AssigmentGrid>
+        </motion.div>
+      </AssignmentWrapper>
+    </>
   )
 }
 
