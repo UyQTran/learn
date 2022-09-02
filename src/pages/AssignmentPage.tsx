@@ -46,14 +46,11 @@ const AssignmentTitle = styled(Typography)`
 `
 
 const ButtonGroup = styled.div`
-  display: grid;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  grid-template-columns: 1fr 6fr 1fr;
-  column-gap: ${props => props.theme.spacing(4)};
-
-  @media only screen and (max-width: 1000px) {
-
-    grid-template-columns: 1fr 3fr 1fr;
+  *:not(:last-child) {
+    margin-right: ${props => props.theme.spacing(4)};
   }
 `
 
@@ -65,6 +62,15 @@ const AssigmentGrid = styled.div`
   @media only screen and (max-width: 1100px) {
     grid-template-columns: 1fr;
   }
+`
+
+const AssigmentProgressionButton = styled(Button)`
+  max-width: 100px;
+  min-width: 5vw;
+`
+
+const AssigmentProgressBar = styled(LinearProgress)`
+  width: 100%;
 `
 
 interface Assignment {
@@ -145,22 +151,22 @@ const AssignmentPage = () => {
       <Header/>
       <AssignmentWrapper>
         <ButtonGroup>
-          <Button
+          <AssigmentProgressionButton
             data-cy="previous-page-button"
             variant="outlined"
             onClick={handlePreviousClick}
           >
             Tilbake
-          </Button>
-          <LinearProgress variant="determinate" value={(indexNumber/(assignments.length-1))* 100} />
-          <Button
+          </AssigmentProgressionButton>
+          <AssigmentProgressBar variant="determinate" value={(indexNumber/(assignments.length-1))* 100} />
+          <AssigmentProgressionButton
             data-cy="next-assignment-button"
             variant="contained"
             onClick={handleNextClick}
             disabled={indexNumber+1 >= assignments.length || !shouldShowPostDescription}
           >
             Neste
-          </Button>
+          </AssigmentProgressionButton>
         </ButtonGroup>
         <motion.div
           initial="visible"
