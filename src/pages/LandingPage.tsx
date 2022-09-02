@@ -53,7 +53,7 @@ const LandingPage = () => (
       wrapper="h1"
     />
     <AppDescription>
-      Lær deg programmering!
+      La oss knekke koden!
     </AppDescription>
     <ButtonWrapper>
         <Button
