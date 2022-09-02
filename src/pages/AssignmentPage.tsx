@@ -51,6 +51,10 @@ const ButtonGroup = styled.div`
   align-items: center;
   *:not(:last-child) {
     margin-right: ${props => props.theme.spacing(4)};
+
+    @media only screen and (max-width: 1100px) {
+      margin-right: ${props => props.theme.spacing(2)};
+    }
   }
 `
 
@@ -65,8 +69,8 @@ const AssigmentGrid = styled.div`
 `
 
 const AssigmentProgressionButton = styled(Button)`
-  max-width: 100px;
-  min-width: 5vw;
+  min-width: 140px;
+  max-width: 200px;
 `
 
 const AssigmentProgressBar = styled(LinearProgress)`
