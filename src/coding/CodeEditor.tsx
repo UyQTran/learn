@@ -34,6 +34,7 @@ const CodeWindow = styled(CodeMirror)`
 interface CodeEditorProps {
   initialCode: string
   runClickCallback: () => void
+  outputCallback: (output: string) => void
   isSandbox?: boolean
 }
 
@@ -43,8 +44,13 @@ const CodeEditor = (props: CodeEditorProps) => {
 
   const handleRunClick = () => {
     props.runClickCallback()
-    compile(code)
+    compile(code.replace(' ', ' '))
   }
+
+  useEffect(() => {
+    props.outputCallback(output)
+    console.log(code)
+  }, [output])
 
   return (
     <CodeEditorWrapper>

@@ -1,8 +1,11 @@
 [
   {
     "title": "Mitt første program",
-    "description": "På denne siden så kan du kode i et programmeringsspråk som heter Python. På denne siden ser du to hvite bokser. Den øverste er editoren din, mens boksen under er output-feltet. Output-feltet er boksen som skriver ut resultatet av koden i editoren når du trykker på kjøreknappen. På eksempelet, ser du et funksjonskall i editoren der en funksjon print, som skriver ut strengen 'Hei verden!' til output-feltet. Prøv deg frem ved å trykke på kjøreknappen.",
-    "postDescription": "",
+    "description": "Velkommen til progg.it! Her kan du kode i et programmeringsspråk som heter Python. På denne siden ser du to hvite bokser. Den øverste er editoren din, mens boksen under er output-feltet. Output-feltet er boksen som skriver ut resultatet av koden i editoren når du trykker på kjøreknappen. På eksempelet, ser du et funksjonskall i editoren der en funksjon print, som skriver ut strengen 'Hei verden!' til output-feltet. Prøv deg frem ved å trykke på kjøreknappen.",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": ""
+    },
     "initialCode": "print('Hei verden!')",
     "solution": {
       "solved": "",
@@ -12,7 +15,10 @@
   {
     "title": "Koding",
     "description": "Kode er det samme som en oppskrift som maskinene våre følger bastant. Det betyr at maskinen din skriver ut nøyaktig hva som er mellom ' tegnene i funksjonskallet for print. Erstatt progg.it med ditt eget navn så vil du får en hilsen fra din egen maskin.",
-    "postDescription": "",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": ""
+    },
     "initialCode": "print('Hei mitt navn er progg.it')",
     "solution": {
       "solved": "",
@@ -22,7 +28,10 @@
   {
     "title": "Variabler av tall",
     "description": "I matematikken lærer vi om ligninger med ukjente variabler der vår oppgave som oftest er å finne ut hva variabelen er lik. Dette fungerer litt annerledes i programmering hvor vi er sjefen. Vi bestemmer hva variabelen skal være lik. I editoren så ser du en variabel x som vi har satt lik 3. Prøv å bytt ut 3 med ditt favorittall og trykk på kjør",
-    "postDescription": "Funksjonen print kan ta hvilke som helst variabler og printer fortsatt ut som om vi hadde byttet ut variabelen med verdien.",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": "Funksjonen print kan ta hvilke som helst variabler og printer fortsatt ut som om vi hadde byttet ut variabelen med verdien."
+    },
     "initialCode": "x = 3\nprint(x)",
     "solution": {
       "solved": "",
@@ -32,7 +41,10 @@
   {
     "title": "Variabler av strenger",
     "description": "Variabler kan ikke bare være tall, men tekststrenger også. Variabler kan også hete nesten hva som helst så lenge variabelnavnet begynner med en bokstav. Trykk på kjør og se resultatet.",
-    "postDescription": "",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": ""
+    },
     "initialCode": "var1 = 'Jeg heter var1 og er en variabel'\nprint(var1)",
     "solution": {
       "solved": "",
@@ -42,7 +54,10 @@
   {
     "title": "Feil variabelnavn?",
     "description": "Variabler kan hete nesten hva som helst. Nesten...",
-    "postDescription": "På output-feltet, ser du vår første feilmelding! Den forklarer at kildekoden vår inneholder såkalt 'bad input' og hvilket linjenummer feilen først forekommer. Altså variabelnavn kan ikke starte med et tall.",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": "På output-feltet, ser du vår første feilmelding! Den forklarer at kildekoden vår inneholder såkalt 'bad input' og hvilket linjenummer feilen først forekommer. Altså variabelnavn kan ikke starte med et tall."
+    },
     "initialCode": "1var = 'Jeg heter 1var og er en variabel'\nprint(1var)",
     "solution": {
       "solved": "",
@@ -52,7 +67,10 @@
   {
     "title": "Uttrykk",
     "description": "I editoren ser du et eksempel med to variabler x og y med en linje for å printe summen av disse variablene. Prøv deg frem med å trykke på kjøreknappen!",
-    "postDescription": "",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": ""
+    },
     "initialCode": "x = 50\ny = 30\nprint(x + y)",
     "solution": {
       "solved": "",
@@ -62,7 +80,10 @@
   {
     "title": "Feil i kildekoden",
     "description": "Her mangler det noe. Kanskje det går av likevel?",
-    "postDescription": "Imotsetning til oss mennesker, så må maskinene vi jobber med, ta alt med teskje. Det betyr at alle paranteser av alle typer må ha en start og sluttparantes. Alle kvotteringstegn som '' og \"\" må avsluttes. Feilmeldingen i output-feltet forklarer at dette er en syntaksfeil. Det betyr at det er en feil i kildekoden som ikke følger reglene i Python. Litt som en skrivefeil.",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": "Imotsetning til oss mennesker, så må maskinene vi jobber med, ta alt med teskje. Det betyr at alle paranteser av alle typer må ha en start og sluttparantes. Alle kvotteringstegn som '' og \"\" må avsluttes. Feilmeldingen i output-feltet forklarer at dette er en syntaksfeil. Det betyr at det er en feil i kildekoden som ikke følger reglene i Python. Litt som en skrivefeil."
+    },
     "initialCode": "print('Hei verden!'",
     "solution": {
       "solved": "",
@@ -70,19 +91,38 @@
     }
   },
   {
+    "title": "Funksjoner",
+    "description": "En funksjon i Python starter med navnet til funksjonen med to paranteser. Mellom parantesene, kan man gi funksjonen argumenter. Et argument kan for eksempel være tall eller strenger. Om en gitt funksjon, tar imot flere enn et argument, blir de skilt fra hverandre med komma. I editoren, ser du et eksempel på bruken av funksjonen len(). Trykk på kjør så ser vi hva som skjer!",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": "I tillegg til navn og argumenter er noe som heter returverdi en del av anatomien til en funksjon. Returverdien er den verdien funksjonen gir oss tilbake og som vi kan sette lik en variabel. Funksjonen len() kan ta imot en streng som argument og returnerer lengden av strengen som returverdi."
+    },
+    "initialCode": "variabel = len('progg.it')\nprint(variabel)",
+    "solution": {
+      "solved": "",
+      "code": ""
+    }
+  },
+  {
     "title": "Kvadratroten",
-    "description": "Python er et utrolig sterkt språk med masse biblioteker som gjør koding mye enklere for oss. Før vi bruker et bibliotek så må vi importere biblioteket som du ser i linje 1 i editoren. Et bibliotek, math, er en bibliotek med masse matematiske funksjoner. I editoren så ser du bruken av math sin funksjon for å regne ut kvadratroten av et tall eller variabel som er mellom parantesene. Skriv et program som skriver ut kvadratroten av 36.",
-    "postDescription": "I dette eksempelet så er math et objekt, sqrt() en funksjon av math og x et argument til math.sqrt().",
+    "description": "Python er et utrolig sterkt språk med masse biblioteker som gjør koding mye enklere for oss. Før vi bruker et bibliotek så må vi importere biblioteket som du ser i linje 1 i editoren. Biblioteket math, er et bibliotek med masse matematiske funksjoner. I editoren så ser du bruken av math sin funksjon for å regne ut kvadratroten av et tall eller variabel som er mellom parantesene. Skriv et program som skriver ut kvadratroten av 36.",
+    "postDescription": {
+      "shouldShowIfSolved": true,
+      "text": "I dette eksempelet så er math et bibliotek, sqrt() en funksjon av math og x et argument til math.sqrt(). Biblioteker i programmeringsverdenen er litt som en verktøykasse. De inneholder funksjoner som andre har skrevet. Da slipper vi å finne opp verktøyene på nytt fordi andre har gjort det før oss ☺️"
+    },
     "initialCode": "import math\nx = 16\nsqrtX = math.sqrt(x)\nprint(sqrtX)",
     "solution": {
-      "solved": 6.0,
+      "solved": 6,
       "code": "import math\nx = 36\nsqrtX = math.sqrt(x)\nprint('Kvadratroten til 36 er lik')\nprint(sqrtX)"
     }
   },
   {
     "title": "Feil med funksjoner",
     "description": "Ok, så vi må gi funksjonen math.sqrt() et tall for at den skal fungere. Men hva skjer om vi gir funskjonen mer enn ett tall?",
-    "postDescription": "Output-feltet gir oss en feilmelding om at funksjonen math.sqrt() tar nøyaktig et argument. Derfor så vet ikke funksjonen hva den skal gjøre med så mange tall og gir oss en feilmelding slik at vi kan rette på kildekoden.",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": "Output-feltet gir oss en feilmelding om at funksjonen math.sqrt() tar nøyaktig et argument. Derfor så vet ikke funksjonen hva den skal gjøre med så mange tall og gir oss en feilmelding slik at vi kan rette på kildekoden."
+    },
     "initialCode": "import math\nx = 16\nsqrtX = math.sqrt(2,1,51)\nprint(sqrtX)",
     "solution": {
       "solved": 0,
@@ -92,7 +132,10 @@
   {
     "title": "Hva om vi sender inn en streng?",
     "description": "Så feilmeldingen fortalte oss at math.sqrt() tar nøyaktig et argument. Men betyr det også strenger? Hvordan regner man ut kvadratroten av 'progg.it'?",
-    "postDescription": "Nå fikk vi en helt annen feilmelding! Denne forteller oss at math.sqrt() kun tar imot tall som argument. For en kresen funksjon 😡",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": "Nå fikk vi en helt annen feilmelding! Denne forteller oss at math.sqrt() kun tar imot tall som argument. For en kresen funksjon 😡"
+    },
     "initialCode": "import math\nsqrtX = math.sqrt('progg.it')\nprint(sqrtX)",
     "solution": {
       "solved": 0,
@@ -102,7 +145,10 @@
   {
     "title": "Pytagoras",
     "description": "Pytagoras sin læresetning handler om at summen av arealene til katetene i en rettvinklet trekant er lik arealet til hypotenusen. Skriv et program som regner og skriver ut hypotenusen til en trekant der katetene er lik 5 og 12.",
-    "postDescription": "Woho! Veldig bra jobbet! Hittil, har du lært om variabler, tall og funksjonen sqrt i mattebiblioteket. Kun med denne kunnskapen så har du klart å lage en kalkulator for å regne ut hypotenusen til en rettvinklet trekant. Men det er så mye mer å lære om programmering og Python. Bare fortsett sånn :)",
+    "postDescription": {
+      "shouldShowIfSolved": true,
+      "text": "Woho! Veldig bra jobbet! Hittil, har du lært om variabler, tall og funksjonen sqrt i mattebiblioteket. Kun med denne kunnskapen så har du klart å lage en kalkulator for å regne ut hypotenusen til en rettvinklet trekant. Men det er så mye mer å lære om programmering og Python. Bare fortsett sånn 😊"
+    },
     "initialCode": "",
     "solution": {
       "solved": 13,
@@ -112,7 +158,10 @@
   {
     "title": "Lister",
     "description": "En liste i Python er definert med klammeparanteser []. Inneholdet i listen heter elementer som er skilt fra hverandre med kommategn. Akkurat som tekststrenger og tall så kan også lister være variabler som vist på eksempelet i editoren. Trykk på kjøreknappen for å se hva som blir skrevet ut på terminalen.",
-    "postDescription": "",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": ""
+    },
     "initialCode": "liste = [67,31,53,6,97,1]\nprint(liste)",
     "solution": {
       "solved": 0,
@@ -122,7 +171,10 @@
   {
     "title": "Elementer i lister",
     "description": "Noen ganger, vil vi kun skrive ut noen elementer i listen. Tenk på en liste som en bok. En bok er jo egentlig en liste av ark. Ganske ofte når vi leser fagbøker så blir vi nødt til å slå opp ting ved å lete etter sidenummeret. Indeks i en liste tilsvarer det vi ville ha kalt sidenummeret i en bok. Altså et tall som beskriver hvor et element ligger i en liste. I editoren, ser du et eksempel der vi printer ut elementene på plass 4 og 2 i listen. Kan du gjette hvilke tall som blir skrevet ut?",
-    "postDescription": "Gjettet du kanskje at nummer 6 og 31 skulle bli printet ut? Grunnen til at det heller ble 97 og 53 er fordi maskinene våre rett og slett begynner å telle fra 0. Prøv å se hva som skjer om du prøver å printe ut indeks nummer 0 fra liste variablen.",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text":"Gjettet du kanskje at nummer 6 og 31 skulle bli printet ut? Grunnen til at det heller ble 97 og 53 er fordi maskinene våre rett og slett begynner å telle fra 0. Prøv å se hva som skjer om du prøver å printe ut indeks nummer 0 fra liste variablen."
+    },
     "initialCode": "liste = [67,31,53,6,97,1]\nprint(liste[4])\nprint(liste[2])",
     "solution": {
       "solved": 0,
@@ -132,7 +184,10 @@
   {
     "title": "Liste error",
     "description": "Hva med indeks høyere enn størrelsen til listen?",
-    "postDescription": "Akkurat som om vi skulle bla til side 100 i en bok med kun 2 sider så vil ikke dette gå. Feilmeldingen forklarer at indeksen vår er 'out of range' som betyr at den er utenfor grensen til listen. Altså vi prøver å hente et element med en indeks som ikke finnes i listen. I tillegg så gir feilmeldingen beskjed om hvilken linjenummer i kildekoden vår, feilen forekommer. Veldig nyttig!",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": "Akkurat som om vi skulle bla til side 100 i en bok med kun 2 sider så vil ikke dette gå. Feilmeldingen forklarer at indeksen vår er 'out of range' som betyr at den er utenfor grensen til listen. Altså vi prøver å hente et element med en indeks som ikke finnes i listen. I tillegg så gir feilmeldingen beskjed om hvilken linjenummer i kildekoden vår, feilen forekommer. Veldig nyttig!"
+    },
     "initialCode": "liste = [3,14]\nprint(liste[100])",
     "solution": {
       "solved": 0,
@@ -141,8 +196,11 @@
   },
   {
     "title": "Funksjonen range",
-    "description": "Denne funksjonen tar inn to tall og spytter ut en liste med tall fra det første gitte tallet frem til, men ikke inkludert det andre gitte andre tallet. I editoren, ser du et eksempel hvor vi kaller på range med tall 0 og 10.",
-    "postDescription": "Vi kan aksessere range verdien som en liste og bruke klammeparantesene []. I dette tilfellet skulle vi printe plass nummer 3 i listen.",
+    "description": "Denne funksjonen tar inn to tall og spytter ut en liste med tall fra det første gitte tallet frem til, men ikke inkludert det andre gitte tallet. I editoren, ser du et eksempel hvor vi kaller på range med tall 0 og 10.",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": "Vi kan aksessere range verdien som en liste og bruke klammeparantesene []. I dette tilfellet skulle vi printe plass nummer 3 i listen."
+    },
     "initialCode": "liste = range(0,10)\nprint(liste[3])",
     "solution": {
       "solved": 0,
@@ -152,7 +210,10 @@
   {
     "title": "Løkker",
     "description": "Datamaskinen er utrolig flink til å gjøre en ting mange ganger og gi oss kjappe resultater. Tenk deg om vi fikk i oppgave om å telle til 100. Det tar litt tid for oss mennesker å ramse opp alle tallene. Ordet 'for' er et nøkkelord i Python som sier til datamaskinen at vi har et stykke kode som vi vil kjøre flere ganger. I editoren, ser du et eksempel på hvordan en løkke er skrevet i Python hvor print funksjonen blir kalt 25 ganger og printer ut alle tallene fra 25 frem til, men ikke inkludert 50. Endre på løkken slik at print skriver ut alle tall fra 0 frem til, men ikke inkludert 100.",
-    "postDescription": "",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": ""
+    },
     "initialCode": "for i in range(25,50):\n\tprint(i)",
     "solution": {
       "solved": 0,
@@ -162,7 +223,10 @@
   {
     "title": "Hva er indentering?",
     "description": "Indentering er rett og slett fire mellomrom eller en tab med tab-knappen på tasturet som forteller maskinen at hvilken del av kildekoden tilhører en annen del av koden. Fjern alle mellomrommene før print. Hva skjer om vi har feil indentering i denne løkken?",
-    "postDescription": "Da får vi en feilmelding som forteller oss at maskinen ikke skjønner hvor variabel 'i' kommer fra i linje 2. Dette er fordi variabelen 'i' kun kan brukes i kode som tilhører løkken vår.",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": "Da får vi en feilmelding som forteller oss at maskinen ikke skjønner hvor variabel 'i' kommer fra i linje 2. Dette er fordi variabelen 'i' kun kan brukes i kode som tilhører løkken vår."
+    },
     "initialCode": "for i in range(25,50):\n\tprint(i)",
     "solution": {
       "solved": 0,
@@ -172,7 +236,10 @@
   {
     "title": "Strengkonkatenering",
     "description": "Ofte når vi skriver programmer, kan det være lurt å lagre strenger i flere enn en variabel. I editoren, ser du et eksempel på hvordan vi kan slå sammen to strengvariabler. Kalt konkatenering",
-    "postDescription": "Strengkonkatenering er uttrykk bare for tekststrenger akkurat som tall har egne uttrykk med pluss og minus. Vi bruker operatoren + for å slå sammen tekststrenger.",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": "Strengkonkatenering er uttrykk bare for tekststrenger akkurat som tall har egne uttrykk med pluss og minus. Vi bruker operatoren + for å slå sammen tekststrenger."
+    },
     "initialCode": "melding = 'Hei! Mitt navn er '\nnavn = 'progg.it'\nprint(melding + navn)",
     "solution": {
       "solved": 0,
@@ -182,7 +249,10 @@
   {
     "title": "Brukerinput",
     "description": "Når vi bruker programmer på maskinene våre, trenger de ofte input fra oss som brukere fra tastaturet. I Python, gjøres dette med funksjonen input() som vist i eksempelet i editoren. Kjør programmet og skriv inn ditt eget navn.",
-    "postDescription": "Det poppet plutselig opp en alarmboks på nettleseren vår med et input-felt der vi kunne skrive navnet vårt. Det skal sies at dette skjer kun i progg.it fordi jeg er en nettside. Om du kjører Python på andre måter, kan det hende at brukerinput blir hentet på andre måter.",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": "Det poppet plutselig opp en alarmboks på nettleseren vår med et input-felt der vi kunne skrive navnet vårt. Det skal sies at dette skjer kun i progg.it fordi jeg er en nettside. Om du kjører Python på andre måter, kan det hende at brukerinput blir hentet på andre måter."
+    },
     "initialCode": "navn = input()\nprint('Hei! Mitt navn er ' + navn)",
     "solution": {
       "solved": 0,
@@ -192,7 +262,10 @@
   {
     "title": "Typekonvertering fra streng til tall",
     "description": "Nå har vi kommet langt! Vi har nå lært om to primærtyper i Python, tall og strenger. Noen ganger vil vi kanskje bytte typer på disse. Som for eksempel så vil brukerinput alltid spytte ut en streng fra tastaturet. Om vi skriver inn tall i tastaturet så vil vi kunne bruke dette tallet til å regne ut ting. Bruk funksjonen int() for å konvertere tallet vi tar inn i input(). Funksjonen int() tar imot nøyaktig et argument som må være en streng.",
-    "postDescription": "",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": ""
+    },
     "initialCode": "tall = input()\nprint(5 + tall)",
     "solution": {
       "solved": 0,
@@ -202,17 +275,23 @@
   {
     "title": "Typekonvertering fra tall til streng",
     "description": "Eller kanskje vi vil konkatenere et tall inn til en streng? Da bruker vi funksjonen str()",
-    "postDescription": "",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": ""
+    },
     "initialCode": "print('Mitt favorittall er ' + 7)",
     "solution": {
-      "solved": 0,
+      "solved": 7,
       "code": "print('Mitt favorittall er ' + str(7))"
     }
   },
   {
     "title": "Hypotenuskalkulator",
     "description": "Nå har du lært deg hvordan du regner ut Pytagoras læresetning og hvordan vi kan få input fra bruker gjennom tastaturet. La oss kombinere den kunnskapen vi har opplært oss til å lage en kalkulator for å regne ut hypotenusen av en rettvinklet trekant. Kalkulatoren skal ta imot to brukerinput første katet og andre katet. Programmet skal så regne ut hypotenusen. Til slutt, skal programmet printe ut hva brukeren skrev inn som katateter og verdien av den beregnede hypotenusen",
-    "postDescription": "",
+    "postDescription": {
+      "shouldShowIfSolved": false,
+      "text": ""
+    },
     "initialCode": "",
     "solution": {
       "solved": 0,

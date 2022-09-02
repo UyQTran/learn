@@ -69,7 +69,10 @@ const AssigmentGrid = styled.div`
 interface Assignment {
   title?: string
   description: string
-  postDescription: string
+  postDescription: {
+    text: string
+    shouldShowIfSolved: boolean
+  }
   initialCode: string
   solution: {
     solved: string | number
@@ -83,6 +86,7 @@ const AssignmentPage = () => {
   const controls = useAnimation()
   const [assignments, setAssignments] = useState<Assignment[]>()
   const [hasClickedRun, setHasClickedRun] = useState<boolean>(false)
+  const [hasSolved, setHasSolved] = useState<boolean>(false)
   let indexNumber = 0
   if (typeof index === "string") {
     indexNumber = parseInt(index)
@@ -129,6 +133,12 @@ const AssignmentPage = () => {
     navigate('/assignment/'+nextIndex)
   }
 
+  const shouldShowPostDescription = (hasClickedRun
+    && hasSolved
+    && currentAssignment.postDescription.shouldShowIfSolved)
+    || (hasClickedRun
+      && !currentAssignment.postDescription.shouldShowIfSolved)
+
   return (
     <AssignmentWrapper>
       <ButtonGroup>
@@ -144,7 +154,7 @@ const AssignmentPage = () => {
           data-cy="next-assignment-button"
           variant="contained"
           onClick={handleNextClick}
-          disabled={indexNumber+1 >= assignments.length}
+          disabled={indexNumber+1 >= assignments.length || !shouldShowPostDescription}
         >
           Neste
         </Button>
@@ -155,15 +165,19 @@ const AssignmentPage = () => {
         key={indexNumber}
       >
         <AssignmentTitle variant="h2">
-          {currentAssignment.title}
+          {(indexNumber+1)+ ': ' + currentAssignment.title}
         </AssignmentTitle>
         <AssigmentGrid>
           <AssignmentDescription
             description={currentAssignment.description}
-            postDescription={currentAssignment.postDescription}
-            shouldShowPostDescription={hasClickedRun}/>
+            postDescription={currentAssignment.postDescription.text}
+            shouldShowPostDescription={shouldShowPostDescription}/>
           <div>
-            <CodeEditor initialCode={currentAssignment.initialCode} runClickCallback={() => setHasClickedRun(true)}/>
+            <CodeEditor
+              initialCode={currentAssignment.initialCode}
+              runClickCallback={() => setHasClickedRun(true)}
+              outputCallback={(output) => setHasSolved(output.includes(""+currentAssignment.solution.solved))}
+            />
             <Solution solutionCode={currentAssignment.solution.code}/>
           </div>
         </AssigmentGrid>
