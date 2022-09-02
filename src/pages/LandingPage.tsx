@@ -28,7 +28,6 @@ const AppDescription = styled(Typography)`
   word-wrap: break-word;
   display: flex;
   justify-content: center;
-  width: 100%;
 `
 
 const AppFooter = styled.footer`
