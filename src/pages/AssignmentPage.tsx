@@ -11,7 +11,7 @@ import Header from "../components/Header";
 
 const AssignmentWrapper = styled.div`
   width: 80%;
-  animation: fadeIn 0.5s;
+  animation: fadeIn 0.15s;
 
   @keyframes fadeIn {
     0% {

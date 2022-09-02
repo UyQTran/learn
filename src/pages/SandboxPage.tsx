@@ -8,7 +8,7 @@ import Header from "../components/Header";
 
 const SandboxWrapper = styled.div`
   width: 850px;
-  animation: fadeIn 0.5s;
+  animation: fadeIn 0.15s;
 
   @keyframes fadeIn {
     0% {
