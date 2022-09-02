@@ -71,6 +71,11 @@ const AssigmentGrid = styled.div`
 const AssigmentProgressionButton = styled(Button)`
   min-width: 140px;
   max-width: 200px;
+
+  @media only screen and (max-width: 1100px) {
+    min-width: 100px;
+    max-width: 200px;
+  }
 `
 
 const AssigmentProgressBar = styled(LinearProgress)`
