@@ -64,13 +64,13 @@ const LandingPage = () => {
       y: '20vh',
       opacity: -1,
       transition: {
-        duration: 0.2
+        duration: 0.15
       },
     }))
     await headerControls.start(() => ({
       y: '-7vh',
       transition: {
-        duration: 0.25,
+        duration: 0.2,
         ease: 'easeOut'
       },
     }))
