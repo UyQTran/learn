@@ -61,10 +61,10 @@ const LandingPage = () => {
   const handleClick = (to: string) => async () => {
     document.body.style.overflow = 'hidden'
     appControls.start(() => ({
-      y: '20vh',
+      y: '10vh',
       opacity: -1,
       transition: {
-        duration: 0.15
+        duration: 0.2
       },
     }))
     await headerControls.start(() => ({
