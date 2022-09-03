@@ -27,6 +27,8 @@ const Heading = styled.h1`
 
   @media only screen and (max-width: 1000px) {
     margin-top: ${props => props.theme.spacing(2)};
+  }
+    
 `
 
 
