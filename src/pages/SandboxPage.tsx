@@ -60,7 +60,12 @@ const SandboxPage = () => {
           <SandboxDescription variant="subtitle1">
               Programmer akkurat det du vil!
           </SandboxDescription>
-          <CodeEditor initialCode="" isSandbox={true} runClickCallback={() => {}} outputCallback={()=>{}}/>
+          <CodeEditor
+            initialCode=""
+            isSandbox={true}
+            runClickCallback={() => {}}
+            editorOnChangeCallback={() => {}}
+            outputCallback={()=>{}}/>
         </SandboxWrapper>
       </motion.div>
     </>
