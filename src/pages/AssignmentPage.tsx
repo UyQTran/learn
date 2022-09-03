@@ -197,7 +197,8 @@ const AssignmentPage = () => {
               shouldShowPostDescription={shouldShowPostDescription}/>
             <div>
               <CodeEditor
-                initialCode={currentAssignment.initialCode}
+                initialCode={userContext.user.progression[currentAssignment.id]?.code}
+                editorOnChangeCallback={code => userContext.setProgressionCode(code, currentAssignment.id)}
                 runClickCallback={() => {
                   setHasClickedRun(true)
                   userContext.solveProgression(currentAssignment.id)

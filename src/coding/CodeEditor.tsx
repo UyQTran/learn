@@ -34,6 +34,7 @@ const CodeWindow = styled(CodeMirror)`
 
 interface CodeEditorProps {
   initialCode: string
+  editorOnChangeCallback: (code: string) => void
   runClickCallback: () => void
   outputCallback: (output: string) => void
   isSandbox?: boolean
@@ -42,7 +43,6 @@ interface CodeEditorProps {
 const CodeEditor = (props: CodeEditorProps) => {
   const [code, setCode] = useState(props.initialCode)
   const [output, compile] = usePythonCompiler()
-  const userContext = useContext(UserContext)
 
   const handleRunClick = () => {
     props.runClickCallback()
@@ -64,7 +64,10 @@ const CodeEditor = (props: CodeEditorProps) => {
         value={code}
         height="250px"
         extensions={[python()]}
-        onChange={value => setCode(value)}
+        onChange={value => {
+          props.editorOnChangeCallback(value)
+          setCode(value)
+        }}
       />
       <Button
         data-cy="compile-button"
