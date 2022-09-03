@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 import CodeMirror from '@uiw/react-codemirror'
 import { python } from '@codemirror/lang-python'
-import { useEffect, useState } from 'react'
+import {useContext, useEffect, useState} from 'react'
 import { Button } from '@mui/material'
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline'
 import usePythonCompiler from './usePythonCompiler'
+import {UserContext} from "../context/UserProgressionContext";
 
 const CodeEditorWrapper = styled.div`
   color: ${props => props.theme.palette.secondary.dark};
@@ -41,6 +42,7 @@ interface CodeEditorProps {
 const CodeEditor = (props: CodeEditorProps) => {
   const [code, setCode] = useState(props.initialCode)
   const [output, compile] = usePythonCompiler()
+  const userContext = useContext(UserContext)
 
   const handleRunClick = () => {
     props.runClickCallback()
@@ -49,8 +51,11 @@ const CodeEditor = (props: CodeEditorProps) => {
 
   useEffect(() => {
     props.outputCallback(output)
-    console.log(code)
   }, [output])
+
+  useEffect(() => {
+    
+  }, [code])
 
   return (
     <CodeEditorWrapper>

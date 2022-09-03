@@ -1,12 +1,13 @@
-import {useNavigate, useParams} from 'react-router-dom'
-import {Button, LinearProgress, Typography} from '@mui/material'
+import { useNavigate, useParams } from 'react-router-dom'
+import { Button, LinearProgress, Typography } from '@mui/material'
 import styled from 'styled-components'
-import { useEffect, useState } from 'react'
+import {useContext, useEffect, useState} from 'react'
 import CodeEditor from '../coding/CodeEditor'
 import Solution from '../coding/Solution'
 import { motion, useAnimation } from 'framer-motion'
-import AssignmentDescription from '../coding/AssignmentDescription';
-import Header from "../components/Header";
+import AssignmentDescription from '../coding/AssignmentDescription'
+import Header from '../components/Header'
+import {UserContext} from "../context/UserProgressionContext";
 
 
 const AssignmentWrapper = styled.div`
@@ -82,8 +83,10 @@ const AssigmentProgressBar = styled(LinearProgress)`
   width: 100%;
 `
 
-interface Assignment {
-  title?: string
+export interface Assignment {
+  id: string
+  nextId: string
+  title: string
   description: string
   postDescription: {
     text: string
@@ -97,12 +100,14 @@ interface Assignment {
 }
 
 const AssignmentPage = () => {
-  document.body.style.overflow = 'auto'
+  const userContext = useContext(UserContext)
   const { index } = useParams()
   const controls = useAnimation()
   const [assignments, setAssignments] = useState<Assignment[]>()
   const [hasClickedRun, setHasClickedRun] = useState<boolean>(false)
   const [hasSolved, setHasSolved] = useState<boolean>(false)
+  const navigate = useNavigate()
+  document.body.style.overflow = 'auto'
   let indexNumber = 0
   if (typeof index === "string") {
     indexNumber = parseInt(index)
@@ -120,7 +125,6 @@ const AssignmentPage = () => {
 
   const previousPage = previousIndex >= 0 ? '/assignment/'+previousIndex : '/'
 
-  const navigate = useNavigate()
 
   if(!assignments) return <></>
 
@@ -154,6 +158,7 @@ const AssignmentPage = () => {
     && currentAssignment.postDescription.shouldShowIfSolved)
     || (hasClickedRun
       && !currentAssignment.postDescription.shouldShowIfSolved)
+    || userContext.user.progression[currentAssignment.id].hasSolved
 
   return (
     <>
@@ -193,7 +198,10 @@ const AssignmentPage = () => {
             <div>
               <CodeEditor
                 initialCode={currentAssignment.initialCode}
-                runClickCallback={() => setHasClickedRun(true)}
+                runClickCallback={() => {
+                  setHasClickedRun(true)
+                  userContext.solveProgression(currentAssignment.id)
+                }}
                 outputCallback={(output) => setHasSolved(output.includes(""+currentAssignment.solution.solved))}
               />
               <Solution solutionCode={currentAssignment.solution.code}/>

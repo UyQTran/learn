@@ -1,5 +1,7 @@
 [
   {
+    "id": "intro",
+    "nextId": "coding",
     "title": "Mitt første program",
     "description": "Velkommen til progg.it! Her kan du kode i et programmeringsspråk som heter Python. På denne siden ser du to hvite bokser. Den øverste er editoren din, mens boksen under er output-feltet. Output-feltet er boksen som skriver ut resultatet av koden i editoren når du trykker på kjøreknappen. På eksempelet, ser du et funksjonskall i editoren der en funksjon print, som skriver ut strengen 'Hei verden!' til output-feltet. Prøv deg frem ved å trykke på kjøreknappen.",
     "postDescription": {
@@ -13,6 +15,8 @@
     }
   },
   {
+    "id": "coding",
+    "nextId": "variables",
     "title": "Koding",
     "description": "Kode er det samme som en oppskrift som maskinene våre følger bastant. Det betyr at maskinen din skriver ut nøyaktig hva som er mellom ' tegnene i funksjonskallet for print. Erstatt progg.it med ditt eget navn så vil du får en hilsen fra din egen maskin.",
     "postDescription": {
@@ -26,6 +30,8 @@
     }
   },
   {
+    "id": "variables",
+    "nextId": "variables-string",
     "title": "Variabler av tall",
     "description": "I matematikken lærer vi om ligninger med ukjente variabler der vår oppgave som oftest er å finne ut hva variabelen er lik. Dette fungerer litt annerledes i programmering hvor vi er sjefen. Vi bestemmer hva variabelen skal være lik. I editoren så ser du en variabel x som vi har satt lik 3. Prøv å bytt ut 3 med ditt favorittall og trykk på kjør",
     "postDescription": {
@@ -39,6 +45,8 @@
     }
   },
   {
+    "id": "variables-string",
+    "nextId": "variables-error",
     "title": "Variabler av strenger",
     "description": "Variabler kan ikke bare være tall, men tekststrenger også. Variabler kan også hete nesten hva som helst så lenge variabelnavnet begynner med en bokstav. Trykk på kjør og se resultatet.",
     "postDescription": {
@@ -52,6 +60,8 @@
     }
   },
   {
+    "id": "variables-error",
+    "nextId": "expressions",
     "title": "Feil variabelnavn?",
     "description": "Variabler kan hete nesten hva som helst. Nesten...",
     "postDescription": {
@@ -65,6 +75,8 @@
     }
   },
   {
+    "id": "expressions",
+    "nextId": "code-error",
     "title": "Uttrykk",
     "description": "I editoren ser du et eksempel med to variabler x og y med en linje for å printe summen av disse variablene. Prøv deg frem med å trykke på kjøreknappen!",
     "postDescription": {
@@ -78,6 +90,8 @@
     }
   },
   {
+    "id": "code-error",
+    "nextId": "functions",
     "title": "Feil i kildekoden",
     "description": "Her mangler det noe. Kanskje det går av likevel?",
     "postDescription": {
@@ -91,6 +105,8 @@
     }
   },
   {
+    "id": "functions",
+    "nextId": "functions-square-root",
     "title": "Funksjoner",
     "description": "En funksjon i Python starter med navnet til funksjonen med to paranteser. Mellom parantesene, kan man gi funksjonen argumenter. Et argument kan for eksempel være tall eller strenger. Om en gitt funksjon, tar imot flere enn et argument, blir de skilt fra hverandre med komma. I editoren, ser du et eksempel på bruken av funksjonen len(). Trykk på kjør så ser vi hva som skjer!",
     "postDescription": {
@@ -104,6 +120,8 @@
     }
   },
   {
+    "id": "functions-square-root",
+    "nextId": "functions-square-root-error",
     "title": "Kvadratroten",
     "description": "Python er et utrolig sterkt språk med masse biblioteker som gjør koding mye enklere for oss. Før vi bruker et bibliotek så må vi importere biblioteket som du ser i linje 1 i editoren. Biblioteket math, er et bibliotek med masse matematiske funksjoner. I editoren så ser du bruken av math sin funksjon for å regne ut kvadratroten av et tall eller variabel som er mellom parantesene. Skriv et program som skriver ut kvadratroten av 36.",
     "postDescription": {
@@ -117,6 +135,8 @@
     }
   },
   {
+    "id": "functions-square-root-error",
+    "nextId": "functions-square-root-error-string",
     "title": "Feil med funksjoner",
     "description": "Ok, så vi må gi funksjonen math.sqrt() et tall for at den skal fungere. Men hva skjer om vi gir funskjonen mer enn ett tall?",
     "postDescription": {
@@ -130,6 +150,8 @@
     }
   },
   {
+    "id": "functions-square-root-error-string",
+    "nextId": "pythagoras",
     "title": "Hva om vi sender inn en streng?",
     "description": "Så feilmeldingen fortalte oss at math.sqrt() tar nøyaktig et argument. Men betyr det også strenger? Hvordan regner man ut kvadratroten av 'progg.it'?",
     "postDescription": {
@@ -143,6 +165,8 @@
     }
   },
   {
+    "id": "pythagoras",
+    "nextId": "lists",
     "title": "Pytagoras",
     "description": "Pytagoras sin læresetning handler om at summen av arealene til katetene i en rettvinklet trekant er lik arealet til hypotenusen. Skriv et program som regner og skriver ut hypotenusen til en trekant der katetene er lik 5 og 12.",
     "postDescription": {
@@ -156,6 +180,8 @@
     }
   },
   {
+    "id": "lists",
+    "nextId": "lists-elements",
     "title": "Lister",
     "description": "En liste i Python er definert med klammeparanteser []. Inneholdet i listen heter elementer som er skilt fra hverandre med kommategn. Akkurat som tekststrenger og tall så kan også lister være variabler som vist på eksempelet i editoren. Trykk på kjøreknappen for å se hva som blir skrevet ut på terminalen.",
     "postDescription": {
@@ -169,6 +195,8 @@
     }
   },
   {
+    "id": "lists-elements",
+    "nextId": "lists-error",
     "title": "Elementer i lister",
     "description": "Noen ganger, vil vi kun skrive ut noen elementer i listen. Tenk på en liste som en bok. En bok er jo egentlig en liste av ark. Ganske ofte når vi leser fagbøker så blir vi nødt til å slå opp ting ved å lete etter sidenummeret. Indeks i en liste tilsvarer det vi ville ha kalt sidenummeret i en bok. Altså et tall som beskriver hvor et element ligger i en liste. I editoren, ser du et eksempel der vi printer ut elementene på plass 4 og 2 i listen. Kan du gjette hvilke tall som blir skrevet ut?",
     "postDescription": {
@@ -182,6 +210,8 @@
     }
   },
   {
+    "id": "lists-error",
+    "nextId": "functions-range",
     "title": "Liste error",
     "description": "Hva med indeks høyere enn størrelsen til listen?",
     "postDescription": {
@@ -195,6 +225,8 @@
     }
   },
   {
+    "id": "functions-range",
+    "nextId": "loops",
     "title": "Funksjonen range",
     "description": "Denne funksjonen tar inn to tall og spytter ut en liste med tall fra det første gitte tallet frem til, men ikke inkludert det andre gitte tallet. I editoren, ser du et eksempel hvor vi kaller på range med tall 0 og 10.",
     "postDescription": {
@@ -208,6 +240,8 @@
     }
   },
   {
+    "id": "loops",
+    "nextId": "indents",
     "title": "Løkker",
     "description": "Datamaskinen er utrolig flink til å gjøre en ting mange ganger og gi oss kjappe resultater. Tenk deg om vi fikk i oppgave om å telle til 100. Det tar litt tid for oss mennesker å ramse opp alle tallene. Ordet 'for' er et nøkkelord i Python som sier til datamaskinen at vi har et stykke kode som vi vil kjøre flere ganger. I editoren, ser du et eksempel på hvordan en løkke er skrevet i Python hvor print funksjonen blir kalt 25 ganger og printer ut alle tallene fra 25 frem til, men ikke inkludert 50. Endre på løkken slik at print skriver ut alle tall fra 0 frem til, men ikke inkludert 100.",
     "postDescription": {
@@ -221,6 +255,8 @@
     }
   },
   {
+    "id": "indents",
+    "nextId": "string-concat",
     "title": "Hva er indentering?",
     "description": "Indentering er rett og slett fire mellomrom eller en tab med tab-knappen på tasturet som forteller maskinen at hvilken del av kildekoden tilhører en annen del av koden. Fjern alle mellomrommene før print. Hva skjer om vi har feil indentering i denne løkken?",
     "postDescription": {
@@ -234,6 +270,8 @@
     }
   },
   {
+    "id": "string-concat",
+    "nextId": "user-input",
     "title": "Strengkonkatenering",
     "description": "Ofte når vi skriver programmer, kan det være lurt å lagre strenger i flere enn en variabel. I editoren, ser du et eksempel på hvordan vi kan slå sammen to strengvariabler. Kalt konkatenering",
     "postDescription": {
@@ -247,6 +285,8 @@
     }
   },
   {
+    "id": "user-input",
+    "nextId": "conversion-string-int",
     "title": "Brukerinput",
     "description": "Når vi bruker programmer på maskinene våre, trenger de ofte input fra oss som brukere fra tastaturet. I Python, gjøres dette med funksjonen input() som vist i eksempelet i editoren. Kjør programmet og skriv inn ditt eget navn.",
     "postDescription": {
@@ -260,6 +300,8 @@
     }
   },
   {
+    "id": "conversion-string-int",
+    "nextId": "conversion-int-string",
     "title": "Typekonvertering fra streng til tall",
     "description": "Nå har vi kommet langt! Vi har nå lært om to primærtyper i Python, tall og strenger. Noen ganger vil vi kanskje bytte typer på disse. Som for eksempel så vil brukerinput alltid spytte ut en streng fra tastaturet. Om vi skriver inn tall i tastaturet så vil vi kunne bruke dette tallet til å regne ut ting. Bruk funksjonen int() for å konvertere tallet vi tar inn i input(). Funksjonen int() tar imot nøyaktig et argument som må være en streng.",
     "postDescription": {
@@ -273,6 +315,8 @@
     }
   },
   {
+    "id": "conversion-int-string",
+    "nextId": "hypothenus-calculator",
     "title": "Typekonvertering fra tall til streng",
     "description": "Eller kanskje vi vil konkatenere et tall inn til en streng? Da bruker vi funksjonen str()",
     "postDescription": {
@@ -286,6 +330,8 @@
     }
   },
   {
+    "id": "hypothenus-calculator",
+    "nextId": "",
     "title": "Hypotenuskalkulator",
     "description": "Nå har du lært deg hvordan du regner ut Pytagoras læresetning og hvordan vi kan få input fra bruker gjennom tastaturet. La oss kombinere den kunnskapen vi har opplært oss til å lage en kalkulator for å regne ut hypotenusen av en rettvinklet trekant. Kalkulatoren skal ta imot to brukerinput første katet og andre katet. Programmet skal så regne ut hypotenusen. Til slutt, skal programmet printe ut hva brukeren skrev inn som katateter og verdien av den beregnede hypotenusen",
     "postDescription": {
