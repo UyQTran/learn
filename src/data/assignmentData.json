@@ -130,7 +130,7 @@
     },
     "initialCode": "import math\nx = 16\nsqrtX = math.sqrt(x)\nprint(sqrtX)",
     "solution": {
-      "solved": 6,
+      "solved": "6",
       "code": "import math\nx = 36\nsqrtX = math.sqrt(x)\nprint('Kvadratroten til 36 er lik')\nprint(sqrtX)"
     }
   },
@@ -145,7 +145,7 @@
     },
     "initialCode": "import math\nx = 16\nsqrtX = math.sqrt(2,1,51)\nprint(sqrtX)",
     "solution": {
-      "solved": 0,
+      "solved": "",
       "code": ""
     }
   },
@@ -160,7 +160,7 @@
     },
     "initialCode": "import math\nsqrtX = math.sqrt('progg.it')\nprint(sqrtX)",
     "solution": {
-      "solved": 0,
+      "solved": "",
       "code": ""
     }
   },
@@ -175,7 +175,7 @@
     },
     "initialCode": "",
     "solution": {
-      "solved": 13,
+    "solved": "13",
       "code": "import math\nkat1 = 5\nkat2 = 12\nhyp = math.sqrt(kat1*kat1+kat2*kat2)\nprint('Hypotenusen til en rettvinklet trekant med kateter 5 og 12 er lik')\nprint(hyp)"
     }
   },
@@ -190,7 +190,7 @@
     },
     "initialCode": "liste = [67,31,53,6,97,1]\nprint(liste)",
     "solution": {
-      "solved": 0,
+      "solved": "",
       "code": ""
     }
   },
@@ -205,7 +205,7 @@
     },
     "initialCode": "liste = [67,31,53,6,97,1]\nprint(liste[4])\nprint(liste[2])",
     "solution": {
-      "solved": 0,
+      "solved": "",
       "code": ""
     }
   },
@@ -220,7 +220,7 @@
     },
     "initialCode": "liste = [3,14]\nprint(liste[100])",
     "solution": {
-      "solved": 0,
+      "solved": "",
       "code": ""
     }
   },
@@ -235,7 +235,7 @@
     },
     "initialCode": "liste = range(0,10)\nprint(liste[3])",
     "solution": {
-      "solved": 0,
+      "solved": "",
       "code": ""
     }
   },
@@ -250,7 +250,7 @@
     },
     "initialCode": "for i in range(25,50):\n\tprint(i)",
     "solution": {
-      "solved": 0,
+      "solved": "",
       "code": ""
     }
   },
@@ -265,7 +265,7 @@
     },
     "initialCode": "for i in range(25,50):\n\tprint(i)",
     "solution": {
-      "solved": 0,
+      "solved": "",
       "code": ""
     }
   },
@@ -280,7 +280,7 @@
     },
     "initialCode": "melding = 'Hei! Mitt navn er '\nnavn = 'progg.it'\nprint(melding + navn)",
     "solution": {
-      "solved": 0,
+      "solved": "",
       "code": ""
     }
   },
@@ -295,7 +295,7 @@
     },
     "initialCode": "navn = input()\nprint('Hei! Mitt navn er ' + navn)",
     "solution": {
-      "solved": 0,
+      "solved": "",
       "code": ""
     }
   },
@@ -310,7 +310,7 @@
     },
     "initialCode": "tall = input()\nprint(5 + tall)",
     "solution": {
-      "solved": 0,
+      "solved": "",
       "code": "tall = int(input())\nprint(5 + tall)"
     }
   },
@@ -325,7 +325,7 @@
     },
     "initialCode": "print('Mitt favorittall er ' + 7)",
     "solution": {
-      "solved": 7,
+      "solved": "7",
       "code": "print('Mitt favorittall er ' + str(7))"
     }
   },
@@ -340,7 +340,7 @@
     },
     "initialCode": "",
     "solution": {
-      "solved": 0,
+      "solved": "",
       "code": "import math\nkat1 = int(input())\nkat2 = int(input())\nhyp = math.sqrt(kat1*kat1+kat2*kat2)\nprint('Hypotenusen til en rettvinklet trekant med kateter ' + str(kat1) + ' og ' + str(kat2) + ' er lik ' + str(hyp))"
     }
   }

@@ -4,7 +4,7 @@ import LandingPage from './pages/LandingPage'
 import AssignmentPage, {Assignment} from './pages/AssignmentPage'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import SandboxPage from './pages/SandboxPage'
-import {Progression, UserContext, userKey} from "./context/UserProgressionContext";
+import { Progression, UserContext, userKey } from "./context/UserProgressionContext";
 
 const AppWrapper = styled.div`
   display: flex;
@@ -31,18 +31,25 @@ const App = () => {
 
     const progressionUpdate: Progression = {}
 
-    if(!currentProgression.hasSolved) {
-      const currentAssignment = assignments.find(assignment => assignment.id === assignmentId)
-      const nextAssignment = assignments.find(assignment => assignment.id === currentAssignment?.nextId)
-      progressionUpdate[nextAssignment?.id || ''] = {hasSolved: false, code: nextAssignment?.initialCode || ''}
-    }
-
     currentProgression.hasSolved = true
 
     progressionUpdate[assignmentId] = currentProgression
 
     setProgression({...progression, ...progressionUpdate})
     setUser({progression: {...progression, ...progressionUpdate}})
+  }
+  const createProgression = (assignmentId: string) =>  {
+
+    if(!progression[assignmentId]) {
+      const nextAssignment = assignments.find(assignment => assignmentId === assignment.id)
+      const newProgression = {hasSolved: false, code: nextAssignment?.initialCode || ''}
+
+      const progressionUpdate: Progression = {}
+      progressionUpdate[nextAssignment?.id || ''] = newProgression
+
+      setProgression({...progression, ...progressionUpdate})
+      setUser({progression: {...progression, ...progressionUpdate}})
+    }
   }
 
   const setProgressionCode = (code: string, assignmentId: string) =>  {
@@ -55,7 +62,7 @@ const App = () => {
 
   return (
     <AppWrapper>
-      <UserContext.Provider value={{user, solveProgression, setProgressionCode}}>
+      <UserContext.Provider value={{user, solveProgression, setProgressionCode, createProgression}}>
         <BrowserRouter basename="/">
           <Suspense fallback={<p>Loading...</p>}>
             <Routes>

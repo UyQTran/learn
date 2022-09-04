@@ -19,6 +19,7 @@ interface UserContextType {
   user: User
   solveProgression: (assignmentId: string) => void
   setProgressionCode: (code: string, assignmentId: string) => void
+  createProgression: (assignmentId: string) => void
 }
 
 const defaultUser: User = JSON.parse(localStorage.getItem(userKey) || '{"progression":{"intro": {"hasSolved": false, "code": "print(\'Hei verden!\')"}}}')
@@ -26,7 +27,8 @@ const defaultUser: User = JSON.parse(localStorage.getItem(userKey) || '{"progres
 const defaultUserContext: UserContextType = {
   user: defaultUser,
   solveProgression: (assignmentId: string) => {},
-  setProgressionCode: (code, assignmentId) => {}
+  setProgressionCode: (code, assignmentId) => {},
+  createProgression: (assignmentId: string) => {}
 }
 
 export const UserContext = createContext(defaultUserContext)

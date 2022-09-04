@@ -94,7 +94,7 @@ export interface Assignment {
   }
   initialCode: string
   solution: {
-    solved: string | number
+    solved: string
     code: string
   }
 }
@@ -105,7 +105,6 @@ const AssignmentPage = () => {
   const controls = useAnimation()
   const [assignments, setAssignments] = useState<Assignment[]>()
   const [hasClickedRun, setHasClickedRun] = useState<boolean>(false)
-  const [hasSolved, setHasSolved] = useState<boolean>(false)
   const navigate = useNavigate()
   document.body.style.overflow = 'auto'
   let indexNumber = 0
@@ -143,6 +142,7 @@ const AssignmentPage = () => {
 
   const handleNextClick = async () => {
     document.body.style.overflow = 'hidden'
+    userContext.createProgression(currentAssignment.nextId)
     await controls.start(() => ({
       opacity: 0,
       x: -1000,
@@ -153,12 +153,14 @@ const AssignmentPage = () => {
     navigate('/assignment/'+nextIndex)
   }
 
-  const shouldShowPostDescription = (hasClickedRun
-    && hasSolved
-    && currentAssignment.postDescription.shouldShowIfSolved)
-    || (hasClickedRun
-      && !currentAssignment.postDescription.shouldShowIfSolved)
-    || userContext.user.progression[currentAssignment.id].hasSolved
+  const hasSolved = userContext.user.progression[currentAssignment.id].hasSolved
+
+  const handleIfSolvedAssignment = (output: string) => {
+    if(hasClickedRun && (output.includes(currentAssignment.solution.solved) || currentAssignment.solution.solved === '')) {
+      userContext.solveProgression(currentAssignment.id)
+      setHasClickedRun(false)
+    }
+  }
 
   return (
     <>
@@ -177,7 +179,7 @@ const AssignmentPage = () => {
             data-cy="next-assignment-button"
             variant="contained"
             onClick={handleNextClick}
-            disabled={indexNumber+1 >= assignments.length || !shouldShowPostDescription}
+            disabled={indexNumber+1 >= assignments.length || !hasSolved}
           >
             Neste
           </AssigmentProgressionButton>
@@ -194,16 +196,15 @@ const AssignmentPage = () => {
             <AssignmentDescription
               description={currentAssignment.description}
               postDescription={currentAssignment.postDescription.text}
-              shouldShowPostDescription={shouldShowPostDescription}/>
+              shouldShowPostDescription={hasSolved}/>
             <div>
               <CodeEditor
                 initialCode={userContext.user.progression[currentAssignment.id]?.code}
                 editorOnChangeCallback={code => userContext.setProgressionCode(code, currentAssignment.id)}
                 runClickCallback={() => {
                   setHasClickedRun(true)
-                  userContext.solveProgression(currentAssignment.id)
                 }}
-                outputCallback={(output) => setHasSolved(output.includes(""+currentAssignment.solution.solved))}
+                outputCallback={handleIfSolvedAssignment}
               />
               <Solution solutionCode={currentAssignment.solution.code}/>
             </div>
