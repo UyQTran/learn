@@ -3,13 +3,15 @@ import Header from '../components/Header'
 import styled from 'styled-components'
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents'
 import { Typography } from '@mui/material'
+import Confetti from 'react-confetti'
+import useWindowSize from 'react-use/lib/useWindowSize'
 
 
 const Congrats = styled(Typography)`
   text-align: center;
 `
 
-const Medal = styled.div`
+const Trophy = styled.div`
   display: flex;
   justify-content: center;
   svg {
@@ -29,6 +31,8 @@ const Progger = styled(Typography)`
 
 const FinishPage = () => {
   const controls = useAnimation()
+  const { width, height } = useWindowSize()
+
   return (
     <>
       <Header shouldAnimate={false}/>
@@ -40,11 +44,15 @@ const FinishPage = () => {
         <Congrats variant="h6">
           Gratulerer! Du klarte alle oppgavene og kan nå kalle deg selv en ekte progger!
         </Congrats>
-        <Medal>
+        <Trophy>
           <Progger variant="h3">Progger</Progger>
           <EmojiEventsIcon/>
-        </Medal>
+        </Trophy>
       </motion.div>
+      <Confetti
+        width={width}
+        height={height}
+      />
     </>
   )
 }
