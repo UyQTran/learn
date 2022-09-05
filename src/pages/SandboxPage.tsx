@@ -48,7 +48,7 @@ const SandboxPage = () => {
   const controls = useAnimation()
   return (
     <>
-      <Header/>
+      <Header shouldAnimate={true}/>
       <motion.div
         initial="visible"
         animate={controls}

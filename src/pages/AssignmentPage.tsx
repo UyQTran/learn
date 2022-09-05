@@ -150,7 +150,11 @@ const AssignmentPage = () => {
         duration: 0.35
       },
     }))
-    navigate('/assignment/'+nextIndex)
+    if(indexNumber+1 >= assignments.length) {
+      navigate('/assignment/finish')
+    } else {
+      navigate('/assignment/'+nextIndex)
+    }
   }
 
   const hasSolved = userContext.user.progression[currentAssignment.id].hasSolved
@@ -164,7 +168,7 @@ const AssignmentPage = () => {
 
   return (
     <>
-      <Header/>
+      <Header shouldAnimate={true}/>
       <AssignmentWrapper>
         <ButtonGroup>
           <AssigmentProgressionButton
@@ -179,7 +183,7 @@ const AssignmentPage = () => {
             data-cy="next-assignment-button"
             variant="contained"
             onClick={handleNextClick}
-            disabled={indexNumber+1 >= assignments.length || !hasSolved}
+            disabled={!hasSolved}
           >
             Neste
           </AssigmentProgressionButton>
