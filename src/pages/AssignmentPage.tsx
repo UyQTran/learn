@@ -178,7 +178,7 @@ const AssignmentPage = () => {
           >
             Tilbake
           </AssigmentProgressionButton>
-          <AssigmentProgressBar variant="determinate" value={(indexNumber/(assignments.length-1))* 100} />
+          <AssigmentProgressBar data-cy="assignment-progress-bar" variant="determinate" value={(indexNumber/(assignments.length-1))* 100} />
           <AssigmentProgressionButton
             data-cy="next-assignment-button"
             variant="contained"
@@ -198,6 +198,7 @@ const AssignmentPage = () => {
           </AssignmentTitle>
           <AssigmentGrid>
             <AssignmentDescription
+              data-cy="assignment-post-description"
               description={currentAssignment.description}
               postDescription={currentAssignment.postDescription.text}
               shouldShowPostDescription={hasSolved}/>
