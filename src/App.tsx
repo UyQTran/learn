@@ -4,8 +4,8 @@ import LandingPage from './pages/LandingPage'
 import AssignmentPage, {Assignment} from './pages/AssignmentPage'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import SandboxPage from './pages/SandboxPage'
-import { Progression, UserContext, userKey } from "./context/UserProgressionContext";
-import FinishPage from './pages/FinishPage';
+import { Progression, UserContext, userKey } from './context/UserProgressionContext'
+import FinishPage from './pages/FinishPage'
 
 const AppWrapper = styled.div`
   display: flex;
