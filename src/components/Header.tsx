@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from 'react-router-dom'
 
 const HeadingAnimation = css`
   animation: downSize 0.3s;

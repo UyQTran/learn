@@ -2,7 +2,7 @@ import { Typography } from '@mui/material'
 import styled from 'styled-components'
 import CodeEditor from '../coding/CodeEditor'
 import { motion, useAnimation } from 'framer-motion'
-import Header from "../components/Header";
+import Header from '../components/Header'
 
 const SandboxWrapper = styled.div`
   width: 850px;

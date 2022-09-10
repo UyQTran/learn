@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 import CodeMirror from '@uiw/react-codemirror'
 import { python } from '@codemirror/lang-python'
-import {useContext, useEffect, useState} from 'react'
+import {useEffect, useState} from 'react'
 import { Button } from '@mui/material'
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline'
 import usePythonCompiler from './usePythonCompiler'
-import {UserContext} from "../context/UserProgressionContext";
 
 const CodeEditorWrapper = styled.div`
   color: ${props => props.theme.palette.secondary.dark};
@@ -54,7 +53,7 @@ const CodeEditor = (props: CodeEditorProps) => {
   }, [output])
 
   useEffect(() => {
-    
+
   }, [code])
 
   return (
