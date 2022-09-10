@@ -7,7 +7,7 @@ import Solution from '../coding/Solution'
 import { motion, useAnimation } from 'framer-motion'
 import AssignmentDescription from '../coding/AssignmentDescription'
 import Header from '../components/Header'
-import {UserContext} from "../context/UserProgressionContext";
+import {UserContext} from '../context/UserProgressionContext'
 
 
 const AssignmentWrapper = styled.div`
@@ -114,7 +114,7 @@ const AssignmentPage = () => {
 
   useEffect(() => {
     setHasClickedRun(false)
-      import('../data/assignmentData.json')
+      import('../../assets/data/assignmentData.json')
         .then((res) => setAssignments(res.default))
         .catch(_ => null)
   }, [indexNumber])

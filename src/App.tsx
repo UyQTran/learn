@@ -19,7 +19,7 @@ const App = () => {
   const userContext = useContext(UserContext)
   const [assignments, setAssignments] = useState<Assignment[]>([])
   useEffect(() => {
-    import('./data/assignmentData.json')
+    import('../assets/data/assignmentData.json')
       .then((res) => setAssignments(res.default))
       .catch(_ => null)
   }, [])
