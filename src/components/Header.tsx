@@ -47,7 +47,7 @@ const Header = (props: HeaderProps) => {
 
   return (
     <Heading shouldAnimate={props.shouldAnimate}>
-      <a href="" onClick={() => navigate('/')}>
+      <a href="" onClick={() => navigate('/')} data-cy="logo-home-button">
         progg.it
       </a>
     </Heading>
